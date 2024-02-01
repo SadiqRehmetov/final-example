@@ -1,0 +1,435 @@
+@import "./variable";
+@import "./mixin";
+@import "./reset";
+
+.container{
+    margin: 0 auto;
+    padding: 0px 60px;
+    width: 100%;
+    max-width: 1890px;
+}
+.iframe{
+    background-color: rgba(0, 0, 0, 0.785);
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 1000;
+    display: none;
+    iframe{
+        width:70%;
+        height: 70%;
+    }
+    i{
+        font-size: $font + 20px;
+        color: white;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+    }
+}
+header{
+    .container{
+        .in-header{
+            padding: 20px 0px;
+            @include center;
+            gap: 20px;
+            .logo{
+                a{
+                max-width: 250px;
+                img{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+                }
+            }
+            ul{
+                @include center;
+                gap: 30px;
+                font-size: $font + 5px;
+            }
+            .icons{
+                @include center;
+                gap: 20px;
+                font-size: $font + 10px;
+                position: relative;
+                span{
+                    padding: 2px;
+                    font-size: $font - 2px;
+                    width: 30px;
+                    height: 30px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    background-color: $color1;
+                    color: white;
+                    border-radius: 9999px;
+                    position: absolute;
+                    top: -15px;
+                    right: -15px;
+                }
+                strong{
+                    font-size: $font;
+                    a{
+                        transition: all  0.5s ease;
+                        &:hover{
+                            color: $color1;
+
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+#banner{
+
+    background-color: $color2;
+    padding-top: 50px 0px;
+    background-image: url("../image/round.png.webp");
+    // background-position: center;
+    // background-repeat: no-repeat;
+    // background-size: cover;
+    .container{
+        .in-banner{
+            @include center;
+            .left{
+                @include column;
+                gap: 40px;
+                width: 45%;
+                h1{
+                    font-size: $font + 30px;
+                    // width: 50%;
+                    span{
+                        color: $color3;
+                    }
+                }
+                p{
+                    font-size: $font + 10px;
+                }
+                .banner-button{
+                    @include center;
+                    justify-content: center;
+                    gap: 5px;
+                    background-color: $color1;
+                    width: 250px;
+                    padding: 15px 20px;
+                    border-radius: 10px;
+                    button{
+                        color: white;
+                        font-size: $font + 5px;
+                        background-color: rgba(255, 255, 255, 0);
+                        border: none;
+                    }
+                    .bi-arrow-right{
+                        color: white;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        font-size: $font + 5px;
+                    }
+                }
+            }
+            .right{
+                width: 45%;
+                margin-top: 50px;
+                position: relative;
+                img{
+                    width: 100%;
+                    min-width: 400px;
+                    height: 100%;
+                    object-fit: cover;
+                }
+                .images{
+                    @include column;
+                    justify-content: center;
+                    gap: 10px;
+                    padding: 30px 40px;
+                    width: 350px;
+                    background-color: white;
+                    position: absolute;
+                    bottom: calc((100% - 100px) / 7);
+                    left: -175px;
+                    h5{
+                        font-size: $font;
+                    }
+                    .instrunctor{
+                        @include center;
+                        
+                        img{
+                            max-width: 200px;
+                            min-width: 100px;
+                        }
+                        h4{
+                            font-size: $font;
+                            span{
+                                color: $color3;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+#banner-icon{
+    background-color: $color1;
+    margin-top: -5px;
+    .container{
+        .in-banner-icon{
+            display: grid;
+            grid-template-columns: repeat(4,auto);
+            .svg-icon{
+                @include center;
+                padding: 40px 0px;
+                justify-content: center;
+                gap: 10px;
+                
+                .icon{
+                    width: 70px;
+                    height: 70px;
+                    background-color: $color1_1;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border-radius: 9999px;
+                }
+                h4{
+                    width: 45%;
+                    color: white;
+                    font-size: $font;
+                
+                }
+            }
+        }
+    }
+}
+#categories{
+    .container{
+        .in-categories{
+            @include column;
+            align-items: center;
+            gap: 30px;
+            padding: 150px 0px;
+            h2{
+                font-size: $font + 30px;
+            }
+            p{
+                font-size: $font;
+            }
+            .categories-carts{
+                width: 100%;
+                display: grid;
+                grid-template-columns: repeat(3, auto);
+                gap: 40px;
+                .cart{
+                    @include center;
+                    background-color: rgba(255, 166, 0, 0.552);
+                    gap: 20px;
+                    padding: 30px 60px;
+                    border-radius: 10px;
+                    transition: all 0.5s ease;
+                    &:hover i{
+                        color: white;
+                    }
+                    &:hover a{
+                        color: white;
+                    }
+                    i{
+                        font-size: $font + 30px;
+                    }
+                    a{
+                        font-size: $font + 3px;
+                        color: black;
+                        
+                    }
+                }
+                .first{
+                    background-color: $color4;
+                    i{
+                        color: $color1;
+                    }
+                    &:hover{
+                        background-color: $color1;
+                    }
+                    
+                }
+                .second{
+                    background-color: $color5;
+                    i{
+                        color: $color3;
+                    }
+                    &:hover{
+                        background-color: $color3;
+                    }
+                }
+                .third{
+                    background-color: $color7;
+                    i{
+                        color: $color6;
+                    }
+                    &:hover{
+                        background-color: $color6;
+                    }
+                }
+                .fourth{
+                    background-color: $color9;
+                    i{
+                        color: $color8;
+                    }
+                    &:hover{
+                        background-color: $color8;
+                    }
+                }
+                .fifth{
+                    background-color: $color11;
+                    i{
+                        color: $color10;
+                    }
+                    &:hover{
+                        background-color: $color10;
+                    }
+                }
+                .sixth{
+                    background-color: $color13;
+                    i{
+                        color: $color12;
+                    }
+                    &:hover{
+                        background-color: $color12;
+                    }
+                }
+                .seventh{
+                    background-color: $color15;
+                    i{
+                        color: $color14;
+                    }
+                    &:hover{
+                        background-color: $color14;
+                    }
+                }
+                .eighth{
+                    background-color: $color17;
+                    i{
+                        color: $color16;
+                    }
+                    &:hover{
+                        background-color: $color16;
+                    }
+                }
+                .nineth{
+                    background-color: $color19;
+                    i{
+                        color: $color18;
+                    }
+                    &:hover{
+                        background-color: $color18;
+                    }
+                }
+            }
+        }
+    }
+}
+#about{
+    .container{
+        .in-about{
+            @include center;
+            padding: 50px 0px;
+            .left{
+                width: 45%;
+                border-radius: 10px;
+                position: relative;
+                img{
+                    border-radius: 10px;
+                    width: 100%;
+                    max-width: 470px;
+                    min-width: 300px;
+                    height: 100%;
+                    object-fit: cover;
+                }
+                .image{
+                    width: 260px;
+                    height: 210px;
+                    background-image: url("../image/Image-2.png");
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    position: absolute;
+                    right: 160px;
+                    top: -100px;
+                    img{
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                    .icon{
+                        background-color: white;
+                        width: 70px;
+                        height: 70px;
+                        border-radius: 9999px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        transition: all .5s ease;
+                        &:hover{
+                            background-color: $color1;
+                        }
+                        &:hover i{
+                            color: white;
+                        }
+                        i{
+                            color: $color3;
+                            font-size: $font + 20px;
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
+            .right{
+                width: 45%;
+                @include column;
+                gap: 30px;
+                h2{
+                    padding: 10px 0px;
+                    font-size: $font + 30px;
+                    width: 100%;
+                    position: relative;
+                    &::after{
+                        content: "";
+                        background-color: $color1;
+                        width: 30%;
+                        height: 10px;
+                        clip-path: path('M 0 200 L 0,75 A 5,5 0,0,1 150,75 L 200 200 z');
+                        position: absolute;
+                        left: 0;
+                        top: 100%;
+                    }
+                    span{
+                        color: $color3;
+                    }
+                }
+                p{
+                    font-size: $font;
+                }
+                div{
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                    i{
+                        font-size: $font + 15px;
+                        color: $color8;
+                    }
+                    strong{
+                        font-size: $font;
+                    }
+                }
+            }
+        }
+    }
+}
