@@ -364,7 +364,7 @@ header .container .in-header .icons strong a:hover {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 50px 0px;
+  padding: 100px 0px;
 }
 #about .container .in-about .left {
   width: 45%;
@@ -374,6 +374,7 @@ header .container .in-header .icons strong a:hover {
 #about .container .in-about .left .awards {
   background-color: white;
   border-radius: 10px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
   width: 300px;
   height: 100px;
   display: flex;
@@ -384,6 +385,18 @@ header .container .in-header .icons strong a:hover {
   position: absolute;
   bottom: -50px;
   right: -90px;
+  animation: bounce 4s infinite;
+}
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-30px);
+  }
+  60% {
+    transform: translateY(-15px);
+  }
 }
 #about .container .in-about .left .awards .icon {
   width: 60px;
@@ -414,6 +427,7 @@ header .container .in-header .icons strong a:hover {
 #about .container .in-about .left .image {
   width: 260px;
   height: 210px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
   background-image: url("../image/Image-2.png");
   background-position: center;
   background-repeat: no-repeat;
@@ -522,6 +536,52 @@ header .container .in-header .icons strong a:hover {
   position: absolute;
   top: 100%;
   left: 0;
+}
+#course .container .in-course a {
+  cursor: pointer;
+  margin: 50px 0px;
+}
+#course .container .in-course a button {
+  margin-top: 20px;
+  border-radius: 10px;
+  color: white;
+  background-color: #27B889;
+  border: none;
+  font-size: 18px;
+  padding: 15px 30px;
+}
+#course .container .in-course .reyting {
+  padding: 40px;
+  margin-bottom: -300px;
+  width: 50%;
+  background-color: white;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+  border-radius: 20px;
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+}
+#course .container .in-course .reyting div {
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+@keyframes shake {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  25%, 75% {
+    transform: translateX(-5px);
+  }
+  50% {
+    transform: translateX(5px);
+  }
+}
+#course .container .in-course .reyting div span {
+  font-size: 40px;
+  font-weight: bold;
+  animation: shake 1s infinite;
 }
 #course .container .in-course .course-carts {
   margin-top: 30px;
