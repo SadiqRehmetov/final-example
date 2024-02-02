@@ -68,7 +68,13 @@ header .container .in-header ul {
   justify-content: space-between;
   align-items: center;
   gap: 30px;
-  font-size: 25px;
+  font-size: 20px;
+}
+header .container .in-header ul li a {
+  transition: all 0.5s ease;
+}
+header .container .in-header ul li a:hover {
+  color: #27B889;
 }
 header .container .in-header .icons {
   display: flex;
@@ -120,13 +126,13 @@ header .container .in-header .icons strong a:hover {
   width: 45%;
 }
 #banner .container .in-banner .left h1 {
-  font-size: 50px;
+  font-size: 40px;
 }
 #banner .container .in-banner .left h1 span {
   color: #EE4A62;
 }
 #banner .container .in-banner .left p {
-  font-size: 30px;
+  font-size: 25px;
 }
 #banner .container .in-banner .left .banner-button {
   display: flex;
@@ -136,12 +142,12 @@ header .container .in-header .icons strong a:hover {
   gap: 5px;
   background-color: #27B889;
   width: 250px;
-  padding: 15px 20px;
+  padding: 22px 20px;
   border-radius: 10px;
 }
 #banner .container .in-banner .left .banner-button button {
   color: white;
-  font-size: 25px;
+  font-size: 18px;
   background-color: rgba(255, 255, 255, 0);
   border: none;
 }
@@ -168,6 +174,7 @@ header .container .in-header .icons strong a:hover {
   flex-direction: column;
   justify-content: center;
   gap: 10px;
+  border-radius: 10px;
   padding: 30px 40px;
   width: 350px;
   background-color: white;
@@ -188,7 +195,8 @@ header .container .in-header .icons strong a:hover {
   min-width: 100px;
 }
 #banner .container .in-banner .right .images .instrunctor h4 {
-  font-size: 20px;
+  font-size: 15px;
+  opacity: 0.9;
 }
 #banner .container .in-banner .right .images .instrunctor h4 span {
   color: #EE4A62;
@@ -349,6 +357,9 @@ header .container .in-header .icons strong a:hover {
   background-color: #39C0FA;
 }
 
+#about {
+  background-image: url("../image/round.png.webp");
+}
 #about .container .in-about {
   display: flex;
   justify-content: space-between;
@@ -359,6 +370,38 @@ header .container .in-header .icons strong a:hover {
   width: 45%;
   border-radius: 10px;
   position: relative;
+}
+#about .container .in-about .left .awards {
+  background-color: white;
+  border-radius: 10px;
+  width: 300px;
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5px;
+  padding: 15px 30px;
+  position: absolute;
+  bottom: -50px;
+  right: -90px;
+}
+#about .container .in-about .left .awards .icon {
+  width: 60px;
+  height: 60px;
+  background-color: #abebe0;
+  border-radius: 9999px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#about .container .in-about .left .awards .icon i {
+  color: #27B889;
+  font-size: 25px;
+}
+#about .container .in-about .left .awards .info span {
+  color: #1AB69D;
+  font-size: 25px;
+  font-weight: bold;
 }
 #about .container .in-about .left img {
   border-radius: 10px;
@@ -379,7 +422,7 @@ header .container .in-header .icons strong a:hover {
   justify-content: center;
   align-items: center;
   position: absolute;
-  right: 160px;
+  right: -80px;
   top: -100px;
 }
 #about .container .in-about .left .image img {
@@ -412,11 +455,12 @@ header .container .in-header .icons strong a:hover {
   width: 45%;
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 15px;
 }
 #about .container .in-about .right h2 {
+  margin-top: 15px;
   padding: 10px 0px;
-  font-size: 50px;
+  font-size: 40px;
   width: 100%;
   position: relative;
 }
@@ -434,7 +478,7 @@ header .container .in-header .icons strong a:hover {
   color: #EE4A62;
 }
 #about .container .in-about .right p {
-  font-size: 20px;
+  font-size: 17px;
 }
 #about .container .in-about .right div {
   display: flex;
@@ -446,5 +490,176 @@ header .container .in-header .icons strong a:hover {
   color: #F8B81F;
 }
 #about .container .in-about .right div strong {
+  font-size: 17px;
+  opacity: 0.6;
+}
+
+#course {
+  width: 100%;
+  margin: 100px 0px;
+  background-color: #F0F4F5;
+}
+#course .container .in-course {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 50px 0px;
+}
+#course .container .in-course p {
+  font-size: 15px;
+}
+#course .container .in-course h2 {
+  font-size: 35px;
+  padding: 10px 0px;
+  position: relative;
+}
+#course .container .in-course h2::after {
+  content: "";
+  width: 30%;
+  height: 5px;
+  background-color: #27B889;
+  position: absolute;
+  top: 100%;
+  left: 0;
+}
+#course .container .in-course .course-carts {
+  margin-top: 30px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  gap: 40px;
+}
+#course .container .in-course .course-carts .cart {
+  border-radius: 10px;
+  position: relative;
+}
+#course .container .in-course .course-carts .cart .hiddenDiv {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  color: white;
+  padding: 30px 20px;
+  background-color: #1AB69D;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  opacity: 0;
+  transition: all 0.5s ease;
+}
+#course .container .in-course .course-carts .cart .hiddenDiv .heartDiv {
+  width: 60px;
+  height: 60px;
+  border-radius: 9999px;
+  background-color: #3cd1a2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 10px;
+  right: 20px;
+}
+#course .container .in-course .course-carts .cart .hiddenDiv .heartDiv .bi-heart {
   font-size: 20px;
+}
+#course .container .in-course .course-carts .cart .hiddenDiv .title-span {
+  background-color: white;
+  color: black;
+  text-align: center;
+  width: 100px;
+  padding: 5px 2px;
+}
+#course .container .in-course .course-carts .cart .hiddenDiv h3 {
+  opacity: 1;
+}
+#course .container .in-course .course-carts .cart .hiddenDiv .ratings i {
+  color: yellow;
+}
+#course .container .in-course .course-carts .cart .hiddenDiv .ratings span {
+  font-size: 15px;
+}
+#course .container .in-course .course-carts .cart .hiddenDiv .price {
+  color: white;
+  font-size: 25px;
+}
+#course .container .in-course .course-carts .cart .hiddenDiv .cart-info {
+  color: white;
+  opacity: 1;
+  font-size: 18px;
+}
+#course .container .in-course .course-carts .cart .hiddenDiv .icons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+#course .container .in-course .course-carts .cart .hiddenDiv .icons p i, #course .container .in-course .course-carts .cart .hiddenDiv .icons p span {
+  font-size: 14px;
+}
+#course .container .in-course .course-carts .cart .hiddenDiv:hover {
+  opacity: 1;
+}
+#course .container .in-course .course-carts .cart .image {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  width: 100%;
+  height: auto;
+  position: relative;
+}
+#course .container .in-course .course-carts .cart .image .date {
+  background-color: #F8B81F;
+  width: 100px;
+  padding: 5px 3px;
+  font-size: 15px;
+  color: white;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+#course .container .in-course .course-carts .cart .image img {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+#course .container .in-course .course-carts .cart .info {
+  width: 100%;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 30px 20px;
+}
+#course .container .in-course .course-carts .cart .info .title-span {
+  text-align: center;
+  width: 100px;
+  padding: 5px 2px;
+  background-color: #ceebe1;
+  color: #27B889;
+}
+#course .container .in-course .course-carts .cart .info h3 {
+  opacity: 0.7;
+}
+#course .container .in-course .course-carts .cart .info .ratings i {
+  color: #ffbb00;
+}
+#course .container .in-course .course-carts .cart .info .ratings span {
+  font-size: 15px;
+}
+#course .container .in-course .course-carts .cart .info .price {
+  color: #EE4A62;
+  font-size: 25px;
+}
+#course .container .in-course .course-carts .cart .info .icons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+#course .container .in-course .course-carts .cart .info .icons p i, #course .container .in-course .course-carts .cart .info .icons p span {
+  font-size: 14px;
 }/*# sourceMappingURL=index.css.map */
