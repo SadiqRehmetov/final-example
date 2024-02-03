@@ -1,0 +1,34 @@
+@media screen and (max-width: 1200px){
+    header{
+        .container{
+            .in-header{
+                ul{
+                    display: none;
+                }
+                .bi-list{
+                    display: flex;
+                }
+                .icons{
+                    strong{
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+    // #banner{
+    //     .container{
+    //         .in-banner{
+
+    //         }
+    //     }
+    // }
+}
+
+@media screen and (max-width:768px){
+    
+}
+
+@media screen and (max-width: 451px) {
+    
+}
