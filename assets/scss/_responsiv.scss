@@ -16,19 +16,465 @@
             }
         }
     }
-    // #banner{
-    //     .container{
-    //         .in-banner{
-
-    //         }
-    //     }
-    // }
+    #banner{
+        .container{
+            .in-banner{
+                flex-direction: column;
+                align-items: center;
+                gap: 20px;
+                .left{
+                    padding-top: 100px;
+                    align-items: center;
+                    text-align: center;
+                    width: 100%;
+                    p{
+                        font-size: $font;
+                    }
+                }
+            }
+        }
+    }
+    #banner-icon{
+        .container{
+            .in-banner-icon{
+                grid-template-columns: repeat(2,auto);
+                .second{
+                    border-right: 0px solid rgba(255, 255, 255, 0.433);
+                }
+                .fourth{
+                    border-right: 0px solid rgba(255, 255, 255, 0.433);
+                }
+            }
+        }
+    }
+    #categories{
+        .container{
+            .in-categories{
+                .categories-carts{
+                    grid-template-columns: repeat(2,auto);
+                }
+            }
+        }
+    }
+    #about{
+        .container{
+            .in-about{
+                @include column;
+                .right{
+                    width: 100%;
+                    margin-top: 100px;
+                }
+            }
+        }
+    }
+    #course{
+        .container{
+            .in-course{
+                .course-carts{
+                    grid-template-columns: repeat(2,auto);
+                }
+                .point{
+                    display: none;
+                }
+                .loading-gif{
+                    display: none;
+                }
+                .reyting{
+                    img{
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+    #call{
+        .container{
+            .in-call{
+                .center{
+                    flex-direction: column;
+                    gap: 20px;
+                    text-align: center;
+                }
+            }
+        }
+    }
+    #instructors{
+        .container{
+            .in-instructors{
+                .instructors-carts{
+                    grid-template-columns: repeat(2,auto);
+                }
+            }
+        }
+    }
+    #started{
+        .container{
+            .in-started{
+                h2{
+                    font-size: $font + 10px;
+                    width: 100%;
+                }
+                .img2{
+                    display: none;
+                }
+            }
+        }
+    }
+    #partner{
+        .container{
+            .in-partner{
+                flex-direction: column;
+                gap: 30px;
+                .left{
+                    width: 100%;
+                }
+                .right{
+                    width: 100%;
+                }
+            }
+        }
+    }
+    #news{
+        .container{
+            .in-news{
+                text-align: center;
+                margin-top: 80px;
+                h2{
+                    font-size: $font + 10px;
+                }
+                .news-carts{
+                    grid-template-columns: repeat(2,auto);
+                    .third{
+                        margin-top: 100px;
+                    }
+                }
+            }
+        }
+    }
 }
 
 @media screen and (max-width:768px){
-    
+    .container{
+        padding: 0px 40px;
+    }
+    header{
+        .container{
+            .in-header{
+                strong{
+                    display: none;
+                }
+            }
+        }
+    }
+    #banner{
+        .container{
+            .in-banner{
+                flex-direction: column;
+                align-items: center;
+                gap: 20px;
+                .left{
+                    padding-top: 100px;
+                    align-items: center;
+                    text-align: center;
+                    width: 100%;
+                    p{
+                        font-size: $font;
+                    }
+                }
+                .right{
+                    width: 100%;
+                    text-align: center;
+                    img{
+                        max-width: 500px;
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                    .images{
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+    #banner-icon{
+        .container{
+            .in-banner-icon{
+                grid-template-columns: repeat(1,auto);
+               .svg-icon{
+                padding: 10px 0px;
+               }
+               .first{
+                border: none;
+            }
+            .third{
+                border: none;
+            }
+            }
+        }
+    }
+    #categories{
+        .container{
+            .in-categories{
+                .categories-carts{
+                    grid-template-columns: repeat(1,auto);
+                }
+            }
+        }
+    }
+    #about{
+        .container{
+            .in-about{
+                @include column;
+                .right{
+                    width: 100%;
+                    margin-top: 100px;
+                }
+                .left{
+                    text-align: center;
+                    width: 100%;
+                    .awards{
+                        display: none;
+                    }
+                    .image{
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+    #course{
+        .container{
+            .in-course{
+                .course-carts{
+                    grid-template-columns: repeat(2,auto);
+                }
+                .point{
+                    display: none;
+                }
+                .loading-gif{
+                    display: none;
+                }
+                .reyting{
+                    background-color: white;
+                    position: static;
+                    width: 100%;
+                    margin: 0;
+                    grid-template-columns: repeat(1,auto);
+                    .first{
+                        border: none;
+                    }
+                    .second{
+                        border: none;
+                    }
+                    .third{
+                        border: none;
+                    }
+                    .fourth{
+                        border: none;
+                    }
+                }
+            }
+        }
+    }
+    #call{
+        margin-top: 0;
+        .container{
+            .in-call{
+                padding: 50px 0px;
+                .center{
+                    .img1{
+                        display: none;
+                    }
+                    .img2{
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+    #instructors{
+        .container{
+            .in-instructors{
+                
+                .instructors-carts{
+                    grid-template-columns: repeat(2,auto);
+                    h2{
+                        font-size: $font + 20px;
+                        padding: 10px 0px;
+                        position: relative;
+                        &::after{
+                            content: "";
+                            width: 50%;
+                            height: 5px;
+                            background-color: $color1;
+                            position: absolute;
+                            top: 100%;
+                            left: calc((100% - (100% - 50%))/ 2);
+                        }
+                    }
+                }
+            }
+        }
+    }
+    #started{
+        .container{
+            .in-started{
+                h2{
+                    font-size: $font + 10px;
+                    width: 100%;
+                }
+                .img2{
+                    display: none;
+                }
+                .img1{
+                    display: none;
+                }
+                .img3{
+                    display: none;
+                }
+                .img4{
+                    display: none;
+                }
+            }
+        }
+    }
+    #partner{
+        .container{
+            .in-partner{
+                flex-direction: column;
+                gap: 30px;
+                .left{
+                    width: 100%;
+                }
+                .right{
+                    width: 100%;
+                }
+            }
+        }
+    }
+    #news{
+        .container{
+            .in-news{
+                .news-carts{
+                    grid-template-columns: repeat(1,auto);
+                    .third{
+                        margin-top: 100px;
+                    }
+                    .cart{
+                        .info{
+                            position: static;
+                            width: 100%;
+                            margin: 0;
+                            border-radius: 0;
+                            text-align: start;
+                            .icon{
+                                justify-content: flex-start;
+                                gap: 10px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    footer{
+        .container{
+            .footer-up{
+                grid-template-columns: repeat(1,auto);
+            }
+        }
+    }
 }
 
-@media screen and (max-width: 451px) {
-    
+@media screen and (max-width: 575px) {
+    .container{
+        padding: 0px 20px;
+    }
+    header{
+        .container{
+            .in-header{
+                .icons{
+                    .bi-cart{
+                        display: none;
+                    }
+                    span{
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+    #course{
+        .container{
+            .in-course{
+                .course-carts{
+                    grid-template-columns: repeat(1,auto);
+                }
+            }
+        }
+    }
+    #instructors{
+        .container{
+            .in-instructors{
+                
+                .instructors-carts{
+                    grid-template-columns: repeat(1,auto);
+                    h2{
+                        font-size: $font + 20px;
+                        padding: 10px 0px;
+                        position: relative;
+                        &::after{
+                            content: "";
+                            width: 50%;
+                            height: 5px;
+                            background-color: $color1;
+                            position: absolute;
+                            top: 100%;
+                            left: calc((100% - (100% - 50%))/ 2);
+                        }
+                    }
+                }
+            }
+        }
+    }
+    #partner{
+        .container{
+            .in-partner{
+                flex-direction: column;
+                gap: 30px;
+                .img1{
+                    display: none;
+                }
+                .img2{
+                    display: none;
+                }
+                .left{
+                    width: 100%;
+                    h2{
+                        width: 100%;
+                    }
+                    p{
+                        width: 100%;
+                    }
+                }
+                .right{
+                    width: 100%;
+                }
+            }
+        }
+    }
+    footer{
+        .container{
+            .footer-up{
+                grid-template-columns: repeat(1,auto);
+                .third{
+                    .input{
+                        flex-direction: column;
+                        align-items: flex-start;
+                    }
+                }
+            }
+        }
+    }
 }

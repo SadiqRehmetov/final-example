@@ -25,6 +25,7 @@
         }
     }
 }
+
 .iframe{
     background-color: rgba(0, 0, 0, 0.785);
     width: 100%;
@@ -59,6 +60,7 @@ header{
             @include center;
             gap: 20px;
             .logo{
+                min-width: 100px;
                 a{
                 max-width: 250px;
                 img{
@@ -89,6 +91,7 @@ header{
                 .searchInput{
                     border: none;
                     height: 0;
+                    width: 0;
                 }
                 .search{
                     transition: all 1s ease;
@@ -130,6 +133,7 @@ header{
             .bi-list{
                 display: none;
             }
+            
         }
     }
 }
@@ -188,7 +192,7 @@ header{
                 
                 img{
                     width: 100%;
-                    min-width: 400px;
+                    max-width: 400px;
                     height: 100%;
                     object-fit: cover;
                 }
@@ -231,8 +235,19 @@ header{
     margin-top: -5px;
     .container{
         .in-banner-icon{
+            padding: 20px 0px;
             display: grid;
             grid-template-columns: repeat(4,auto);
+            .first{
+                border-right: 1px solid rgba(255, 255, 255, 0.433);
+            }
+            .second{
+                border-right: 0px solid rgba(255, 255, 255, 0.433);
+            }
+            .third{
+                border-right: 1px solid rgba(255, 255, 255, 0.433);
+            }
+
             .svg-icon{
                 @include center;
                 padding: 40px 0px;
@@ -261,6 +276,7 @@ header{
 #categories{
     .container{
         .in-categories{
+            width: 100%;
             @include column;
             align-items: center;
             gap: 30px;
@@ -618,7 +634,6 @@ header{
                 padding: 40px;
                 margin-bottom: -300px;
                 width: 600px;
-                background-color: white;
                 box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
                 border-radius: 20px;
                 display: grid;
@@ -661,6 +676,18 @@ header{
                         animation: shake 1s infinite;
                     }
                 }
+                .first{
+                    border-right: 1px solid rgba(0, 0, 0, 0.734);
+                }
+                .second{
+                    border-bottom: 1px solid rgba(0, 0, 0, 0.735);
+                }
+                .third{
+                    border-top: 1px solid rgba(0, 0, 0, 0.737);
+                }
+                .fourth{
+                    border-left: 1px solid rgba(0, 0, 0, 0.733);
+                }
             }
             .course-carts{
                 margin-top: 30px;
@@ -676,6 +703,7 @@ header{
                         @include column;
                         justify-content: center;
                         gap: 20px;
+                        border-radius: 10px;
                         color: white;
                         padding: 30px 20px;
                         background-color: #1AB69D;
@@ -745,10 +773,11 @@ header{
                     }
                     .image{
                         border-top-left-radius: 10px;
-                        border-top-right-radius: 10px;
+                        border-top-right-radius:10px;
                         width: 100%;
                         height: auto;
                         position: relative;
+
                         .date{
                             background-color: $color8;
                             width: 100px;
@@ -770,6 +799,7 @@ header{
                     .info{
                         width: 100%;
                         background-color: white;
+                        border-radius: 10px;
                         @include column;
                         gap: 20px;
                         padding: 30px 20px;
@@ -872,6 +902,7 @@ header{
             @include column;
             align-items: center;
             gap: 10px;
+            text-align: center;
             h2{
                 font-size: $font + 20px;
                 padding: 10px 0px;
@@ -887,6 +918,7 @@ header{
                 }
             }
             .instructors-carts{
+                width: 100%;
                 display: grid;
                 grid-template-columns: repeat(4, auto);
                 gap: 40px;
@@ -1032,7 +1064,7 @@ header{
                 h2{
                     font-size: $font + 20px;
                     width: 70%;
-                    padding: 10px 0px;
+                    padding-bottom: 10px;
                     position: relative;
                     &::after{
                         content: "";
@@ -1074,10 +1106,11 @@ header{
     margin-top: 100px;
     .container{
         .in-news{
+            width: 100%;
             @include column;
             align-items: center;
             gap: 20px;
-            padding: 50px;
+            padding: 50px 0px;
             h2{
                 font-size: $font + 20px;
                 opacity: .8;
@@ -1094,10 +1127,11 @@ header{
                     }
             }
             .news-carts{
+                width: 100%;
                 margin-top: 20px;
                 display: grid;
                 grid-template-columns: repeat(3,auto);
-                gap: 40px;
+                gap: 20px;
 
                 .cart{
                         position: relative;
@@ -1234,5 +1268,11 @@ footer{
                 }
             }
         }
+        
+    }
+    .footer-down{
+        text-align: center;
+        padding: 20px 0px;
+        background-color: $color2;
     }
 }

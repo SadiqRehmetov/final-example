@@ -28,6 +28,12 @@ window.addEventListener("scroll", () => {
 searchIcon.addEventListener("click", () => {
     searchInput.classList.toggle("search");
     searchInput.classList.toggle("searchInput");
+    if(menuİcon.style.display=="none"){
+        menuİcon.style.display="flex";
+    }
+    else{
+        menuİcon.style.display="none";
+    }
 });
 menuİcon.addEventListener("click",()=>{
     responsMenu.style.transform = "translateX(0)";

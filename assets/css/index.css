@@ -94,6 +94,9 @@ header .container .in-header {
   align-items: center;
   gap: 20px;
 }
+header .container .in-header .logo {
+  min-width: 100px;
+}
 header .container .in-header .logo a {
   max-width: 250px;
 }
@@ -126,6 +129,7 @@ header .container .in-header .icons {
 header .container .in-header .icons .searchInput {
   border: none;
   height: 0;
+  width: 0;
 }
 header .container .in-header .icons .search {
   transition: all 1s ease;
@@ -219,7 +223,7 @@ header .container .in-header .bi-list {
 }
 #banner .container .in-banner .right img {
   width: 100%;
-  min-width: 400px;
+  max-width: 400px;
   height: 100%;
   object-fit: cover;
 }
@@ -261,8 +265,18 @@ header .container .in-header .bi-list {
   margin-top: -5px;
 }
 #banner-icon .container .in-banner-icon {
+  padding: 20px 0px;
   display: grid;
   grid-template-columns: repeat(4, auto);
+}
+#banner-icon .container .in-banner-icon .first {
+  border-right: 1px solid rgba(255, 255, 255, 0.433);
+}
+#banner-icon .container .in-banner-icon .second {
+  border-right: 0px solid rgba(255, 255, 255, 0.433);
+}
+#banner-icon .container .in-banner-icon .third {
+  border-right: 1px solid rgba(255, 255, 255, 0.433);
 }
 #banner-icon .container .in-banner-icon .svg-icon {
   display: flex;
@@ -288,6 +302,7 @@ header .container .in-header .bi-list {
 }
 
 #categories .container .in-categories {
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -645,7 +660,6 @@ header .container .in-header .bi-list {
   padding: 40px;
   margin-bottom: -300px;
   width: 600px;
-  background-color: white;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
   border-radius: 20px;
   display: grid;
@@ -689,6 +703,18 @@ header .container .in-header .bi-list {
   font-weight: bold;
   animation: shake 1s infinite;
 }
+#course .container .in-course .reyting .first {
+  border-right: 1px solid rgba(0, 0, 0, 0.734);
+}
+#course .container .in-course .reyting .second {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.735);
+}
+#course .container .in-course .reyting .third {
+  border-top: 1px solid rgba(0, 0, 0, 0.737);
+}
+#course .container .in-course .reyting .fourth {
+  border-left: 1px solid rgba(0, 0, 0, 0.733);
+}
 #course .container .in-course .course-carts {
   margin-top: 30px;
   width: 100%;
@@ -705,6 +731,7 @@ header .container .in-header .bi-list {
   flex-direction: column;
   justify-content: center;
   gap: 20px;
+  border-radius: 10px;
   color: white;
   padding: 30px 20px;
   background-color: #1AB69D;
@@ -795,6 +822,7 @@ header .container .in-header .bi-list {
 #course .container .in-course .course-carts .cart .info {
   width: 100%;
   background-color: white;
+  border-radius: 10px;
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -888,6 +916,7 @@ header .container .in-header .bi-list {
   flex-direction: column;
   align-items: center;
   gap: 10px;
+  text-align: center;
 }
 #instructors .container .in-instructors h2 {
   font-size: 40px;
@@ -904,6 +933,7 @@ header .container .in-header .bi-list {
   left: 0;
 }
 #instructors .container .in-instructors .instructors-carts {
+  width: 100%;
   display: grid;
   grid-template-columns: repeat(4, auto);
   gap: 40px;
@@ -1051,7 +1081,7 @@ header .container .in-header .bi-list {
 #partner .container .in-partner .left h2 {
   font-size: 40px;
   width: 70%;
-  padding: 10px 0px;
+  padding-bottom: 10px;
   position: relative;
 }
 #partner .container .in-partner .left h2::after {
@@ -1090,11 +1120,12 @@ header .container .in-header .bi-list {
   margin-top: 100px;
 }
 #news .container .in-news {
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 20px;
-  padding: 50px;
+  padding: 50px 0px;
 }
 #news .container .in-news h2 {
   font-size: 40px;
@@ -1112,10 +1143,11 @@ header .container .in-header .bi-list {
   left: 0;
 }
 #news .container .in-news .news-carts {
+  width: 100%;
   margin-top: 20px;
   display: grid;
   grid-template-columns: repeat(3, auto);
-  gap: 40px;
+  gap: 20px;
 }
 #news .container .in-news .news-carts .cart {
   position: relative;
@@ -1249,6 +1281,11 @@ footer .container .footer-up .third .icon :nth-child(4) {
 footer .container .footer-up .third .icon :nth-child(5) {
   color: red;
 }
+footer .footer-down {
+  text-align: center;
+  padding: 20px 0px;
+  background-color: #EAF0F2;
+}
 
 @media screen and (max-width: 1200px) {
   header .container .in-header ul {
@@ -1259,5 +1296,320 @@ footer .container .footer-up .third .icon :nth-child(5) {
   }
   header .container .in-header .icons strong {
     display: none;
+  }
+  #banner .container .in-banner {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  #banner .container .in-banner .left {
+    padding-top: 100px;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+  }
+  #banner .container .in-banner .left p {
+    font-size: 20px;
+  }
+  #banner-icon .container .in-banner-icon {
+    grid-template-columns: repeat(2, auto);
+  }
+  #banner-icon .container .in-banner-icon .second {
+    border-right: 0px solid rgba(255, 255, 255, 0.433);
+  }
+  #banner-icon .container .in-banner-icon .fourth {
+    border-right: 0px solid rgba(255, 255, 255, 0.433);
+  }
+  #categories .container .in-categories .categories-carts {
+    grid-template-columns: repeat(2, auto);
+  }
+  #about .container .in-about {
+    display: flex;
+    flex-direction: column;
+  }
+  #about .container .in-about .right {
+    width: 100%;
+    margin-top: 100px;
+  }
+  #course .container .in-course .course-carts {
+    grid-template-columns: repeat(2, auto);
+  }
+  #course .container .in-course .point {
+    display: none;
+  }
+  #course .container .in-course .loading-gif {
+    display: none;
+  }
+  #course .container .in-course .reyting img {
+    display: none;
+  }
+  #call .container .in-call .center {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+  }
+  #instructors .container .in-instructors .instructors-carts {
+    grid-template-columns: repeat(2, auto);
+  }
+  #started .container .in-started h2 {
+    font-size: 30px;
+    width: 100%;
+  }
+  #started .container .in-started .img2 {
+    display: none;
+  }
+  #partner .container .in-partner {
+    flex-direction: column;
+    gap: 30px;
+  }
+  #partner .container .in-partner .left {
+    width: 100%;
+  }
+  #partner .container .in-partner .right {
+    width: 100%;
+  }
+  #news .container .in-news {
+    text-align: center;
+    margin-top: 80px;
+  }
+  #news .container .in-news h2 {
+    font-size: 30px;
+  }
+  #news .container .in-news .news-carts {
+    grid-template-columns: repeat(2, auto);
+  }
+  #news .container .in-news .news-carts .third {
+    margin-top: 100px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .container {
+    padding: 0px 40px;
+  }
+  header .container .in-header strong {
+    display: none;
+  }
+  #banner .container .in-banner {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  #banner .container .in-banner .left {
+    padding-top: 100px;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+  }
+  #banner .container .in-banner .left p {
+    font-size: 20px;
+  }
+  #banner .container .in-banner .right {
+    width: 100%;
+    text-align: center;
+  }
+  #banner .container .in-banner .right img {
+    max-width: 500px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  #banner .container .in-banner .right .images {
+    display: none;
+  }
+  #banner-icon .container .in-banner-icon {
+    grid-template-columns: repeat(1, auto);
+  }
+  #banner-icon .container .in-banner-icon .svg-icon {
+    padding: 10px 0px;
+  }
+  #banner-icon .container .in-banner-icon .first {
+    border: none;
+  }
+  #banner-icon .container .in-banner-icon .third {
+    border: none;
+  }
+  #categories .container .in-categories .categories-carts {
+    grid-template-columns: repeat(1, auto);
+  }
+  #about .container .in-about {
+    display: flex;
+    flex-direction: column;
+  }
+  #about .container .in-about .right {
+    width: 100%;
+    margin-top: 100px;
+  }
+  #about .container .in-about .left {
+    text-align: center;
+    width: 100%;
+  }
+  #about .container .in-about .left .awards {
+    display: none;
+  }
+  #about .container .in-about .left .image {
+    display: none;
+  }
+  #course .container .in-course .course-carts {
+    grid-template-columns: repeat(2, auto);
+  }
+  #course .container .in-course .point {
+    display: none;
+  }
+  #course .container .in-course .loading-gif {
+    display: none;
+  }
+  #course .container .in-course .reyting {
+    background-color: white;
+    position: static;
+    width: 100%;
+    margin: 0;
+    grid-template-columns: repeat(1, auto);
+  }
+  #course .container .in-course .reyting .first {
+    border: none;
+  }
+  #course .container .in-course .reyting .second {
+    border: none;
+  }
+  #course .container .in-course .reyting .third {
+    border: none;
+  }
+  #course .container .in-course .reyting .fourth {
+    border: none;
+  }
+  #call {
+    margin-top: 0;
+  }
+  #call .container .in-call {
+    padding: 50px 0px;
+  }
+  #call .container .in-call .center .img1 {
+    display: none;
+  }
+  #call .container .in-call .center .img2 {
+    display: none;
+  }
+  #instructors .container .in-instructors .instructors-carts {
+    grid-template-columns: repeat(2, auto);
+  }
+  #instructors .container .in-instructors .instructors-carts h2 {
+    font-size: 40px;
+    padding: 10px 0px;
+    position: relative;
+  }
+  #instructors .container .in-instructors .instructors-carts h2::after {
+    content: "";
+    width: 50%;
+    height: 5px;
+    background-color: #27B889;
+    position: absolute;
+    top: 100%;
+    left: 25%;
+  }
+  #started .container .in-started h2 {
+    font-size: 30px;
+    width: 100%;
+  }
+  #started .container .in-started .img2 {
+    display: none;
+  }
+  #started .container .in-started .img1 {
+    display: none;
+  }
+  #started .container .in-started .img3 {
+    display: none;
+  }
+  #started .container .in-started .img4 {
+    display: none;
+  }
+  #partner .container .in-partner {
+    flex-direction: column;
+    gap: 30px;
+  }
+  #partner .container .in-partner .left {
+    width: 100%;
+  }
+  #partner .container .in-partner .right {
+    width: 100%;
+  }
+  #news .container .in-news .news-carts {
+    grid-template-columns: repeat(1, auto);
+  }
+  #news .container .in-news .news-carts .third {
+    margin-top: 100px;
+  }
+  #news .container .in-news .news-carts .cart .info {
+    position: static;
+    width: 100%;
+    margin: 0;
+    border-radius: 0;
+    text-align: start;
+  }
+  #news .container .in-news .news-carts .cart .info .icon {
+    justify-content: flex-start;
+    gap: 10px;
+  }
+  footer .container .footer-up {
+    grid-template-columns: repeat(1, auto);
+  }
+}
+@media screen and (max-width: 575px) {
+  .container {
+    padding: 0px 20px;
+  }
+  header .container .in-header .icons .bi-cart {
+    display: none;
+  }
+  header .container .in-header .icons span {
+    display: none;
+  }
+  #course .container .in-course .course-carts {
+    grid-template-columns: repeat(1, auto);
+  }
+  #instructors .container .in-instructors .instructors-carts {
+    grid-template-columns: repeat(1, auto);
+  }
+  #instructors .container .in-instructors .instructors-carts h2 {
+    font-size: 40px;
+    padding: 10px 0px;
+    position: relative;
+  }
+  #instructors .container .in-instructors .instructors-carts h2::after {
+    content: "";
+    width: 50%;
+    height: 5px;
+    background-color: #27B889;
+    position: absolute;
+    top: 100%;
+    left: 25%;
+  }
+  #partner .container .in-partner {
+    flex-direction: column;
+    gap: 30px;
+  }
+  #partner .container .in-partner .img1 {
+    display: none;
+  }
+  #partner .container .in-partner .img2 {
+    display: none;
+  }
+  #partner .container .in-partner .left {
+    width: 100%;
+  }
+  #partner .container .in-partner .left h2 {
+    width: 100%;
+  }
+  #partner .container .in-partner .left p {
+    width: 100%;
+  }
+  #partner .container .in-partner .right {
+    width: 100%;
+  }
+  footer .container .footer-up {
+    grid-template-columns: repeat(1, auto);
+  }
+  footer .container .footer-up .third .input {
+    flex-direction: column;
+    align-items: flex-start;
   }
 }/*# sourceMappingURL=index.css.map */
