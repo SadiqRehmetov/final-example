@@ -384,6 +384,9 @@
                 grid-template-columns: repeat(1,auto);
             }
         }
+        .footer-down{
+            padding: 20px 40px;
+        }
     }
 }
 
@@ -475,6 +478,9 @@
                     }
                 }
             }
+        }
+        .footer-down{
+            padding: 20px;
         }
     }
 }
