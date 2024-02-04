@@ -32,7 +32,7 @@ p {
   height: 100vh;
   padding: 10px 0px;
   background-color: white;
-  width: 50%;
+  width: 70%;
   position: fixed;
   z-index: 30000;
   transform: translateX(-500%);
@@ -45,6 +45,9 @@ p {
   gap: 20px;
   padding: 10px 20px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.268);
+}
+.respons-menu .image img {
+  max-width: 100px;
 }
 .respons-menu ul {
   padding: 0px 25px;
@@ -1283,7 +1286,7 @@ footer .container .footer-up .third .icon :nth-child(5) {
 }
 footer .footer-down {
   text-align: center;
-  padding: 20px 0px;
+  padding: 20px 60px;
   background-color: #EAF0F2;
 }
 
@@ -1388,6 +1391,10 @@ footer .footer-down {
   }
   header .container .in-header strong {
     display: none;
+  }
+  header .container .in-header .icons #search {
+    font-size: 20px;
+    gap: 10px;
   }
   #banner .container .in-banner {
     flex-direction: column;
@@ -1552,6 +1559,9 @@ footer .footer-down {
   footer .container .footer-up {
     grid-template-columns: repeat(1, auto);
   }
+  footer .footer-down {
+    padding: 20px 40px;
+  }
 }
 @media screen and (max-width: 575px) {
   .container {
@@ -1611,5 +1621,8 @@ footer .footer-down {
   footer .container .footer-up .third .input {
     flex-direction: column;
     align-items: flex-start;
+  }
+  footer .footer-down {
+    padding: 20px;
   }
 }/*# sourceMappingURL=index.css.map */
