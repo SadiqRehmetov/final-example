@@ -1290,6 +1290,65 @@ footer .footer-down {
   background-color: #EAF0F2;
 }
 
+#faq-questions {
+  background-color: #F3F4F6;
+}
+#faq-questions .container .in-faq-questions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-items: flex-start;
+  padding: 100px 0px;
+}
+#faq-questions .container .in-faq-questions .left {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 30%;
+}
+#faq-questions .container .in-faq-questions .left h3 {
+  font-size: 30px;
+}
+#faq-questions .container .in-faq-questions .left ul {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+#faq-questions .container .in-faq-questions .right {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 60%;
+}
+#faq-questions .container .in-faq-questions .right .question {
+  background-color: white;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  border-radius: 20px;
+}
+#faq-questions .container .in-faq-questions .right .question .active {
+  background-color: #ccc;
+}
+#faq-questions .container .in-faq-questions .right .question h4 {
+  font-size: 20px;
+  opacity: 0.7;
+  margin: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+#faq-questions .container .in-faq-questions .right .question .answer {
+  overflow: hidden;
+  margin-bottom: 10px;
+  transition: all 0.5s ease;
+}
+#faq-questions .container .in-faq-questions .right .question .answer p {
+  height: 0;
+  padding: 0px 20px;
+}
+
 @media screen and (max-width: 1200px) {
   header .container .in-header ul {
     display: none;

@@ -1,0 +1,53 @@
+#faq-questions{
+    background-color: #F3F4F6;
+    .container{
+        .in-faq-questions{
+            @include center;
+            align-items: flex-start;
+            padding: 100px 0px;
+            .left{
+                @include column;
+                gap: 20px;
+                width: 30%;
+                h3{
+                    font-size: $font +10px;
+                }
+                ul{
+                    @include column;
+                    gap: 20px;
+                }
+            }
+            .right{
+                @include column;
+                gap: 20px;
+                width: 60%;
+                .question{
+                    background-color: white;
+                    overflow: hidden;
+
+                    @include column;
+                    border-radius: 20px;
+                    .active {
+                        background-color: #ccc; 
+                      }
+                    h4{
+                        font-size: $font;
+                        opacity: .7;
+                        margin: 20px;
+                        @include center;
+                        cursor: pointer;
+                    }
+                    .answer{
+                        overflow: hidden;
+                        margin-bottom: 10px;
+                        transition: all .5s ease;
+                        p{
+                            height: 0;
+                            padding: 0px 20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

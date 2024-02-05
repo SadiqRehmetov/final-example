@@ -1,6 +1,3 @@
-let iframeDiv = document.querySelector(".iframe")
-let closeIframe = document.querySelector(".iframe-close")
-let playIframe = document.querySelector(".play-iframe")
 let nav = document.querySelector("header")
 let searchIcon = document.querySelector("#search")
 let searchInput = document.querySelector("#searchinput")
@@ -8,19 +5,9 @@ let menuİcon = document.querySelector(".bi-list")
 let responsMenu = document.querySelector(".respons-menu")
 let closeMenu = document.querySelector(".closemenu")
 let courseCarts = document.querySelector(".course-carts")
-playIframe.addEventListener("click", ()=>{
-    iframeDiv.style.display="flex";
-})
-closeIframe.addEventListener("click",()=>{
-    iframeDiv.style.display="none";
-    window.location.reload();
-})
-
-
 window.addEventListener("scroll", () => {
     if (window.scrollY > 100) {
         nav.style.position = "fixed";
-        nav.style.top="0"
         nav.style.transition = "position 0.3s ease"; 
     } else {
         nav.style.position = "static"; 
@@ -44,3 +31,26 @@ menuİcon.addEventListener("click",()=>{
 closeMenu.addEventListener("click", ()=>{
     responsMenu.style.transform = "translateX(-500%)";
 })
+
+document.addEventListener("DOMContentLoaded", function () {
+    const accordionItems = document.querySelectorAll('.question');
+    accordionItems.forEach(item => {
+        const header = item.querySelector('h4');
+        const answer = item.querySelector('.answer');
+        header.addEventListener('click', function () {
+            const isActive = item.classList.contains('active');
+            accordionItems.forEach(accItem => {
+                if (accItem !== item) {
+                    accItem.classList.remove('active');
+                    accItem.querySelector('.answer').style.height = '0';
+                }
+            });
+            item.classList.toggle('active');
+            if (isActive) {
+                answer.style.height = '0';
+            } else {
+                answer.style.height = answer.scrollHeight + 'px';
+            }
+        });
+    });
+});
