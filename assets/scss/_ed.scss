@@ -1279,3 +1279,45 @@ footer{
         background-color: $color2;
     }
 }
+
+//contact style
+
+#contact{
+    .container{
+        .in-contact{
+            @include center;
+            align-items: flex-start;
+            .left{
+                @include column;
+                gap: 20px;
+                width: 45%;
+                h2{
+                    width: 70%;
+                    font-size: $font + 10px;
+                    opacity: .9;
+                }
+                .address, .email, .phone{
+                    @include column;
+                    gap: 10px;
+                    h5{
+                        font-size: $font - 2px;
+                        opacity: .7;
+                    }
+                }
+            }
+            .right{
+                @include column;
+                gap: 5px;
+                width: 45%;
+                h4{
+                    font-size: $font;
+                    opacity: .8;
+                }
+                form{
+                    @include column;
+                    gap: 10px;
+                }
+            }
+        }
+    }
+}
