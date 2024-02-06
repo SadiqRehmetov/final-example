@@ -1356,6 +1356,9 @@ footer .footer-down {
   flex-direction: column;
   gap: 20px;
 }
+#faq-questions .container .in-faq-questions .left ul li {
+  cursor: pointer;
+}
 #faq-questions .container .in-faq-questions .right {
   display: flex;
   flex-direction: column;

@@ -10,11 +10,14 @@
                 gap: 20px;
                 width: 30%;
                 h3{
-                    font-size: $font +10px;
+                    font-size: $font + 10px;
                 }
                 ul{
                     @include column;
                     gap: 20px;
+                    li{
+                        cursor: pointer;
+                    }
                 }
             }
             .right{
