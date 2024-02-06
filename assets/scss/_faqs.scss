@@ -1,5 +1,5 @@
 #faq-questions{
-    background-color: #F3F4F6;
+    // background-color: #F3F4F6;
     .container{
         .in-faq-questions{
             @include center;
@@ -54,3 +54,51 @@
         }
     }
 }
+// footer{
+//     margin-top: 0px;
+//     background-color: black;
+//     .container{
+//         .footer-up{
+//             h3{
+//                 color: white;
+//             }
+//             .first{
+//                 p{
+//                     color: white;
+//                 }
+//                 a{
+//                     color: white;
+//                 }
+//             }
+//             .second{
+//                 h3{
+//                     color: white;
+//                 }
+//                 ul{
+                    
+//                     li{
+//                         a{
+//                             color: white;
+//                             opacity: .7;
+//                         }
+//                     }
+//                 }
+//             }
+//             .third{
+//                 h3{
+//                     color: white;
+//                 }
+//                 p{
+//                     width: 70%;
+//                     color: white;
+//                 }
+//             }
+//         }
+        
+//     }
+//     .footer-down{
+//         border-top: 1px solid rgba(255, 255, 255, 0.369);
+//        background-color: black;
+//        color: white;
+//     }
+// }

@@ -394,6 +394,26 @@
             padding: 20px 40px;
         }
     }
+    //contact
+    #contact{
+        .container{
+            .in-contact{
+                @include column;
+                gap: 40px;
+                .right{
+                    width: 100%;
+                    form{
+                        button{
+                            font-size: $font - 3px;
+                        }
+                    }
+                }
+                .left{
+                    width: 100%;
+                }
+            }
+        }
+    }
 }
 
 @media screen and (max-width: 575px) {
@@ -487,6 +507,23 @@
         }
         .footer-down{
             padding: 20px;
+        }
+    }
+
+    //contact
+    #contact{
+        .container{
+            .in-contact{
+                
+                .right{
+                    form{
+                        button{
+                            font-size: $font - 5px;
+                        }
+                    }
+                }
+                
+            }
         }
     }
 }

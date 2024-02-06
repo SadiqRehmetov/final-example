@@ -76,7 +76,7 @@ header{
             ul{
                 @include center;
                 gap: 30px;
-                font-size: $font;
+                font-size: $font - 3px;
                 li{
                     a{
                         transition: all .5s ease;
@@ -89,7 +89,7 @@ header{
             .icons{
                 @include center;
                 gap: 20px;
-                font-size: $font + 10px;
+                font-size: $font;
                 position: relative;
                 .searchInput{
                     border: none;
@@ -109,9 +109,9 @@ header{
                 }
                 span{
                     padding: 2px;
-                    font-size: $font - 2px;
-                    width: 30px;
-                    height: 30px;
+                    font-size: $font - 6px;
+                    width: 25px;
+                    height: 25px;
                     display: flex;
                     justify-content: center;
                     align-items: center;
@@ -141,13 +141,8 @@ header{
     }
 }
 #banner{
-
     background-color: $color2;
     padding-top: 50px 0px;
-    background-image: url("../image/round.png.webp");
-    // background-position: center;
-    // background-repeat: no-repeat;
-    // background-size: cover;
     .container{
         .in-banner{
             @include center;
@@ -157,7 +152,6 @@ header{
                 width: 45%;
                 h1{
                     font-size: $font + 20px;
-                    // width: 50%;
                     span{
                         color: $color3;
                     }
@@ -286,6 +280,17 @@ header{
             padding: 150px 0px;
             h2{
                 font-size: $font + 30px;
+                padding: 20px 0px;
+                position: relative;
+                    &::after{
+                        content: "";
+                        background-color: $color1;
+                        width: 30%;
+                        height: 10px;
+                        position: absolute;
+                        left: calc((100% - 30%) / 2);
+                        top: 100%;
+                    }
             }
             p{
                 font-size: $font;
@@ -297,11 +302,15 @@ header{
                 gap: 40px;
                 .cart{
                     @include center;
+                    justify-content: flex-start;
                     background-color: rgba(255, 166, 0, 0.552);
                     gap: 20px;
                     padding: 30px 60px;
                     border-radius: 10px;
                     transition: all 0.5s ease;
+                    .icon{
+                        width: 50px;
+                    }
                     &:hover i{
                         color: white;
                     }
@@ -312,7 +321,7 @@ header{
                         font-size: $font + 30px;
                     }
                     a{
-                        font-size: $font + 3px;
+                        font-size: $font - 3px;
                         color: black;
                         
                     }
@@ -404,11 +413,12 @@ header{
     }
 }
 #about{
-    background-image: url("../image/round.png.webp");
+    // background-image: url("../image/round.png.webp");
+    background-color: $color2;
     .container{
         .in-about{
             @include center;
-            padding: 100px 0px;
+            padding: 150px 0px;
             .left{
                 width: 45%;
                 border-radius: 10px;
@@ -620,9 +630,9 @@ header{
                 }
             }
             a{
-                cursor: pointer;
                 margin-bottom: 90px;
                 button{
+                    cursor: pointer;
                     margin-top: 20px;
                     border-radius: 10px;
                     color: white;
@@ -634,6 +644,7 @@ header{
             }
             
             .reyting{
+                background-color: white;
                 padding: 40px;
                 margin-bottom: -300px;
                 width: 600px;
@@ -680,16 +691,21 @@ header{
                     }
                 }
                 .first{
-                    border-right: 1px solid rgba(0, 0, 0, 0.734);
+                    border-right: 1px solid rgba(0, 0, 0, 0.086);
+                    border-bottom: 1px solid rgba(0, 0, 0, 0.086);
                 }
                 .second{
-                    border-bottom: 1px solid rgba(0, 0, 0, 0.735);
+                    border-bottom: 1px solid rgba(0, 0, 0, 0.086);
+                    border-left: 1px solid rgba(0, 0, 0, 0.086);
+
                 }
                 .third{
-                    border-top: 1px solid rgba(0, 0, 0, 0.737);
+                    border-right: 1px solid rgba(0, 0, 0, 0.086);
+                    border-top: 1px solid rgba(0, 0, 0, 0.086);
                 }
                 .fourth{
-                    border-left: 1px solid rgba(0, 0, 0, 0.733);
+                    border-top: 1px solid rgba(0, 0, 0, 0.086);
+                    border-left: 1px solid rgba(0, 0, 0, 0.086);
                 }
             }
             .course-carts{
@@ -712,6 +728,7 @@ header{
                         background-color: #1AB69D;
                         height: 100%;
                         position: absolute;
+                        width: 100%;
                         top: 0;
                         left: 0;
                         z-index: 1;
@@ -741,6 +758,7 @@ header{
                         }
                         h3{
                             opacity: 1;
+                            
                         }
                         .ratings{
                             i{
@@ -815,6 +833,8 @@ header{
                         }
                         h3{
                             opacity: .7;
+                            overflow: hidden;
+                            height: 50px;
                         }
                         .ratings{
                             i{
@@ -1164,6 +1184,9 @@ header{
                         position: absolute;
                         left: calc((100% - (100% - 10px)) / 2);
                         top: 50%;
+                        .info-p{
+                            opacity: .5;
+                        }
                         // h4{
                         //     font-size: $font;
                         // }
@@ -1287,6 +1310,7 @@ footer{
         .in-contact{
             @include center;
             align-items: flex-start;
+            padding: 100px 0px;
             .left{
                 @include column;
                 gap: 20px;
@@ -1304,11 +1328,17 @@ footer{
                         opacity: .7;
                     }
                 }
+                .icons{
+                    display: flex;
+                    gap: 20px
+                }
             }
             .right{
                 @include column;
                 gap: 5px;
                 width: 45%;
+                padding: 50px;
+                box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
                 h4{
                     font-size: $font;
                     opacity: .8;
@@ -1316,6 +1346,31 @@ footer{
                 form{
                     @include column;
                     gap: 10px;
+                    input[type="text"], [type="email"]{
+                        padding: 20px 0px;
+                        border: none;
+                        border-bottom: 1px solid rgba(0, 0, 0, 0.624);
+                        font-size: $font - 4px;
+                        outline: none;
+                    }
+                    textarea {
+                        resize: vertical; 
+                        padding: 20px 0px;
+                        border: none;
+                        border-bottom: 1px solid rgba(0, 0, 0, 0.622);
+                        font-size: $font - 4px;
+                        outline: none;
+                    }
+                    
+                    button{
+                        background-color: #1AB69D;
+                        padding: 20px 10px;
+                        color: white;
+                        font-size: $font;
+                        border: none;
+                        cursor: pointer;
+                        border-radius: 10px;
+                    }
                 }
             }
         }
