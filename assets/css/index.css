@@ -1346,6 +1346,12 @@ footer .footer-down {
   display: flex;
   gap: 20px;
 }
+#contact .container .in-contact .left .icons i {
+  transition: all 0.5s ease;
+}
+#contact .container .in-contact .left .icons i:hover {
+  color: #27B889;
+}
 #contact .container .in-contact .right {
   display: flex;
   flex-direction: column;
@@ -1370,6 +1376,9 @@ footer .footer-down {
   font-size: 16px;
   outline: none;
 }
+#contact .container .in-contact .right form input[type=text]:focus, #contact .container .in-contact .right form [type=email]:focus {
+  border-bottom: 1px solid #27B889;
+}
 #contact .container .in-contact .right form textarea {
   resize: vertical;
   padding: 20px 0px;
@@ -1377,6 +1386,9 @@ footer .footer-down {
   border-bottom: 1px solid rgba(0, 0, 0, 0.622);
   font-size: 16px;
   outline: none;
+}
+#contact .container .in-contact .right form textarea:focus {
+  border-bottom: 1px solid #27B889;
 }
 #contact .container .in-contact .right form button {
   background-color: #1AB69D;
@@ -1448,26 +1460,26 @@ footer .footer-down {
 }
 
 #course .container .in-course .course-search {
-  width: 100%;
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   align-items: center;
+  justify-content: flex-end;
   gap: 20px;
+  width: 100%;
 }
 #course .container .in-course .course-search input {
+  padding: 10px 10px;
+  border-radius: 20px;
   border: none;
-  background-color: #F5F5F5;
-  padding: 20px 40px;
-  font-size: 17px;
-  border-radius: 10px;
+  background-color: #EAF0F2;
   outline: none;
 }
 #course .container .in-course .course-search select {
-  background-color: #F5F5F5;
-  padding: 10px 0px;
-  font-size: 17px;
+  padding: 10px;
   border: none;
-  border-radius: 10px;
+  border-radius: 20px;
+  background-color: #EAF0F2;
+  outline: none;
 }
 
 @media screen and (max-width: 1200px) {

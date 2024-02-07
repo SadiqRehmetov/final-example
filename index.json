@@ -1,561 +1,583 @@
 {
-    "course":[
-        {
-            "id":1,
-            "image":"./assets/image/course-04-590x430.jpg",
-            "category":"Beginner",
-            "name":"Starting SEO as your Home Based Business",
-            "price":"30",
-            "description":"Lorem ipsum dolor sit amet consectur adipiscing elit, sed do eiusmod tempor"
-        },
-        {
-            "id":2,
-            "image":"./assets/image/course-08-590x430.jpg",
-            "category":"Expert",
-            "name":"Grow Personal Financial Security Thinking &",
-            "price":"49"
-        },
-        {
-            "id":3,
-            "image":"./assets/image/course-12-590x430.jpg",
-            "category":"All Levels",
-            "name":"The Complete Guide to Build RESTful API",
-            "price":"Free"
-        },
-        {
-            "id":4,
-            "image":"./assets/image/course-03-590x430.jpg",
-            "category":"All Levels",
-            "name":"Competitive Strategy Law for Management",
-            "price":"75"
-        },
-        {
-            "id":5,
-            "image":"./assets/image/course-04-590x430.jpg",
-            "category":"Beginner",
-            "name":"Starting SEO as your Home Based Business",
-            "price":"30"
-        },
-        {
-            "id":6,
-            "image":"./assets/image/course-08-590x430.jpg",
-            "category":"Expert",
-            "name":"Grow Personal Financial Security Thinking &",
-            "price":"49"
-        },
-        {
-            "id":7,
-            "image":"./assets/image/course-12-590x430.jpg",
-            "category":"All Levels",
-            "name":"The Complete Guide to Build RESTful API",
-            "price":"Free"
-        },
-        {
-            "id":8,
-            "image":"./assets/image/course-03-590x430.jpg",
-            "category":"All Levels",
-            "name":"Competitive Strategy Law for Management",
-            "price":"75"
-        },
-        {
-            "id":9,
-            "image":"./assets/image/course-04-590x430.jpg",
-            "category":"Beginner",
-            "name":"Starting SEO as your Home Based Business",
-            "price":"30"
-        },
-        {
-            "id":10,
-            "image":"./assets/image/course-08-590x430.jpg",
-            "category":"Expert",
-            "name":"Grow Personal Financial Security Thinking &",
-            "price":"49"
-        },
-        {
-            "id":11,
-            "image":"./assets/image/course-12-590x430.jpg",
-            "category":"All Levels",
-            "name":"The Complete Guide to Build RESTful API",
-            "price":"Free"
-        },
-        {
-            "id":12,
-            "image":"./assets/image/course-03-590x430.jpg",
-            "category":"All Levels",
-            "name":"Competitive Strategy Law for Management",
-            "price":"75"
-        },
-        {
-            "id":13,
-            "image":"./assets/image/course-04-590x430.jpg",
-            "category":"Beginner",
-            "name":"Starting SEO as your Home Based Business",
-            "price":"30"
-        },
-        {
-            "id":14,
-            "image":"./assets/image/course-08-590x430.jpg",
-            "category":"Expert",
-            "name":"Grow Personal Financial Security Thinking &",
-            "price":"49"
-        },
-        {
-            "id":15,
-            "image":"./assets/image/course-12-590x430.jpg",
-            "category":"All Levels",
-            "name":"The Complete Guide to Build RESTful API",
-            "price":"Free"
-        },
-        {
-            "id":16,
-            "image":"./assets/image/course-03-590x430.jpg",
-            "category":"All Levels",
-            "name":"Competitive Strategy Law for Management",
-            "price":"75"
-        },
-        {
-            "id":17,
-            "image":"./assets/image/course-04-590x430.jpg",
-            "category":"Beginner",
-            "name":"Starting SEO as your Home Based Business",
-            "price":"30"
-        },
-        {
-            "id":18,
-            "image":"./assets/image/course-08-590x430.jpg",
-            "category":"Expert",
-            "name":"Grow Personal Financial Security Thinking &",
-            "price":"49"
-        },
-        {
-            "id":19,
-            "image":"./assets/image/course-12-590x430.jpg",
-            "category":"All Levels",
-            "name":"The Complete Guide to Build RESTful API",
-            "price":"Free"
-        },
-        {
-            "id":20,
-            "image":"./assets/image/course-03-590x430.jpg",
-            "category":"All Levels",
-            "name":"Competitive Strategy Law for Management",
-            "price":"75"
-        },
-        {
-            "id":21,
-            "image":"./assets/image/course-04-590x430.jpg",
-            "category":"Beginner",
-            "name":"Starting SEO as your Home Based Business",
-            "price":"30"
-        },
-        {
-            "id":22,
-            "image":"./assets/image/course-08-590x430.jpg",
-            "category":"Expert",
-            "name":"Grow Personal Financial Security Thinking &",
-            "price":"49"
-        },
-        {
-            "id":23,
-            "image":"./assets/image/course-12-590x430.jpg",
-            "category":"All Levels",
-            "name":"The Complete Guide to Build RESTful API",
-            "price":"Free"
-        },
-        {
-            "id":24,
-            "image":"./assets/image/course-03-590x430.jpg",
-            "category":"All Levels",
-            "name":"Competitive Strategy Law for Management",
-            "price":"75"
-        },
-        {
-            "id":25,
-            "image":"./assets/image/course-04-590x430.jpg",
-            "category":"Beginner",
-            "name":"Starting SEO as your Home Based Business",
-            "price":"30"
-        },
-        {
-            "id":26,
-            "image":"./assets/image/course-08-590x430.jpg",
-            "category":"Expert",
-            "name":"Grow Personal Financial Security Thinking &",
-            "price":"49"
-        },
-        {
-            "id":27,
-            "image":"./assets/image/course-12-590x430.jpg",
-            "category":"All Levels",
-            "name":"The Complete Guide to Build RESTful API",
-            "price":"Free"
-        },
-        {
-            "id":28,
-            "image":"./assets/image/course-03-590x430.jpg",
-            "category":"All Levels",
-            "name":"Competitive Strategy Law for Management",
-            "price":"75"
-        },
-        {
-            "id":29,
-            "image":"./assets/image/course-04-590x430.jpg",
-            "category":"Beginner",
-            "name":"Starting SEO as your Home Based Business",
-            "price":"30"
-        },
-        {
-            "id":30,
-            "image":"./assets/image/course-08-590x430.jpg",
-            "category":"Expert",
-            "name":"Grow Personal Financial Security Thinking &",
-            "price":"49"
-        },
-        {
-            "id":31,
-            "image":"./assets/image/course-12-590x430.jpg",
-            "category":"All Levels",
-            "name":"The Complete Guide to Build RESTful API",
-            "price":"Free"
-        },
-        {
-            "id":32,
-            "image":"./assets/image/course-03-590x430.jpg",
-            "category":"All Levels",
-            "name":"Competitive Strategy Law for Management",
-            "price":"75"
-        },
-        {
-            "id":33,
-            "image":"./assets/image/course-04-590x430.jpg",
-            "category":"Beginner",
-            "name":"Starting SEO as your Home Based Business",
-            "price":"30"
-        },
-        {
-            "id":34,
-            "image":"./assets/image/course-08-590x430.jpg",
-            "category":"Expert",
-            "name":"Grow Personal Financial Security Thinking &",
-            "price":"49"
-        },
-        {
-            "id":35,
-            "image":"./assets/image/course-12-590x430.jpg",
-            "category":"All Levels",
-            "name":"The Complete Guide to Build RESTful API",
-            "price":"Free"
-        },
-        {
-            "id":36,
-            "image":"./assets/image/course-03-590x430.jpg",
-            "category":"All Levels",
-            "name":"Competitive Strategy Law for Management",
-            "price":"75"
-        },
-        {
-            "id":37,
-            "image":"./assets/image/course-04-590x430.jpg",
-            "category":"Beginner",
-            "name":"Starting SEO as your Home Based Business",
-            "price":"30"
-        },
-        {
-            "id":38,
-            "image":"./assets/image/course-08-590x430.jpg",
-            "category":"Expert",
-            "name":"Grow Personal Financial Security Thinking &",
-            "price":"49"
-        },
-        {
-            "id":39,
-            "image":"./assets/image/course-12-590x430.jpg",
-            "category":"All Levels",
-            "name":"The Complete Guide to Build RESTful API",
-            "price":"Free"
-        },
-        {
-            "id":40,
-            "image":"./assets/image/course-03-590x430.jpg",
-            "category":"All Levels",
-            "name":"Competitive Strategy Law for Management",
-            "price":"75"
-        }
-    ],
-    "instructors":[
-        {
-            "image":"./assets/image/team-01.webp",
-            "name":"Jane Seymour",
-            "job":"UI Designer"
-        },
-        {
-            "image":"./assets/image/team-02.webp",
-            "name":"Edward Norton",
-            "job":"Edward Norton"
-        },
-        {
-            "image":"./assets/image/team-03.webp",
-            "name":"Penelope Cruz",
-            "job":"Digital Marketer"
-        },
-        {
-            "image":"./assets/image/team-04.webp",
-            "name":"John Travolta",
-            "job":"WordPress Expert"
-        }
-    ],
-    "faqs":[
-        {
-            "id":1,
-            "category":"General",
-            "question":"What kind of support does EduBlink provide?",
-            "answer":"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt labore et dolore magna aliqua enim ad minim veniam quis nostrud exercitation ullamco qui laboris nis aliquip commodo consequat."
-        },
-        {
-            "id":2,
-            "category":"General",
-            "question":"How long it take to create a video course?",
-            "answer":"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt labore et dolore magna aliqua enim ad minim veniam quis nostrud exercitation ullamco qui laboris nis aliquip commodo consequat."
-        },
-        {
-            "id":3,
-            "category":"General",
-            "question":"How long do I get support & updates?",
-            "answer":"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt labore et dolore magna aliqua enim ad minim veniam quis nostrud exercitation ullamco qui laboris nis aliquip commodo consequat."
-        },
-        {
-            "id":4,
-            "category":"General",
-            "question":"How long is my personal free trial?",
-            "answer":"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt labore et dolore magna aliqua enim ad minim veniam quis nostrud exercitation ullamco qui laboris nis aliquip commodo consequat."
-        },
-        {
-            "id":5,
-            "category":"General",
-            "question":"How do I find a school where I want to study?",
-            "answer":"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt labore et dolore magna aliqua enim ad minim veniam quis nostrud exercitation ullamco qui laboris nis aliquip commodo consequat."
-        },
-        {
-            "id":6,
-            "category":"General",
-            "question":"How can I contact a school directly?",
-            "answer":"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt labore et dolore magna aliqua enim ad minim veniam quis nostrud exercitation ullamco qui laboris nis aliquip commodo consequat."
-        },
-        {
-            "id":7,
-            "category":"General",
-            "question":"Where can I find information on private companies?",
-            "answer":"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt labore et dolore magna aliqua enim ad minim veniam quis nostrud exercitation ullamco qui laboris nis aliquip commodo consequat."
-        },
-        {
-            "id":8,
-            "category":"Regular",
-            "question":"How can I contact a school directly?",
-            "answer":"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt labore et dolore magna aliqua enim ad minim veniam quis nostrud exercitation ullamco qui laboris nis aliquip commodo consequat."
-        },
-        {
-            "id":9,
-            "category":"Regular",
-            "question":"How long is my personal free trial?",
-            "answer":"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt labore et dolore magna aliqua enim ad minim veniam quis nostrud exercitation ullamco qui laboris nis aliquip commodo consequat."
-        },
-        {
-            "id":10,
-            "category":"Regular",
-            "question":"What kind of support does EduBlink provide?",
-            "answer":"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt labore et dolore magna aliqua enim ad minim veniam quis nostrud exercitation ullamco qui laboris nis aliquip commodo consequat."
-        },
-        {
-            "id":11,
-            "category":"Regular",
-            "question":"How long do I get support & updates?",
-            "answer":"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt labore et dolore magna aliqua enim ad minim veniam quis nostrud exercitation ullamco qui laboris nis aliquip commodo consequat."
-        },
-        {
-            "id":12,
-            "category":"Regular",
-            "question":"Where can I find information on private companies?",
-            "answer":"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt labore et dolore magna aliqua enim ad minim veniam quis nostrud exercitation ullamco qui laboris nis aliquip commodo consequat."
-        },
-        {
-            "id":13,
-            "category":"Regular",
-            "question":"How long it take to create a video course?",
-            "answer":"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt labore et dolore magna aliqua enim ad minim veniam quis nostrud exercitation ullamco qui laboris nis aliquip commodo consequat."
-        },
-        {
-            "id":14,
-            "category":"Regular",
-            "question":"How do I find a school where I want to study?",
-            "answer":"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt labore et dolore magna aliqua enim ad minim veniam quis nostrud exercitation ullamco qui laboris nis aliquip commodo consequat."
-        },
-        {
-            "id":15,
-            "category":"Advanced",
-            "question":"How do I find a school where I want to study?",
-            "answer":"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt labore et dolore magna aliqua enim ad minim veniam quis nostrud exercitation ullamco qui laboris nis aliquip commodo consequat."
-        },
-        {
-            "id":16,
-            "category":"Advanced",
-            "question":"How long do I get support & updates?",
-            "answer":"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt labore et dolore magna aliqua enim ad minim veniam quis nostrud exercitation ullamco qui laboris nis aliquip commodo consequat."
-        },
-        {
-            "id":17,
-            "category":"Advanced",
-            "question":"How can I contact a school directly?",
-            "answer":"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt labore et dolore magna aliqua enim ad minim veniam quis nostrud exercitation ullamco qui laboris nis aliquip commodo consequat."
-        },
-        {
-            "id":18,
-            "category":"Advanced",
-            "question":"How long is my personal free trial?",
-            "answer":"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt labore et dolore magna aliqua enim ad minim veniam quis nostrud exercitation ullamco qui laboris nis aliquip commodo consequat."
-        },
-        {
-            "id":19,
-            "category":"Advanced",
-            "question":"What kind of support does EduBlink provide?",
-            "answer":"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt labore et dolore magna aliqua enim ad minim veniam quis nostrud exercitation ullamco qui laboris nis aliquip commodo consequat."
-        },
-        {
-            "id":20,
-            "category":"Advanced",
-            "question":"How long it take to create a video course?",
-            "answer":"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt labore et dolore magna aliqua enim ad minim veniam quis nostrud exercitation ullamco qui laboris nis aliquip commodo consequat."
-        },
-        {
-            "id":21,
-            "category":"Advanced",
-            "question":"Where can I find information on private companies?",
-            "answer":"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt labore et dolore magna aliqua enim ad minim veniam quis nostrud exercitation ullamco qui laboris nis aliquip commodo consequat."
-        },
-        {
-            "id":22,
-            "category":"Company",
-            "question":"What kind of support does EduBlink provide?",
-            "answer":"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt labore et dolore magna aliqua enim ad minim veniam quis nostrud exercitation ullamco qui laboris nis aliquip commodo consequat."
-        },
-        {
-            "id":23,
-            "category":"Company",
-            "question":"How long it take to create a video course?",
-            "answer":"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt labore et dolore magna aliqua enim ad minim veniam quis nostrud exercitation ullamco qui laboris nis aliquip commodo consequat."
-        },
-        {
-            "id":24,
-            "category":"Company",
-            "question":"Where can I find information on private companies?",
-            "answer":"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt labore et dolore magna aliqua enim ad minim veniam quis nostrud exercitation ullamco qui laboris nis aliquip commodo consequat."
-        },
-        {
-            "id":25,
-            "category":"Company",
-            "question":"How do I find a school where I want to study?",
-            "answer":"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt labore et dolore magna aliqua enim ad minim veniam quis nostrud exercitation ullamco qui laboris nis aliquip commodo consequat."
-        },
-        {
-            "id":26,
-            "category":"Company",
-            "question":"How can I contact a school directly?",
-            "answer":"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt labore et dolore magna aliqua enim ad minim veniam quis nostrud exercitation ullamco qui laboris nis aliquip commodo consequat."
-        },
-        {
-            "id":27,
-            "category":"Company",
-            "question":"How long is my personal free trial?",
-            "answer":"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt labore et dolore magna aliqua enim ad minim veniam quis nostrud exercitation ullamco qui laboris nis aliquip commodo consequat."
-        },
-        {
-            "id":28,
-            "category":"Company",
-            "question":"How long do I get support & updates?",
-            "answer":"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt labore et dolore magna aliqua enim ad minim veniam quis nostrud exercitation ullamco qui laboris nis aliquip commodo consequat."
-        },
-        {
-            "id":29,
-            "category":"Payment",
-            "question":"How to Change my Plan using PayPal?",
-            "answer":"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt labore et dolore magna aliqua enim ad minim veniam quis nostrud exercitation ullamco qui laboris nis aliquip commodo consequat."
-        },
-        {
-            "id":30,
-            "category":"Payment",
-            "question":"Is There Any Prerequisites To Learn Python?",
-            "answer":"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt labore et dolore magna aliqua enim ad minim veniam quis nostrud exercitation ullamco qui laboris nis aliquip commodo consequat."
-        },
-        {
-            "id":31,
-            "category":"Payment",
-            "question":"Where can I find information on private companies?",
-            "answer":"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt labore et dolore magna aliqua enim ad minim veniam quis nostrud exercitation ullamco qui laboris nis aliquip commodo consequat."
-        },
-        {
-            "id":32,
-            "category":"Payment",
-            "question":"How do I find a school where I want to study?",
-            "answer":"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt labore et dolore magna aliqua enim ad minim veniam quis nostrud exercitation ullamco qui laboris nis aliquip commodo consequat."
-        },
-        {
-            "id":33,
-            "category":"Payment",
-            "question":"How can I contact a school directly?",
-            "answer":"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt labore et dolore magna aliqua enim ad minim veniam quis nostrud exercitation ullamco qui laboris nis aliquip commodo consequat."
-        },
-        {
-            "id":34,
-            "category":"Payment",
-            "question":"How long is my personal free trial?",
-            "answer":"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt labore et dolore magna aliqua enim ad minim veniam quis nostrud exercitation ullamco qui laboris nis aliquip commodo consequat."
-        },
-        {
-            "id":35,
-            "category":"Payment",
-            "question":"How long do I get support & updates?",
-            "answer":"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt labore et dolore magna aliqua enim ad minim veniam quis nostrud exercitation ullamco qui laboris nis aliquip commodo consequat."
-        },
-        {
-            "id":36,
-            "category":"Terms & Conditions",
-            "question":"Do You Provide Career Guideline?",
-            "answer":"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt labore et dolore magna aliqua enim ad minim veniam quis nostrud exercitation ullamco qui laboris nis aliquip commodo consequat."
-        },
-        {
-            "id":37,
-            "category":"Terms & Conditions",
-            "question":"How long is my personal free trial?",
-            "answer":"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt labore et dolore magna aliqua enim ad minim veniam quis nostrud exercitation ullamco qui laboris nis aliquip commodo consequat."
-        },
-        {
-            "id":38,
-            "category":"Terms & Conditions",
-            "question":"Where can I find information on private companies?",
-            "answer":"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt labore et dolore magna aliqua enim ad minim veniam quis nostrud exercitation ullamco qui laboris nis aliquip commodo consequat."
-        },
-        {
-            "id":39,
-            "category":"Terms & Conditions",
-            "question":"How do I find a school where I want to study?",
-            "answer":"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt labore et dolore magna aliqua enim ad minim veniam quis nostrud exercitation ullamco qui laboris nis aliquip commodo consequat."
-        },
-        {
-            "id":40,
-            "category":"Terms & Conditions",
-            "question":"How can I contact a school directly?",
-            "answer":"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt labore et dolore magna aliqua enim ad minim veniam quis nostrud exercitation ullamco qui laboris nis aliquip commodo consequat."
-        },
-        {
-            "id":41,
-            "category":"Terms & Conditions",
-            "question":"How long is my personal free trial?",
-            "answer":"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt labore et dolore magna aliqua enim ad minim veniam quis nostrud exercitation ullamco qui laboris nis aliquip commodo consequat."
-        },
-        {
-            "id":42,
-            "category":"Terms & Conditions",
-            "question":"How do I redeem a coupon?",
-            "answer":"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt labore et dolore magna aliqua enim ad minim veniam quis nostrud exercitation ullamco qui laboris nis aliquip commodo consequat."
-        }
-    ]
+  "course": [
+    {
+      "id": "1",
+      "image": "./assets/image/course-04-590x430.jpg",
+      "category": "Beginner",
+      "name": "Starting SEO as your Home Based Business",
+      "price": "30",
+      "description": "Lorem ipsum dolor sit amet consectur adipiscing elit, sed do eiusmod tempor"
+    },
+    {
+      "id": "2",
+      "image": "./assets/image/course-08-590x430.jpg",
+      "category": "Expert",
+      "name": "Grow Personal Financial Security Thinking &",
+      "price": "49"
+    },
+    {
+      "id": "3",
+      "image": "./assets/image/course-12-590x430.jpg",
+      "category": "All Levels",
+      "name": "The Complete Guide to Build RESTful API",
+      "price": "Free"
+    },
+    {
+      "id": "4",
+      "image": "./assets/image/course-03-590x430.jpg",
+      "category": "All Levels",
+      "name": "Competitive Strategy Law for Management",
+      "price": "75"
+    },
+    {
+      "id": "5",
+      "image": "./assets/image/course-04-590x430.jpg",
+      "category": "Beginner",
+      "name": "Starting SEO as your Home Based Business",
+      "price": "30"
+    },
+    {
+      "id": "6",
+      "image": "./assets/image/course-08-590x430.jpg",
+      "category": "Expert",
+      "name": "Grow Personal Financial Security Thinking &",
+      "price": "49"
+    },
+    {
+      "id": "7",
+      "image": "./assets/image/course-12-590x430.jpg",
+      "category": "All Levels",
+      "name": "The Complete Guide to Build RESTful API",
+      "price": "Free"
+    },
+    {
+      "id": "8",
+      "image": "./assets/image/course-03-590x430.jpg",
+      "category": "All Levels",
+      "name": "Competitive Strategy Law for Management",
+      "price": "75"
+    },
+    {
+      "id": "9",
+      "image": "./assets/image/course-04-590x430.jpg",
+      "category": "Beginner",
+      "name": "Starting SEO as your Home Based Business",
+      "price": "30"
+    },
+    {
+      "id": "10",
+      "image": "./assets/image/course-08-590x430.jpg",
+      "category": "Expert",
+      "name": "Grow Personal Financial Security Thinking &",
+      "price": "49"
+    },
+    {
+      "id": "11",
+      "image": "./assets/image/course-12-590x430.jpg",
+      "category": "All Levels",
+      "name": "The Complete Guide to Build RESTful API",
+      "price": "Free"
+    },
+    {
+      "id": "12",
+      "image": "./assets/image/course-03-590x430.jpg",
+      "category": "All Levels",
+      "name": "Competitive Strategy Law for Management",
+      "price": "75"
+    },
+    {
+      "id": "13",
+      "image": "./assets/image/course-04-590x430.jpg",
+      "category": "Beginner",
+      "name": "Starting SEO as your Home Based Business",
+      "price": "30"
+    },
+    {
+      "id": "14",
+      "image": "./assets/image/course-08-590x430.jpg",
+      "category": "Expert",
+      "name": "Grow Personal Financial Security Thinking &",
+      "price": "49"
+    },
+    {
+      "id": "15",
+      "image": "./assets/image/course-12-590x430.jpg",
+      "category": "All Levels",
+      "name": "The Complete Guide to Build RESTful API",
+      "price": "Free"
+    },
+    {
+      "id": "16",
+      "image": "./assets/image/course-03-590x430.jpg",
+      "category": "All Levels",
+      "name": "Competitive Strategy Law for Management",
+      "price": "75"
+    },
+    {
+      "id": "17",
+      "image": "./assets/image/course-04-590x430.jpg",
+      "category": "Beginner",
+      "name": "Starting SEO as your Home Based Business",
+      "price": "30"
+    },
+    {
+      "id": "18",
+      "image": "./assets/image/course-08-590x430.jpg",
+      "category": "Expert",
+      "name": "Grow Personal Financial Security Thinking &",
+      "price": "49"
+    },
+    {
+      "id": "19",
+      "image": "./assets/image/course-12-590x430.jpg",
+      "category": "All Levels",
+      "name": "The Complete Guide to Build RESTful API",
+      "price": "Free"
+    },
+    {
+      "id": "20",
+      "image": "./assets/image/course-03-590x430.jpg",
+      "category": "All Levels",
+      "name": "Competitive Strategy Law for Management",
+      "price": "75"
+    },
+    {
+      "id": "21",
+      "image": "./assets/image/course-04-590x430.jpg",
+      "category": "Beginner",
+      "name": "Starting SEO as your Home Based Business",
+      "price": "30"
+    },
+    {
+      "id": "22",
+      "image": "./assets/image/course-08-590x430.jpg",
+      "category": "Expert",
+      "name": "Grow Personal Financial Security Thinking &",
+      "price": "49"
+    },
+    {
+      "id": "23",
+      "image": "./assets/image/course-12-590x430.jpg",
+      "category": "All Levels",
+      "name": "The Complete Guide to Build RESTful API",
+      "price": "Free"
+    },
+    {
+      "id": "24",
+      "image": "./assets/image/course-03-590x430.jpg",
+      "category": "All Levels",
+      "name": "Competitive Strategy Law for Management",
+      "price": "75"
+    },
+    {
+      "id": "25",
+      "image": "./assets/image/course-04-590x430.jpg",
+      "category": "Beginner",
+      "name": "Starting SEO as your Home Based Business",
+      "price": "30"
+    },
+    {
+      "id": "26",
+      "image": "./assets/image/course-08-590x430.jpg",
+      "category": "Expert",
+      "name": "Grow Personal Financial Security Thinking &",
+      "price": "49"
+    },
+    {
+      "id": "27",
+      "image": "./assets/image/course-12-590x430.jpg",
+      "category": "All Levels",
+      "name": "The Complete Guide to Build RESTful API",
+      "price": "Free"
+    },
+    {
+      "id": "28",
+      "image": "./assets/image/course-03-590x430.jpg",
+      "category": "All Levels",
+      "name": "Competitive Strategy Law for Management",
+      "price": "75"
+    },
+    {
+      "id": "29",
+      "image": "./assets/image/course-04-590x430.jpg",
+      "category": "Beginner",
+      "name": "Starting SEO as your Home Based Business",
+      "price": "30"
+    },
+    {
+      "id": "30",
+      "image": "./assets/image/course-08-590x430.jpg",
+      "category": "Expert",
+      "name": "Grow Personal Financial Security Thinking &",
+      "price": "49"
+    },
+    {
+      "id": "31",
+      "image": "./assets/image/course-12-590x430.jpg",
+      "category": "All Levels",
+      "name": "The Complete Guide to Build RESTful API",
+      "price": "Free"
+    },
+    {
+      "id": "32",
+      "image": "./assets/image/course-03-590x430.jpg",
+      "category": "All Levels",
+      "name": "Competitive Strategy Law for Management",
+      "price": "75"
+    },
+    {
+      "id": "33",
+      "image": "./assets/image/course-04-590x430.jpg",
+      "category": "Beginner",
+      "name": "Starting SEO as your Home Based Business",
+      "price": "30"
+    },
+    {
+      "id": "34",
+      "image": "./assets/image/course-08-590x430.jpg",
+      "category": "Expert",
+      "name": "Grow Personal Financial Security Thinking &",
+      "price": "49"
+    },
+    {
+      "id": "35",
+      "image": "./assets/image/course-12-590x430.jpg",
+      "category": "All Levels",
+      "name": "The Complete Guide to Build RESTful API",
+      "price": "Free"
+    },
+    {
+      "id": "36",
+      "image": "./assets/image/course-03-590x430.jpg",
+      "category": "All Levels",
+      "name": "Competitive Strategy Law for Management",
+      "price": "75"
+    },
+    {
+      "id": "37",
+      "image": "./assets/image/course-04-590x430.jpg",
+      "category": "Beginner",
+      "name": "Starting SEO as your Home Based Business",
+      "price": "30"
+    },
+    {
+      "id": "38",
+      "image": "./assets/image/course-08-590x430.jpg",
+      "category": "Expert",
+      "name": "Grow Personal Financial Security Thinking &",
+      "price": "49"
+    },
+    {
+      "id": "39",
+      "image": "./assets/image/course-12-590x430.jpg",
+      "category": "All Levels",
+      "name": "The Complete Guide to Build RESTful API",
+      "price": "Free"
+    },
+    {
+      "id": "40",
+      "image": "./assets/image/course-03-590x430.jpg",
+      "category": "All Levels",
+      "name": "Competitive Strategy Law for Management",
+      "price": "75"
+    }
+  ],
+  "instructors": [
+    {
+      "image": "./assets/image/team-01.webp",
+      "name": "Jane Seymour",
+      "job": "UI Designer",
+      "id": "0a8c"
+    },
+    {
+      "image": "./assets/image/team-02.webp",
+      "name": "Edward Norton",
+      "job": "Edward Norton",
+      "id": "dcc3"
+    },
+    {
+      "image": "./assets/image/team-03.webp",
+      "name": "Penelope Cruz",
+      "job": "Digital Marketer",
+      "id": "0981"
+    },
+    {
+      "image": "./assets/image/team-04.webp",
+      "name": "John Travolta",
+      "job": "WordPress Expert",
+      "id": "e590"
+    }
+  ],
+  "faqs": [
+    {
+      "id": "1",
+      "category": "General",
+      "question": "What kind of support does EduBlink provide?",
+      "answer": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt labore et dolore magna aliqua enim ad minim veniam quis nostrud exercitation ullamco qui laboris nis aliquip commodo consequat."
+    },
+    {
+      "id": "2",
+      "category": "General",
+      "question": "How long it take to create a video course?",
+      "answer": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt labore et dolore magna aliqua enim ad minim veniam quis nostrud exercitation ullamco qui laboris nis aliquip commodo consequat."
+    },
+    {
+      "id": "3",
+      "category": "General",
+      "question": "How long do I get support & updates?",
+      "answer": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt labore et dolore magna aliqua enim ad minim veniam quis nostrud exercitation ullamco qui laboris nis aliquip commodo consequat."
+    },
+    {
+      "id": "4",
+      "category": "General",
+      "question": "How long is my personal free trial?",
+      "answer": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt labore et dolore magna aliqua enim ad minim veniam quis nostrud exercitation ullamco qui laboris nis aliquip commodo consequat."
+    },
+    {
+      "id": "5",
+      "category": "General",
+      "question": "How do I find a school where I want to study?",
+      "answer": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt labore et dolore magna aliqua enim ad minim veniam quis nostrud exercitation ullamco qui laboris nis aliquip commodo consequat."
+    },
+    {
+      "id": "6",
+      "category": "General",
+      "question": "How can I contact a school directly?",
+      "answer": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt labore et dolore magna aliqua enim ad minim veniam quis nostrud exercitation ullamco qui laboris nis aliquip commodo consequat."
+    },
+    {
+      "id": "7",
+      "category": "General",
+      "question": "Where can I find information on private companies?",
+      "answer": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt labore et dolore magna aliqua enim ad minim veniam quis nostrud exercitation ullamco qui laboris nis aliquip commodo consequat."
+    },
+    {
+      "id": "8",
+      "category": "Regular",
+      "question": "How can I contact a school directly?",
+      "answer": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt labore et dolore magna aliqua enim ad minim veniam quis nostrud exercitation ullamco qui laboris nis aliquip commodo consequat."
+    },
+    {
+      "id": "9",
+      "category": "Regular",
+      "question": "How long is my personal free trial?",
+      "answer": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt labore et dolore magna aliqua enim ad minim veniam quis nostrud exercitation ullamco qui laboris nis aliquip commodo consequat."
+    },
+    {
+      "id": "10",
+      "category": "Regular",
+      "question": "What kind of support does EduBlink provide?",
+      "answer": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt labore et dolore magna aliqua enim ad minim veniam quis nostrud exercitation ullamco qui laboris nis aliquip commodo consequat."
+    },
+    {
+      "id": "11",
+      "category": "Regular",
+      "question": "How long do I get support & updates?",
+      "answer": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt labore et dolore magna aliqua enim ad minim veniam quis nostrud exercitation ullamco qui laboris nis aliquip commodo consequat."
+    },
+    {
+      "id": "12",
+      "category": "Regular",
+      "question": "Where can I find information on private companies?",
+      "answer": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt labore et dolore magna aliqua enim ad minim veniam quis nostrud exercitation ullamco qui laboris nis aliquip commodo consequat."
+    },
+    {
+      "id": "13",
+      "category": "Regular",
+      "question": "How long it take to create a video course?",
+      "answer": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt labore et dolore magna aliqua enim ad minim veniam quis nostrud exercitation ullamco qui laboris nis aliquip commodo consequat."
+    },
+    {
+      "id": "14",
+      "category": "Regular",
+      "question": "How do I find a school where I want to study?",
+      "answer": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt labore et dolore magna aliqua enim ad minim veniam quis nostrud exercitation ullamco qui laboris nis aliquip commodo consequat."
+    },
+    {
+      "id": "15",
+      "category": "Advanced",
+      "question": "How do I find a school where I want to study?",
+      "answer": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt labore et dolore magna aliqua enim ad minim veniam quis nostrud exercitation ullamco qui laboris nis aliquip commodo consequat."
+    },
+    {
+      "id": "16",
+      "category": "Advanced",
+      "question": "How long do I get support & updates?",
+      "answer": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt labore et dolore magna aliqua enim ad minim veniam quis nostrud exercitation ullamco qui laboris nis aliquip commodo consequat."
+    },
+    {
+      "id": "17",
+      "category": "Advanced",
+      "question": "How can I contact a school directly?",
+      "answer": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt labore et dolore magna aliqua enim ad minim veniam quis nostrud exercitation ullamco qui laboris nis aliquip commodo consequat."
+    },
+    {
+      "id": "18",
+      "category": "Advanced",
+      "question": "How long is my personal free trial?",
+      "answer": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt labore et dolore magna aliqua enim ad minim veniam quis nostrud exercitation ullamco qui laboris nis aliquip commodo consequat."
+    },
+    {
+      "id": "19",
+      "category": "Advanced",
+      "question": "What kind of support does EduBlink provide?",
+      "answer": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt labore et dolore magna aliqua enim ad minim veniam quis nostrud exercitation ullamco qui laboris nis aliquip commodo consequat."
+    },
+    {
+      "id": "20",
+      "category": "Advanced",
+      "question": "How long it take to create a video course?",
+      "answer": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt labore et dolore magna aliqua enim ad minim veniam quis nostrud exercitation ullamco qui laboris nis aliquip commodo consequat."
+    },
+    {
+      "id": "21",
+      "category": "Advanced",
+      "question": "Where can I find information on private companies?",
+      "answer": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt labore et dolore magna aliqua enim ad minim veniam quis nostrud exercitation ullamco qui laboris nis aliquip commodo consequat."
+    },
+    {
+      "id": "22",
+      "category": "Company",
+      "question": "What kind of support does EduBlink provide?",
+      "answer": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt labore et dolore magna aliqua enim ad minim veniam quis nostrud exercitation ullamco qui laboris nis aliquip commodo consequat."
+    },
+    {
+      "id": "23",
+      "category": "Company",
+      "question": "How long it take to create a video course?",
+      "answer": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt labore et dolore magna aliqua enim ad minim veniam quis nostrud exercitation ullamco qui laboris nis aliquip commodo consequat."
+    },
+    {
+      "id": "24",
+      "category": "Company",
+      "question": "Where can I find information on private companies?",
+      "answer": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt labore et dolore magna aliqua enim ad minim veniam quis nostrud exercitation ullamco qui laboris nis aliquip commodo consequat."
+    },
+    {
+      "id": "25",
+      "category": "Company",
+      "question": "How do I find a school where I want to study?",
+      "answer": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt labore et dolore magna aliqua enim ad minim veniam quis nostrud exercitation ullamco qui laboris nis aliquip commodo consequat."
+    },
+    {
+      "id": "26",
+      "category": "Company",
+      "question": "How can I contact a school directly?",
+      "answer": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt labore et dolore magna aliqua enim ad minim veniam quis nostrud exercitation ullamco qui laboris nis aliquip commodo consequat."
+    },
+    {
+      "id": "27",
+      "category": "Company",
+      "question": "How long is my personal free trial?",
+      "answer": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt labore et dolore magna aliqua enim ad minim veniam quis nostrud exercitation ullamco qui laboris nis aliquip commodo consequat."
+    },
+    {
+      "id": "28",
+      "category": "Company",
+      "question": "How long do I get support & updates?",
+      "answer": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt labore et dolore magna aliqua enim ad minim veniam quis nostrud exercitation ullamco qui laboris nis aliquip commodo consequat."
+    },
+    {
+      "id": "29",
+      "category": "Payment",
+      "question": "How to Change my Plan using PayPal?",
+      "answer": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt labore et dolore magna aliqua enim ad minim veniam quis nostrud exercitation ullamco qui laboris nis aliquip commodo consequat."
+    },
+    {
+      "id": "30",
+      "category": "Payment",
+      "question": "Is There Any Prerequisites To Learn Python?",
+      "answer": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt labore et dolore magna aliqua enim ad minim veniam quis nostrud exercitation ullamco qui laboris nis aliquip commodo consequat."
+    },
+    {
+      "id": "31",
+      "category": "Payment",
+      "question": "Where can I find information on private companies?",
+      "answer": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt labore et dolore magna aliqua enim ad minim veniam quis nostrud exercitation ullamco qui laboris nis aliquip commodo consequat."
+    },
+    {
+      "id": "32",
+      "category": "Payment",
+      "question": "How do I find a school where I want to study?",
+      "answer": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt labore et dolore magna aliqua enim ad minim veniam quis nostrud exercitation ullamco qui laboris nis aliquip commodo consequat."
+    },
+    {
+      "id": "33",
+      "category": "Payment",
+      "question": "How can I contact a school directly?",
+      "answer": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt labore et dolore magna aliqua enim ad minim veniam quis nostrud exercitation ullamco qui laboris nis aliquip commodo consequat."
+    },
+    {
+      "id": "34",
+      "category": "Payment",
+      "question": "How long is my personal free trial?",
+      "answer": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt labore et dolore magna aliqua enim ad minim veniam quis nostrud exercitation ullamco qui laboris nis aliquip commodo consequat."
+    },
+    {
+      "id": "35",
+      "category": "Payment",
+      "question": "How long do I get support & updates?",
+      "answer": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt labore et dolore magna aliqua enim ad minim veniam quis nostrud exercitation ullamco qui laboris nis aliquip commodo consequat."
+    },
+    {
+      "id": "36",
+      "category": "Terms & Conditions",
+      "question": "Do You Provide Career Guideline?",
+      "answer": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt labore et dolore magna aliqua enim ad minim veniam quis nostrud exercitation ullamco qui laboris nis aliquip commodo consequat."
+    },
+    {
+      "id": "37",
+      "category": "Terms & Conditions",
+      "question": "How long is my personal free trial?",
+      "answer": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt labore et dolore magna aliqua enim ad minim veniam quis nostrud exercitation ullamco qui laboris nis aliquip commodo consequat."
+    },
+    {
+      "id": "38",
+      "category": "Terms & Conditions",
+      "question": "Where can I find information on private companies?",
+      "answer": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt labore et dolore magna aliqua enim ad minim veniam quis nostrud exercitation ullamco qui laboris nis aliquip commodo consequat."
+    },
+    {
+      "id": "39",
+      "category": "Terms & Conditions",
+      "question": "How do I find a school where I want to study?",
+      "answer": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt labore et dolore magna aliqua enim ad minim veniam quis nostrud exercitation ullamco qui laboris nis aliquip commodo consequat."
+    },
+    {
+      "id": "40",
+      "category": "Terms & Conditions",
+      "question": "How can I contact a school directly?",
+      "answer": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt labore et dolore magna aliqua enim ad minim veniam quis nostrud exercitation ullamco qui laboris nis aliquip commodo consequat."
+    },
+    {
+      "id": "41",
+      "category": "Terms & Conditions",
+      "question": "How long is my personal free trial?",
+      "answer": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt labore et dolore magna aliqua enim ad minim veniam quis nostrud exercitation ullamco qui laboris nis aliquip commodo consequat."
+    },
+    {
+      "id": "42",
+      "category": "Terms & Conditions",
+      "question": "How do I redeem a coupon?",
+      "answer": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt labore et dolore magna aliqua enim ad minim veniam quis nostrud exercitation ullamco qui laboris nis aliquip commodo consequat."
+    }
+  ],
+  "user": [
+    {
+      "id": "3f3e",
+      "name": "Sadiq",
+      "surname": "Rəhmətov",
+      "email": "friyaziyyat@gmail.com",
+      "phone": "+994507624294",
+      "password": "1234"
+    },
+    {
+      "id": "6591",
+      "name": "Sadiq",
+      "surname": "Rəhmətov",
+      "email": "sadiq@gmail.com",
+      "phone": "+994507624294",
+      "password": "666"
+    }
+  ]
 }

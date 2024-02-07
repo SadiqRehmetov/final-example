@@ -1,0 +1,26 @@
+#course{
+    .container{
+        .in-course{
+            .course-search{
+                @include center;
+                justify-content: flex-end;
+                gap: 20px;
+                width: 100%;
+                input{
+                    padding: 10px 10px;
+                    border-radius: 20px;
+                    border: none;
+                    background-color: $color2;
+                    outline: none;
+                }
+                select{
+                    padding: 10px;
+                    border: none;
+                    border-radius: 20px;
+                    background-color: $color2;
+                    outline: none;
+                }
+            }
+        }
+    }
+}

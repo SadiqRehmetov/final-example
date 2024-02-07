@@ -1330,7 +1330,13 @@ footer{
                 }
                 .icons{
                     display: flex;
-                    gap: 20px
+                    gap: 20px;
+                    i{
+                        transition: all .5s ease;
+                        &:hover{
+                            color: $color1;
+                        }
+                    }
                 }
             }
             .right{
@@ -1352,6 +1358,9 @@ footer{
                         border-bottom: 1px solid rgba(0, 0, 0, 0.624);
                         font-size: $font - 4px;
                         outline: none;
+                        &:focus{
+                            border-bottom: 1px solid $color1;
+                        }
                     }
                     textarea {
                         resize: vertical; 
@@ -1360,6 +1369,9 @@ footer{
                         border-bottom: 1px solid rgba(0, 0, 0, 0.622);
                         font-size: $font - 4px;
                         outline: none;
+                        &:focus{
+                            border-bottom: 1px solid $color1;
+                        }
                     }
                     
                     button{
