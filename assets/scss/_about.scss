@@ -34,3 +34,267 @@
         }
     }
 }
+
+#about-us{
+    .container{
+        .in-about-us{
+            @include center;
+            padding: 100px 0px;
+            .left{
+                width: 45%;
+                @include column;
+                gap: 5px;
+                h2{
+                    padding: 10px 0px;
+                    font-size: $font + 20px;
+                    width: 100%;
+                    position: relative;
+                    &::after{
+                        content: "";
+                        background-color: $color1;
+                        width: 30%;
+                        height: 10px;
+                        clip-path: path('M 0 200 L 0,75 A 5,5 0,0,1 150,75 L 200 200 z');
+                        position: absolute;
+                        left: 0;
+                        top: 100%;
+                    }
+                    span{
+                        color: $color3;
+                    }
+                }
+                p{
+                    font-size: $font - 3px;
+                    margin: 20px 0px;
+                }
+                div{
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                    i{
+                        font-size: $font + 15px;
+                        color: $color8;
+                    }
+                    strong{
+                        font-size: $font - 3px;
+                        opacity: .6;
+                    }
+                }
+            }
+            .right{
+                width: 45%;
+                .image{
+                    border-radius: 10px;
+                    width: 100%;
+                    position: relative;
+                    .img1{
+                        border-radius: 10px;
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                    .img2{
+                        position: absolute;
+                        right: -50px;
+                        top: -50px;
+                    }
+                    .img3{
+                        position: absolute;
+                        left: -50px;
+                        bottom: -50px;
+                    }
+                }
+            }
+        }
+    }
+}
+#partner-course{
+    .container{
+        .in-partner-course{
+            display: grid;
+            grid-template-columns: repeat(6, auto);
+            div{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+    }
+}
+#beneficial{
+    background-image: url("../image/shape-36.png");
+    background-position: center;
+    background-color: #F0F4F5;
+    margin-bottom: 200px;
+    .container{
+        .in-beneficial{
+            @include column;
+            align-items: center;
+            gap: 40px;
+            padding: 150px 0px;
+            position: relative;
+            h2{
+                width: 50%;
+                text-align: center;
+                font-size: $font + 20px;
+                opacity: .7;
+                position: relative;
+                &::after{
+                    content: "";
+                    width: 50%;
+                    height: 5px;
+                    background-color: $color1;
+                    position: absolute;
+                    top: 100%;
+                    left: 0;
+                }
+                span{
+                    color: $color3;
+                }
+            }
+            .beneficial-carts{
+                margin-bottom: -300px;
+                display: grid;
+                grid-template-columns: repeat(3,auto);
+                gap: 40px;
+                :nth-child(1)
+{
+    transition: all .5s ease;
+    &:hover :nth-child(1){
+        background-color: $color1;
+        color: white;
+    }
+    :nth-child(1){
+        background-color: $color2;
+        color: $color1;
+        font-size: $font +10px;
+    }
+} 
+:nth-child(2)
+{
+    transition: all .5s ease;
+    &:hover :nth-child(1){
+        background-color: $color3;
+        color: white;
+    }
+    :nth-child(1){
+        background-color: $color23;
+        color: $color3;
+        font-size: $font +10px;
+    }
+}
+:nth-child(3)
+{
+    transition: all .5s ease;
+    &:hover :nth-child(1){
+        background-color: $color24;
+        color: white;
+    }
+    :nth-child(1){
+        background-color: $color25;
+        color: $color24;
+        font-size: $font +10px;
+    }
+} 
+                .cart{
+                    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+                    border-radius: 10px;
+                    padding: 70px 30px;
+                    background-color: white;
+                    @include column;
+                    align-items: center;
+                    gap: 20px;
+                    text-align: center;
+                    h4{
+                        font-size: $font;
+                    }
+                    .icon{
+                        width: 100px;
+                        height: 100px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        border-radius: 9999px;
+                    }
+                }
+            }
+        }
+    }
+}
+#statistic{
+    background-image: url("../image/map-shape-3.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #e3e3e369;
+    .container{
+        .in-statistic{
+            padding: 50px 0px;
+            .statistic-carts{
+                width: 100%;
+                display: grid;
+                grid-template-columns: repeat(4,auto);
+                gap: 40px;
+                :nth-child(1)
+{
+    
+    
+    :nth-child(1){
+        background-color: $color2;
+        color: $color1;
+        font-size: $font +10px;
+    }
+} 
+:nth-child(2)
+{
+    
+    
+    :nth-child(1){
+        background-color: $color23;
+        color: $color3;
+        font-size: $font +10px;
+    }
+}
+:nth-child(3)
+{
+    :nth-child(1){
+        background-color: $color25;
+        color: $color24;
+        font-size: $font +10px;
+    }
+}
+:nth-child(4)
+{
+    :nth-child(1){
+        background-color: $color9;
+        color: $color8;
+        font-size: $font +10px;
+    }
+}
+                .cart{
+                    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+                    border-radius: 10px;
+                    background-color: white;
+                    padding: 50px 30px;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 10px;
+                    
+                    .icon{
+                        width: 100px;
+                        height: 100px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        border-radius: 9999px;
+                    }
+                    h4{
+                        font-size: $font + 20px;
+                        opacity: .7;
+                    }
+                }
+            }
+        }
+    }
+}

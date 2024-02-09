@@ -287,24 +287,28 @@
       "image": "./assets/image/team-01.webp",
       "name": "Jane Seymour",
       "job": "UI Designer",
+      "description":"Consectetur adipisicing elit, sed do eius mod tempor incididunt",
       "id": "0a8c"
     },
     {
       "image": "./assets/image/team-02.webp",
       "name": "Edward Norton",
       "job": "Edward Norton",
+      "description":"Consectetur adipisicing elit, sed do eius mod tempor incididunt",
       "id": "dcc3"
     },
     {
       "image": "./assets/image/team-03.webp",
       "name": "Penelope Cruz",
       "job": "Digital Marketer",
+      "description":"Consectetur adipisicing elit, sed do eius mod tempor incididunt",
       "id": "0981"
     },
     {
       "image": "./assets/image/team-04.webp",
       "name": "John Travolta",
       "job": "WordPress Expert",
+      "description":"Consectetur adipisicing elit, sed do eius mod tempor incididunt",
       "id": "e590"
     }
   ],

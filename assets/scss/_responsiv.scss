@@ -151,6 +151,63 @@
             }
         }
     }
+    #about-us{
+        .container{
+            .in-about-us{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 50px;
+                .left{
+                    width: 100%;
+                }
+                .right{
+                    width: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    .image{
+                        width: 70%;
+                        .img2, .img3{
+                            width: 200px;
+                        }
+                        
+                    }
+                }
+            }
+        }
+    }
+    #partner-course{
+        .container{
+            .in-partner-course{
+                grid-template-columns: repeat(4, auto);
+            }
+        }
+    }
+    #beneficial{
+        .container{
+            .in-beneficial{
+                padding: 100px 0px;
+                h2{
+                    width: 70%;
+                }
+                .beneficial-carts{
+                    margin: 0;
+                    grid-template-columns: repeat(2,auto);
+                }
+            }
+        }
+    }
+    #statistic{
+        .container{
+            .in-statistic{
+                .statistic-carts{
+                    grid-template-columns: repeat(3,auto);
+                }
+            }
+        }
+    }
 }
 
 @media screen and (max-width:768px){
@@ -425,6 +482,37 @@
             }
         }
     }
+    #about-us{
+        .container{
+            .in-about-us{
+                .right{
+                    .image{
+                        width: 90%;
+                        .img2, .img3{
+                            display: none;
+                        }
+                        
+                    }
+                }
+            }
+        }
+    }
+    #partner-course{
+        .container{
+            .in-partner-course{
+                grid-template-columns: repeat(3, auto);
+            }
+        }
+    }
+    #statistic{
+        .container{
+            .in-statistic{
+                .statistic-carts{
+                    grid-template-columns: repeat(2,auto);
+                }
+            }
+        }
+    }
 }
 
 @media screen and (max-width: 575px) {
@@ -544,6 +632,48 @@
                 h1{
                     width: 100%;
                     font-size: $font + 10px;
+                }
+            }
+        }
+    }
+    #about-us{
+        .container{
+            .in-about-us{
+                .right{
+                    .image{
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+    #partner-course{
+        .container{
+            .in-partner-course{
+                grid-template-columns: repeat(2, auto);
+            }
+        }
+    }
+    #beneficial{
+        .container{
+            .in-beneficial{
+                h2{
+                    width: 100%;
+                }
+                .beneficial-carts{
+                    grid-template-columns: repeat(1,auto);
+                    .cart{
+                        padding: 40px 30px;
+                    }
+                }
+            }
+        }
+    }
+    #statistic{
+        .container{
+            .in-statistic{
+                .statistic-carts{
+                    grid-template-columns: repeat(1,auto);
                 }
             }
         }

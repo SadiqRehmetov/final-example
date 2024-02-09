@@ -116,8 +116,6 @@ function showCourseData(){
 }
 
 searcInput.addEventListener("input", (e) => {
-    console.log("yhuhu");
-    
     arr_1 = arr_2;
     arr_1 = arr_1.filter((element) => {
       return element.name.toLowerCase().includes(e.target.value.toLowerCase());
@@ -138,32 +136,3 @@ sort.addEventListener("change",(e)=>{
     }
     showCourseData()
   })
-
-
-
-//   sort.addEventListener("change", (e) => {
-//     if (e.target.value == "exp") {
-//         arr_1 = arr_1.sort((a, b) => a.price - b.price);
-//     } else if (e.target.value == "cheap") {
-//         arr_1 = arr_1.sort((a, b) => b.price - a.price);
-//     } else if (e.target.value == "az") {
-//         arr_1 = arr_1.sort((a, b) => {
-//             const nameA = a.name.toLowerCase();
-//             const nameB = b.name.toLowerCase();
-//             if (nameA < nameB) return -1;
-//             if (nameA > nameB) return 1;
-//             return 0;
-//         });
-//     } else if (e.target.value == "za") { 
-//         arr_1 = arr_1.sort((a, b) => {
-//             const nameA = a.name.toLowerCase();
-//             const nameB = b.name.toLowerCase();
-//             if (nameA > nameB) return -1;
-//             if (nameA < nameB) return 1;
-//             return 0;
-//         });
-//     } else {
-//         arr_1 = [];
-//     }
-//     showCourseData();
-// });
