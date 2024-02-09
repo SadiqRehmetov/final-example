@@ -16,7 +16,7 @@ form.addEventListener("submit",(e)=>{
                 console.log('Wrong password');
             }      
         }else{
-            console.log("Wrong email");
+            alert("Wrong email");
         }
       })
 })
