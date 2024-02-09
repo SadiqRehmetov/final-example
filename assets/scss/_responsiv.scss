@@ -414,6 +414,17 @@
             }
         }
     }
+
+    //about
+    #about-banner{
+        .container{
+            .in-about-banner{
+                h1{
+                    font-size: $font + 20px;
+                }
+            }
+        }
+    }
 }
 
 @media screen and (max-width: 575px) {
@@ -523,6 +534,17 @@
                     }
                 }
                 
+            }
+        }
+    }
+    //about
+    #about-banner{
+        .container{
+            .in-about-banner{
+                h1{
+                    width: 100%;
+                    font-size: $font + 10px;
+                }
             }
         }
     }

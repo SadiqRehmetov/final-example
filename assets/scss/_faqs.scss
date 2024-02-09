@@ -40,15 +40,27 @@
                         @include center;
                         cursor: pointer;
                     }
-                    .answer{
+                    .answer {
+                        max-height: 0;
                         overflow: hidden;
-                        margin-bottom: 10px;
-                        transition: all .5s ease;
+                        transition: max-height 0.3s ease-out;
                         p{
-                            height: 0;
+                            // height: 0;
                             padding: 0px 20px;
                         }
                     }
+                    
+                    // .answer {
+                    //     max-height: 0;
+                    //     overflow: hidden;
+                    //     transition: max-height 0.3s ease;
+                    //     .show {
+                    //         max-height: 1000px; /* Və ya dəyərinizə görə */
+                    //     }
+                    // }
+                    
+                    
+                    
                 }
             }
         }

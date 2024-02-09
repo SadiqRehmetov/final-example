@@ -33,48 +33,70 @@ closeMenu.addEventListener("click", ()=>{
     responsMenu.style.transform = "translateX(-500%)";
 })
 showFaqData()
-function showFaqData(){
+function showFaqData() {
     fetch(`http://localhost:3000/faqs`)
-    .then(res=>res.json())
-    .then(respons=>{
-        listCategoryList.forEach(el=>{
-            el.addEventListener("click",()=>{
-                console.log(el);
-                    respons.map(element=>{
-                        if(element.category=="General"){
-                            questionCart.innerHTML+=`
-                                <div class="question">
-                                    <h4>${element.question}<i class="bi bi-chevron-compact-down"></i></h4>
-                                    <div class="answer">
-                                        <p>${element.answer}</p>
-                                    </div>    
-                                </div>
-                        `
+        .then(res => res.json())
+        .then(respons => {
+            listCategoryList.forEach(category => {
+                category.addEventListener("click", () => {
+                    listCategoryList.forEach(item => {
+                        if (item !== category) {
                         }
-                    })
-                
-            })
-        })
-    })
-}
-const accordionItems = document.querySelectorAll('.question');
-accordionItems.forEach(item => {
-    const header = item.querySelector('h4');
-    const answer = item.querySelector('.answer');
-    header.addEventListener('click', function () {
-        const isActive = item.classList.contains('active');
-        accordionItems.forEach(accItem => {
-            if (accItem !== item) {
-                accItem.classList.remove('active');
-                accItem.querySelector('.answer').style.height = '0';
-            }
+                    });
+
+                    category.style.color = '#27B889';
+
+                    questionCart.innerHTML = "";
+                    respons.forEach(element => {
+                        if (element.category === category.textContent) {
+                            const questionDiv = document.createElement('div');
+                            questionDiv.classList.add('question');
+                            questionDiv.innerHTML = `
+                                <h4>${element.question}<i class="bi bi-chevron-compact-down"></i></h4>
+                                <div class="answer">
+                                    <p>${element.answer}</p>
+                                </div>
+                            `;
+                            const questionHeader = questionDiv.querySelector('h4');
+                            const answerDiv = questionDiv.querySelector('.answer');
+
+                            questionHeader.addEventListener('click', () => {
+                                const openedQuestion = document.querySelector('.question.opened');
+                                if (openedQuestion && openedQuestion !== questionDiv) {
+                                    openedQuestion.querySelector('.answer').style.maxHeight = null;
+                                    openedQuestion.classList.remove('opened');
+                                    openedQuestion.querySelector('h4').style.color = 'black';
+                                }
+                                
+                                if (!questionDiv.classList.contains('opened')) {
+                                    answerDiv.style.maxHeight = answerDiv.scrollHeight + "px";
+                                    questionDiv.classList.add('opened');
+                                    if (!questionHeader.clicked) {
+                                        questionHeader.style.color = '#27B889';
+                                        questionHeader.clicked = true;
+                                    }
+                                } else {
+                                    answerDiv.style.maxHeight = null;
+                                    questionDiv.classList.remove('opened');
+                                    questionHeader.style.color = 'black';
+                                    questionHeader.clicked = false;
+                                }
+                            });
+
+                            questionCart.appendChild(questionDiv);
+                        }
+                    });
+
+                    const firstQuestion = questionCart.querySelector('.question h4');
+                    if (firstQuestion) {
+                        firstQuestion.click();
+                    }
+                });
+
+                if (category.textContent === "General") {
+                    category.click();
+                }
+            });
         });
-        item.classList.toggle('active');
-        if (isActive) {
-            answer.style.height = '0';
-        } else {
-            answer.style.height = answer.scrollHeight + 'px';
-        }
-    });
-});
+}
 

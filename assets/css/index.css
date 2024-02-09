@@ -1450,12 +1450,11 @@ footer .footer-down {
   cursor: pointer;
 }
 #faq-questions .container .in-faq-questions .right .question .answer {
+  max-height: 0;
   overflow: hidden;
-  margin-bottom: 10px;
-  transition: all 0.5s ease;
+  transition: max-height 0.3s ease-out;
 }
 #faq-questions .container .in-faq-questions .right .question .answer p {
-  height: 0;
   padding: 0px 20px;
 }
 
@@ -1489,6 +1488,9 @@ footer .footer-down {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+#about-banner .container {
+  background-color: rgba(0, 0, 0, 0.52);
 }
 #about-banner .container .in-about-banner {
   height: 85vh;
@@ -1802,6 +1804,9 @@ footer .footer-down {
   #contact .container .in-contact .left {
     width: 100%;
   }
+  #about-banner .container .in-about-banner h1 {
+    font-size: 40px;
+  }
 }
 @media screen and (max-width: 575px) {
   .container {
@@ -1867,5 +1872,9 @@ footer .footer-down {
   }
   #contact .container .in-contact .right form button {
     font-size: 15px;
+  }
+  #about-banner .container .in-about-banner h1 {
+    width: 100%;
+    font-size: 30px;
   }
 }/*# sourceMappingURL=index.css.map */
