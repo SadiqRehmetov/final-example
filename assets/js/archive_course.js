@@ -4,11 +4,7 @@ let searchInput = document.querySelector("#searchinput")
 let menuİcon = document.querySelector(".bi-list")
 let responsMenu = document.querySelector(".respons-menu")
 let closeMenu = document.querySelector(".closemenu")
-let courseCarts = document.querySelector(".course-carts")
-let searcInput = document.querySelector(".search")
-let arr_1=[]
-let arr_2=[]
-let sort = document.querySelector("#sort")
+
 window.addEventListener("scroll", () => {
     if (window.scrollY > 100) {
         nav.style.position = "fixed";
@@ -35,7 +31,11 @@ menuİcon.addEventListener("click",()=>{
 closeMenu.addEventListener("click", ()=>{
     responsMenu.style.transform = "translateX(-500%)";
 })
-
+let courseCarts = document.querySelector(".course-carts")
+let searcInput = document.querySelector(".search")
+let arr_1=[]
+let arr_2=[]
+let sort = document.querySelector("#sort")
 showCourseData()
 function showCourseData(){
     fetch(`http://localhost:3000/course`)
@@ -124,15 +124,15 @@ searcInput.addEventListener("input", (e) => {
     showCourseData();
 });
 
-sort.addEventListener("change",(e)=>{
-    if(e.target.value=="exp"){
-      arr_1=arr_1.sort((a,b)=>a.price - b.price)
+sort.addEventListener("change", (e) => {
+    if (e.target.value === "exp") {
+        arr_1 = arr_1.sort((a, b) => a.price - b.price);
+    } else if (e.target.value === "cheap") {
+        arr_1 = arr_1.sort((a, b) => b.price - a.price);
+    } else {
+        arr_1 = arr_2.slice(); // Orijinal array yenidən yüklənir
     }
-    else if(e.target.value=="cheap"){
-      arr_1=arr_1.sort((a,b)=>b.price - a.price)
-    }
-    else{
-      arr_1=[]
-    }
-    showCourseData()
-  })
+    showCourseData();
+});
+
+

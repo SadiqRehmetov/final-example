@@ -1,0 +1,45 @@
+#basket{
+    .container{
+        .in-basket{
+            padding: 100px 0px;
+            table{
+                width: 100%;
+                text-align: center;
+                th{
+                    padding: 20px 0px;
+                    border-bottom: 1px solid skyblue;
+                }
+                tbody{
+                    
+                    tr{
+                        .img{
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            .image{
+                                width: 100px;
+                                
+                                img{
+                                    width: 100%;
+                                    height: 100%;
+                                    object-fit: cover;
+                                }
+                            }
+                        }
+                        td{
+                            padding: 30px 0px;
+                            border-bottom: 1px solid skyblue;
+                            input[type=number]{
+                                background-color: rgb(238, 238, 238);
+                                padding: 10px 5px;
+                                width: 30%;
+                                border: none;
+                                outline: none;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

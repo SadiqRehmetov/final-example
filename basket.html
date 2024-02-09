@@ -36,15 +36,25 @@
                     <li><a href="./faqs.html">FAQ's</a></li>
                     <li><a href="./contact.html">Contact</a></li>
                 </ul>
-                
+
+                <div class="icons">
+                    
+                    <input type="text" placeholder="Search courses..."  id="searchinput" class="searchInput">
+                    <a href="#"><i class="bi bi-search" id="search"></i></a>
+                    <a href="#"><i class="bi bi-cart"></i></a>
+                    <span>0</span>
+
+                </div>
                 <strong>
-                    <a href="./login.html">Login</a> /
+                    <a href="./login.html">Login</a>/
                     <a href="./register.html">Register</a>
                 </strong>
                 <i class="bi bi-list" style="font-size: 30px;"></i>
+
             </div>
         </div>
     </header>
+
     <section id="started" style="margin: 0px;">
         <div class="container">
             <div class="in-started">
@@ -52,55 +62,70 @@
                 <img src="./assets/image/shape-02.png" alt="picture" class="img2">
                 <img src="./assets/image/shape-02 (1).png" alt="picture" class="img3">
                 <img src="./assets/image/shape-15.png" alt="picture" class="img4">
-                <h2>Countact Us</h2>
-                <a href="./index.html">Home</a>
+                <h2>Cart</h2>
+                <p><a href="./index.html">Home</a> > Cart</p>
             </div>
         </div>
     </section>
-    <section id="contact">
+
+    <section id="basket">
         <div class="container">
-            <div class="in-contact">
-                <div class="left">
-                    <h2>We're Always Eager to Hear From You!</h2>
-                    <div class="address">
-                        <h5>Adress</h5>
-                        <p>Studio 76d, Riley Ford, North Michael chester, CF99 6QQ</p>
+            <div class="in-basket">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Product</th>
+                            <th>Name</th>
+                            <th>Price</th>
+                            <th>Quantity</th>
+                            <th>Subtotal</th>
+                            <th>Delete</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="img">
+                                <div class="image">
+                                    <img src="./assets/image/blog-01.jpg" alt="picture">
+                                </div>
+                            </td>
+                            <td>
+                                Book
+                            </td>
+                            <td>
+                                100$
+                            </td>
+                            <td>
+                                <input type="number" min="0">
+                            </td>
+                            <td>
+                                100$
+                            </td>
+                            <td>
+                                <i class="bi bi-x-circle"></i>
+                            </td>
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                <div class="totals">
+                    <div class="cart">
+                        <h2>Cart Totals</h2>
+                        <div class="subtotal">
+                            <h5>Subtotal</h5>
+                            <p>$500</p>
+                        </div>
+                        <div class="total">
+                            <h5>Total</h5>
+                            <p>$788</p>
+                        </div>
+                        <button>Proceed to checkout</button>
                     </div>
-                    <div class="email">
-                        <h5>Email</h5>
-                        <a href="mailto:edublink@example.com">edublink@example.com</a>
-                    </div>
-                    <div class="phone">
-                        <h5>Phone</h5>
-                        <a href="#">(+091) 413 554 8598</a>
-                    </div>
-                    <div class="icons">
-                        <a href="#"><i class="bi bi-share-fill"></i></a>
-                        <a href="#"><i class="bi bi-facebook"></i></a>
-                        <a href="#"><i class="bi bi-twitter"></i></a>
-                        <a href="#"><i class="bi bi-linkedin"></i></a>
-                    </div>
-                </div>
-                <div class="right">
-                    <h4>Get In Touch</h4>
-                    <p>Fill out this form for booking a consultant advising session.</p>
-                    <form>
-                        <input type="text" placeholder="Your name *">
-                        <input type="email" placeholder="Enter your email *">
-                        <input type="text" placeholder="Subject">
-                        <textarea name="" id="" cols="35" rows="10" placeholder="Your Message"></textarea>
-                        <button>Submit Message <i class="bi bi-arrow-right"></i></button>
-                    </form>
                 </div>
             </div>
         </div>
     </section>
-    <div class="map">
-        <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d49775.198764605884!2d48.80387574762138!3d38.764852568375005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4022ff87bc65fe87%3A0x2e22247524d53740!2zTMmZbmvJmXJhbg!5e0!3m2!1saz!2saz!4v1702756772333!5m2!1saz!2saz"
-            width="100%" height="550" style="border:0;" allowfullscreen="" loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"></iframe>
-    </div>
+
     <footer style="margin: 0px;">
         <div class="container">
             <div class="footer-up">
@@ -108,19 +133,19 @@
                     <div class="image">
                         <a href="./index.html"><img src="./assets/image/logo-dark.png" alt="logo"></a>
                     </div>
-                    <p>Lorem ipsum dolor amet consecto adi pisicing elit sed eiusm tempor incidid unt labore dolore.</p>
-                    <p><span style="opacity: 1;">Add:</span>70-80 Upper St Norwich NR2</p>
-                    <p><span>Call:</span>+01 123 5641 231</p>
-                    <p><span>Email:</span><a href="mailto:info@edublink.com">info@edublink.com</a></p>
+                    <p >Lorem ipsum dolor amet consecto adi pisicing elit sed eiusm tempor incidid unt labore dolore.</p>
+                    <p ><span style="opacity: 1;">Add:</span>70-80 Upper St Norwich NR2</p>
+                    <p ><span>Call:</span>+01 123 5641 231</p>
+                    <p ><span>Email:</span><a href="mailto:info@edublink.com" >info@edublink.com</a></p>
                 </div>
                 <div class="second">
-                    <h3>Online Platform</h3>
+                    <h3 >Online Platform</h3>
                     <ul>
-                        <li><a href="./index.html">Home</a></li>
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Courses</a></li>
-                        <li><a href="#">FAQ's</a></li>
-                        <li><a href="#">Contact</a></li>
+                        <li><a href="./index.html" >Home</a></li>
+                        <li><a href="./about.html" >About</a></li>
+                        <li><a href="./archive_course.html" >Courses</a></li>
+                        <li><a href="./faqs.html" >FAQ's</a></li>
+                        <li><a href="./contact.html" >Contact</a></li>
                     </ul>
                 </div>
                 <div class="third">
@@ -140,10 +165,10 @@
                 </div>
             </div>
         </div>
-        <div class="footer-down">
+        <div class="footer-down" style="border-top: 1px solid rgba(255, 255, 255, 0.494);">
             <p>Copyright 2024 EduBlink | Developed By DevsBlink. All Rights Reserved</p>
         </div>
     </footer>
-    <script src="./assets/js/contact.js"></script>
+    <script src="./assets/js/basket.js"></script>
 </body>
 </html>
