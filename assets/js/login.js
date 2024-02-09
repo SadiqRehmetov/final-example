@@ -13,7 +13,7 @@ form.addEventListener("submit",(e)=>{
                 // localStorage.setItem('currentUser', JSON.stringify(currentUserInfo));
                 window.location = './index.html'
             }else{
-                console.log('Wrong password');
+                alert('Wrong password');
             }      
         }else{
             alert("Wrong email");
