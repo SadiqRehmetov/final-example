@@ -30,6 +30,9 @@ let searchIcon = document.querySelector("#search");
 let searchInput = document.querySelector("#searchinput");
 let currentUser = localStorage.getItem('currentUser') ? JSON.parse(localStorage.getItem('currentUser')) : null;
 let shopCarts = document.querySelector(".shop-carts")
+let userId = currentUser.id
+let favArray = currentUser.fav
+console.log(favArray);
 shopData();
 function shopData() {
     fetch(`http://localhost:3000/shop`)
@@ -66,11 +69,10 @@ function addToFavorites(id) {
     axios.get(`http://localhost:3000/shop/${id}`)
     .then(response => {
         let favoriteItem = response.data;
-        let favorites = JSON.parse(localStorage.getItem('favorites')) || [];
-        favorites.push(favoriteItem);
-        localStorage.setItem('favorites', JSON.stringify(favorites));
+        favArray.push(favoriteItem);
+        localStorage.setItem('favorites', JSON.stringify(favArray));
         if (currentUser) {
-            axios.post(`http://localhost:3000/user/fav`, favoriteItem)
+            axios.patch(`http://localhost:3000/user/${id}`, favArray)
             .then(() => {
                 alert('Item added to favorites!');
             })
