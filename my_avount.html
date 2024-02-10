@@ -10,7 +10,7 @@
 <body>
     <div class="respons-menu">
         <div class="image">
-            <img src="./assets/image/logo-dark.png" alt="picture">
+            <img src="./assets/image/logo-dark.png" alt="">
             <i class=" bi bi-x-lg closemenu"></i>
         </div>
         <ul>
@@ -31,19 +31,16 @@
                 </div>
                 <ul>
                     <li><a href="./index.html">Home</a></li>
-                    <li><a href="./about.html">About</a></li>
-                    <li><a href="./archive_course.html">Courses</a></li>
-                    <li><a href="./faqs.html">FAQ's</a></li>
-                    <li><a href="./contact.html">Contact</a></li>
+                    <li><a href="./archive_course.html">Blog</a></li>
+                    <li><a href="./faqs.html">Basket</a></li>
+                    <li><a href="./contact.html">Favorite</a></li>
                 </ul>
 
                 <div class="icons">
-                    
                     <input type="text" placeholder="Search courses..."  id="searchinput" class="searchInput">
                     <a href="#"><i class="bi bi-search" id="search"></i></a>
                     <a href="#"><i class="bi bi-cart"></i></a>
                     <span>0</span>
-
                 </div>
                 <strong id="login-register">
                     <a href="./login.html">Login</a>/
@@ -51,47 +48,29 @@
                 </strong>
                 <a href="#" class="my-acount" >My acount</a>
                 <i class="bi bi-list" style="font-size: 30px;"></i>
-
             </div>
         </div>
     </header>
 
-    <section id="started" style="margin: 0px;">
+    <section id="acount-section">
         <div class="container">
-            <div class="in-started">
-                <img src="./assets/image/shape-37.png" alt="picture" class="img1">
-                <img src="./assets/image/shape-02.png" alt="picture" class="img2">
-                <img src="./assets/image/shape-02 (1).png" alt="picture" class="img3">
-                <img src="./assets/image/shape-15.png" alt="picture" class="img4">
-                <h2>Archives: Courses</h2>
-                <a href="./index.html">Home</a>
-            </div>
-        </div>
-    </section>
-
-    <section id="course" style="margin: 0; background-color: white;">
-        <div class="container">
-            <div class="in-course">
-                <div class="course-search">
-                    <input type="text" placeholder="search course..." class="search">
-                    <select id="sort">
-                        <option value="df">Default</option>
-                        <option value="exp">Expensive</option>
-                        <option value="cheap">Cheap</option>
-                        <option value="az">Descending</option>
-                        <option value="za">Ascending</option>
-                    </select>
-                </div>
-                <div class="course-carts" style="grid-template-columns: repeat(3, auto);">
+            <div class="in-acount-section">
+                <div class="center">
+                    <div class="image">
+                        <img src="./assets/image/1.jpg" alt="picture" class="profil">
+                    </div>
                     
+                    <h3 class="profilname">Name:</h3>
+                    <h3 class="profilsurname">Surname:</h3>
+                    <p class="profilemail">Email:</p>
+                    <p class="profilnumber">Number:</p>
+                    <input type="file" style="width: 0;" class="profileinput">
                 </div>
-                <a href="#"><button>Browse more courses <i class="bi bi-arrow-right"></i></button></a>
-                
             </div>
         </div>
     </section>
 
-    <footer style="margin: 0px;">
+    <footer>
         <div class="container">
             <div class="footer-up">
                 <div class="first">
@@ -134,6 +113,6 @@
             <p>Copyright 2024 EduBlink | Developed By DevsBlink. All Rights Reserved</p>
         </div>
     </footer>
-    <script src="./assets/js/archive_course.js"></script>
+    <script src="./assets/js/acount.js"></script>
 </body>
 </html>

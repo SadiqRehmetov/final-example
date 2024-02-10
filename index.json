@@ -287,28 +287,28 @@
       "image": "./assets/image/team-01.webp",
       "name": "Jane Seymour",
       "job": "UI Designer",
-      "description":"Consectetur adipisicing elit, sed do eius mod tempor incididunt",
+      "description": "Consectetur adipisicing elit, sed do eius mod tempor incididunt",
       "id": "0a8c"
     },
     {
       "image": "./assets/image/team-02.webp",
       "name": "Edward Norton",
       "job": "Edward Norton",
-      "description":"Consectetur adipisicing elit, sed do eius mod tempor incididunt",
+      "description": "Consectetur adipisicing elit, sed do eius mod tempor incididunt",
       "id": "dcc3"
     },
     {
       "image": "./assets/image/team-03.webp",
       "name": "Penelope Cruz",
       "job": "Digital Marketer",
-      "description":"Consectetur adipisicing elit, sed do eius mod tempor incididunt",
+      "description": "Consectetur adipisicing elit, sed do eius mod tempor incididunt",
       "id": "0981"
     },
     {
       "image": "./assets/image/team-04.webp",
       "name": "John Travolta",
       "job": "WordPress Expert",
-      "description":"Consectetur adipisicing elit, sed do eius mod tempor incididunt",
+      "description": "Consectetur adipisicing elit, sed do eius mod tempor incididunt",
       "id": "e590"
     }
   ],
@@ -566,126 +566,126 @@
       "answer": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt labore et dolore magna aliqua enim ad minim veniam quis nostrud exercitation ullamco qui laboris nis aliquip commodo consequat."
     }
   ],
-  "shop":[
+  "shop": [
     {
-      "id":1,
-      "image":"./assets/image/12.jpg",
-      "name":"Book Demo A",
-      "price":"60"
+      "id": "1",
+      "image": "./assets/image/12.jpg",
+      "name": "Book Demo A",
+      "price": "60"
     },
     {
-      "id":2,
-      "image":"./assets/image/11.jpg",
-      "name":"Book Demo B",
-      "price":"19"
+      "id": "2",
+      "image": "./assets/image/11.jpg",
+      "name": "Book Demo B",
+      "price": "19"
     },
     {
-      "id":3,
-      "image":"./assets/image/10.jpg",
-      "name":"Book Demo C",
-      "price":"69"
+      "id": "3",
+      "image": "./assets/image/10.jpg",
+      "name": "Book Demo C",
+      "price": "69"
     },
     {
-      "id":4,
-      "image":"./assets/image/7.jpg",
-      "name":"Book Demo D",
-      "price":"75"
+      "id": "4",
+      "image": "./assets/image/7.jpg",
+      "name": "Book Demo D",
+      "price": "75"
     },
     {
-      "id":5,
-      "image":"./assets/image/6.jpg",
-      "name":"Book Demo E",
-      "price":"25"
+      "id": "5",
+      "image": "./assets/image/6.jpg",
+      "name": "Book Demo E",
+      "price": "25"
     },
     {
-      "id":6,
-      "image":"./assets/image/4.jpg",
-      "name":"Book Demo F",
-      "price":"35"
+      "id": "6",
+      "image": "./assets/image/4.jpg",
+      "name": "Book Demo F",
+      "price": "35"
     },
     {
-      "id":7,
-      "image":"./assets/image/3.jpg",
-      "name":"Book Demo G",
-      "price":"65"
+      "id": "7",
+      "image": "./assets/image/3.jpg",
+      "name": "Book Demo G",
+      "price": "65"
     },
     {
-      "id":8,
-      "image":"./assets/image/12.jpg",
-      "name":"Book Demo H",
-      "price":"49"
+      "id": "8",
+      "image": "./assets/image/12.jpg",
+      "name": "Book Demo H",
+      "price": "49"
     },
     {
-      "id":9,
-      "image":"./assets/image/2.jpg",
-      "name":"Book Demo I",
-      "price":"49"
+      "id": "9",
+      "image": "./assets/image/2.jpg",
+      "name": "Book Demo I",
+      "price": "49"
     },
     {
-      "id":10,
-      "image":"./assets/image/9.jpg",
-      "name":"Book Demo J",
-      "price":"59"
+      "id": "10",
+      "image": "./assets/image/9.jpg",
+      "name": "Book Demo J",
+      "price": "59"
     },
     {
-      "id":11,
-      "image":"./assets/image/5.jpg",
-      "name":"Book Demo K",
-      "price":"25"
+      "id": "11",
+      "image": "./assets/image/5.jpg",
+      "name": "Book Demo K",
+      "price": "25"
     },
     {
-      "id":12,
-      "image":"./assets/image/8.jpg",
-      "name":"Book Demo L",
-      "price":"49"
+      "id": "12",
+      "image": "./assets/image/8.jpg",
+      "name": "Book Demo L",
+      "price": "49"
     },
     {
-      "id":13,
-      "image":"./assets/image/7.jpg",
-      "name":"Book Demo M",
-      "price":"89"
+      "id": "13",
+      "image": "./assets/image/7.jpg",
+      "name": "Book Demo M",
+      "price": "89"
     },
     {
-      "id":14,
-      "image":"./assets/image/10.jpg",
-      "name":"Book Demo N",
-      "price":"59"
+      "id": "14",
+      "image": "./assets/image/10.jpg",
+      "name": "Book Demo N",
+      "price": "59"
     },
     {
-      "id":15,
-      "image":"./assets/image/11.jpg",
-      "name":"Book Demo O",
-      "price":"20"
+      "id": "15",
+      "image": "./assets/image/11.jpg",
+      "name": "Book Demo O",
+      "price": "20"
     },
     {
-      "id":16,
-      "image":"./assets/image/6.jpg",
-      "name":"Book Demo P",
-      "price":"30"
+      "id": "16",
+      "image": "./assets/image/6.jpg",
+      "name": "Book Demo P",
+      "price": "30"
     },
     {
-      "id":17,
-      "image":"./assets/image/8.jpg",
-      "name":"Book Demo Q",
-      "price":"42"
+      "id": "17",
+      "image": "./assets/image/8.jpg",
+      "name": "Book Demo Q",
+      "price": "42"
     },
     {
-      "id":18,
-      "image":"./assets/image/4.jpg",
-      "name":"Book Demo R",
-      "price":"19"
+      "id": "18",
+      "image": "./assets/image/4.jpg",
+      "name": "Book Demo R",
+      "price": "19"
     },
     {
-      "id":19,
-      "image":"./assets/image/12.jpg",
-      "name":"Book Demo S",
-      "price":"39"
+      "id": "19",
+      "image": "./assets/image/12.jpg",
+      "name": "Book Demo S",
+      "price": "39"
     },
     {
-      "id":20,
-      "image":"./assets/image/12.jpg",
-      "name":"Book Demo T",
-      "price":"65"
+      "id": "20",
+      "image": "./assets/image/12.jpg",
+      "name": "Book Demo T",
+      "price": "65"
     }
   ],
   "user": [
@@ -695,7 +695,12 @@
       "surname": "Rəhmətov",
       "email": "friyaziyyat@gmail.com",
       "phone": "+994507624294",
-      "password": "1234"
+      "password": "1234",
+      "fav": [
+        {
+          "name": "eli"
+        }
+      ]
     },
     {
       "id": "6591",
@@ -703,7 +708,38 @@
       "surname": "Rəhmətov",
       "email": "sadiq@gmail.com",
       "phone": "+994507624294",
-      "password": "666"
+      "password": "666",
+      "fav": [
+        {
+          "name": "eli"
+        }
+      ]
+    },
+    {
+      "id": "13ca",
+      "name": "ffhhh",
+      "surname": "pojklnkn",
+      "email": "hjhjkhkhk@gmail.com",
+      "phone": "787878788",
+      "password": "787878",
+      "fav": [
+        {
+          "name": "eli"
+        }
+      ]
+    },
+    {
+      "id": "719e",
+      "name": "Əli",
+      "surname": "Hüseynov",
+      "email": "əli@gmail.com",
+      "phone": "+994507624294",
+      "password": "12345",
+      "fav": [
+        {
+          "name": "eli"
+        }
+      ]
     }
   ]
 }

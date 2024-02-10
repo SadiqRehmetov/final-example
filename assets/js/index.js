@@ -45,13 +45,24 @@ menuİcon.addEventListener("click",()=>{
 closeMenu.addEventListener("click", ()=>{
     responsMenu.style.transform = "translateX(-500%)";
 })
+let user = localStorage.getItem('currentUser') ? JSON.parse(localStorage.getItem('currentUser')).email : null;
+let acount = document.querySelector(".my-acount")
+let loginAndRegister = document.querySelector("#login-register")
 
+if(user){
+    acount.innerHTML = user
+    acount.style.display = 'block'
+    loginAndRegister.style.display="none";
+}else{
+    setTimeout(()=>{window.location = './login.html'}, 2000)
+}
 showData()
 function showData(){
     fetch(`http://localhost:3000/course?_page=${page}&_limit=4`)
     .then(res=>res.json())
     .then(respons=>{
         respons.map((element)=>{
+            console.log(element.id);
             courseCarts.innerHTML+=`
             <div class="cart">
                         <div class="hiddenDiv">
@@ -126,6 +137,7 @@ function showInstructorsData(){
     .then(res=>res.json())
     .then(respons=>{
         respons.map((element)=>{
+            console.log(element.id);
             instructorsCarts.innerHTML+=`
             <div class="cart">
             <div class="image">

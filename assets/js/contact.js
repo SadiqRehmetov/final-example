@@ -18,3 +18,15 @@ menuİcon.addEventListener("click",()=>{
 closeMenu.addEventListener("click", ()=>{
     responsMenu.style.transform = "translateX(-500%)";
 })
+
+let user = localStorage.getItem('currentUser') ? JSON.parse(localStorage.getItem('currentUser')).email : null;
+let acount = document.querySelector(".my-acount")
+let loginAndRegister = document.querySelector("#login-register")
+
+if(user){
+    acount.innerHTML = user
+    acount.style.display = 'block'
+    loginAndRegister.style.display="none";
+}else{
+    setTimeout(()=>{window.location = './login.html'}, 2000)
+}

@@ -1,4 +1,9 @@
 let form = document.querySelector("form")
+let user = localStorage.getItem('currentUser') ? JSON.parse(localStorage.getItem('currentUser')).email : null;
+
+// if(user){
+//     window.location = '../../contact.html'
+// }
 
 form.addEventListener("submit",(e)=>{
     e.preventDefault();
@@ -7,10 +12,10 @@ form.addEventListener("submit",(e)=>{
     fetch(`http://localhost:3000/user`)
     .then(res=>res.json())
     .then(data => {
-        let currentUserInfo = data.find((user)=>user.email == emailInput)
-        if(currentUserInfo){
-            if(currentUserInfo.password == passwordInput){
-                // localStorage.setItem('currentUser', JSON.stringify(currentUserInfo));
+        let info = data.find((user)=>user.email == emailInput)
+        if(info){
+            if(info.password == passwordInput){
+                localStorage.setItem('currentUser', JSON.stringify(info));
                 window.location = './index.html'
             }else{
                 alert('Wrong password');
@@ -18,5 +23,5 @@ form.addEventListener("submit",(e)=>{
         }else{
             alert("Wrong email");
         }
-      })
+    })
 })
