@@ -27,12 +27,14 @@ window.addEventListener("scroll", () => {
         nav.style.transition = "position 0.3s ease";
     }
 });
+
 searchIcon.addEventListener("click", () => {
     searchInput.classList.toggle("search");
     searchInput.classList.toggle("searchInput");
     if(window.innerWidth < 1200){
         if(menuİcon.style.display=="none"){
             menuİcon.style.display="flex";
+            
         }
         else{
             menuİcon.style.display="none";

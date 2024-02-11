@@ -1,11 +1,17 @@
-
 let nav = document.querySelector("header")
-
 let menuİcon = document.querySelector(".bi-list")
 let responsMenu = document.querySelector(".respons-menu")
 let closeMenu = document.querySelector(".closemenu")
-
-
+let shopCount = document.querySelector(".shopCount")
+let arr_1 = [];
+let arr_2 = [];
+let searchIcon = document.querySelector("#search");
+let searchInput = document.querySelector("#searchinput");
+let currentUser = localStorage.getItem('currentUser') ? JSON.parse(localStorage.getItem('currentUser')) : null;
+let shopCarts = document.querySelector(".shop-carts")
+let userId = currentUser.id
+let userBasketCount = currentUser.basket.length
+console.log("userrrr======", userBasketCount);
 window.addEventListener("scroll", () => {
     if (window.scrollY > 100) {
         nav.style.position = "fixed";
@@ -24,13 +30,7 @@ closeMenu.addEventListener("click", ()=>{
 })
 
 
-let arr_1 = [];
-let arr_2 = [];
-let searchIcon = document.querySelector("#search");
-let searchInput = document.querySelector("#searchinput");
-let currentUser = localStorage.getItem('currentUser') ? JSON.parse(localStorage.getItem('currentUser')) : null;
-let shopCarts = document.querySelector(".shop-carts")
-let userId = currentUser.id
+
 shopData();
 function shopData() {
   fetch(`http://localhost:3000/shop`)
@@ -229,8 +229,9 @@ function updateBasketSession(userData) {
   localStorage.setItem('currentUser', JSON.stringify(userData));
 }
 
-
-
-
+console.log(currentUser);
+console.log(currentUser.basket);
+console.log(currentUser.basket.length);
+shopCount.innerHTML=`${userBasketCount}`
 
 
