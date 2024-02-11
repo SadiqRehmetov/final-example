@@ -19,6 +19,8 @@
             <li><a href="./archive_course.html">Courses</a></li>
             <li><a href="./faqs.html">FAQ's</a></li>
             <li><a href="./contact.html">Contact</a></li>
+            <li><a href="./shop.html">Shop</a></li>
+            
             <li><a href="./login.html">Login</a></li>
             <li><a href="./register.html">Register</a></li>
         </ul>
@@ -32,8 +34,10 @@
                 <ul>
                     <li><a href="./index.html">Home</a></li>
                     <li><a href="./archive_course.html">Blog</a></li>
+                    <li><a href="./shop.html">Shop</a></li>
                     <li><a href="./faqs.html">Basket</a></li>
-                    <li><a href="./contact.html">Favorite</a></li>
+                    <li style="opacity: .8;" class="favorit">Favorite</li>
+                    <li class="toCourse"><a href="./add_course.html">Add to course</a></li>
                 </ul>
 
                 <div class="icons">
@@ -46,7 +50,10 @@
                     <a href="./login.html">Login</a>/
                     <a href="./register.html">Register</a>
                 </strong>
-                <a href="#" class="my-acount" >My acount</a>
+                <div style="display: flex; justify-content: center;align-items: center;gap: 10px;">
+                    <a href="./my_avount.html" class="my-acount" ></a>
+                    <button id="logout" style="padding: 5px 20px; border: none;border-radius: 10px;background-color: #27B889; color: white;">Log out</button>
+                </div>
                 <i class="bi bi-list" style="font-size: 30px;"></i>
             </div>
         </div>
@@ -57,7 +64,7 @@
             <div class="in-acount-section">
                 <div class="center">
                     <div class="image">
-                        <img src="./assets/image/1.jpg" alt="picture" class="profil">
+                        <img src="./assets/image/userimage.webp" alt="picture" class="profil">
                     </div>
                     
                     <h3 class="profilname">Name:</h3>
@@ -65,6 +72,16 @@
                     <p class="profilemail">Email:</p>
                     <p class="profilnumber">Number:</p>
                     <input type="file" style="width: 0;" class="profileinput">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="shop">
+        <div class="container">
+            <div class="in-shop">
+                <div class="shop-carts">
+                                        
                 </div>
             </div>
         </div>
@@ -89,6 +106,7 @@
                         <li><a href="./about.html">About</a></li>
                         <li><a href="./archive_course.html">Courses</a></li>
                         <li><a href="./faqs.html">FAQ's</a></li>
+                        <li><a href="./shop.html">Shop</a></li>
                         <li><a href="./contact.html">Contact</a></li>
                     </ul>
                 </div>
@@ -113,6 +131,7 @@
             <p>Copyright 2024 EduBlink | Developed By DevsBlink. All Rights Reserved</p>
         </div>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="./assets/js/acount.js"></script>
 </body>
 </html>

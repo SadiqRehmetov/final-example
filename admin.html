@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/admin.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <title>Dashboard</title>
+
+</head>
+<body>
+    <section class="header">
+        <div class="logo">
+            <i class="ri-menu-line icon icon-0 menu" style="color: #70d7a5;"></i>
+            <h2>Edub<span>Link</span></h2>
+        </div>
+        <div class="search--notification--profile">
+            <div class="search">
+                <input type="text" placeholder="Search Scdule..">
+                <button><i class="ri-search-2-line"></i></button>
+            </div>
+            <div class="notification--profile">
+                <!-- <div class="picon lock">
+                    <i class="ri-lock-line"></i>
+                </div>
+                <div class="picon bell">
+                    <i class="ri-notification-2-line"></i>
+                </div>
+                <div class="picon chat">
+                    <i class="ri-wechat-2-line"></i>
+                </div> -->
+                <!-- <div class="picon profile">
+                    <img src="assets/images/profile.jpg" alt="">
+                </div> -->
+            </div>
+        </div>
+    </section>
+    <section class="main">
+        <div class="sidebar">
+            <ul class="sidebar--items">
+                <li>
+                    <a href="#" id="active--link">
+                        <span class="icon icon-1"><i class="ri-layout-grid-line"></i></span>
+                        <span class="sidebar--item">User</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon icon-2"><i class="ri-calendar-2-line"></i></span>
+                        <span class="sidebar--item">Shop</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon icon-3"><i class="ri-user-2-line"></i></span>
+                        <span class="sidebar--item" style="white-space: nowrap;">Course</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon icon-3"><i class="ri-user-2-line"></i></span>
+                        <span class="sidebar--item" style="white-space: nowrap;">Faq's</span>
+                    </a>
+                </li>
+                
+            </ul>
+            
+            
+        </div>
+        <div class="main--content">
+            
+            
+            <div class="recent--patients">
+                <div class="title">
+                    <h2 class="section--title">Recent Patients</h2>
+                    <!-- <button class="add"><i class="ri-add-line"></i>Add Doctor</button> -->
+                </div>
+                <div class="table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Id</th>
+                                <th>Name</th>
+                                <th>Surname</th>
+                                <th>Job</th>
+                                <th>Age</th>
+                                <th>Status</th>
+                                <th>Settings</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Cameron Williamson</td>
+                                <td>30/07/2022</td>
+                                <td>Male</td>
+                                <td>61kg</td>
+                                <td class="pending">pending</td>
+                                <td><span><i class="ri-edit-line edit"></i><i class="ri-delete-bin-line delete"></i></span></td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>George Washington</td>
+                                <td>30/07/2022</td>
+                                <td>Male</td>
+                                <td>54kg</td>
+                                <td class="confirmed">Confirmed</td>
+                                <td><span><i class="ri-edit-line edit"></i><i class="ri-delete-bin-line delete"></i></span></td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>John Adams</td>
+                                <td>29/07/2022</td>
+                                <td>Male</td>
+                                <td>56kg</td>
+                                <td class="confirmed">Confirmed</td>
+                                <td><span><i class="ri-edit-line edit"></i><i class="ri-delete-bin-line delete"></i></span></td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>Thomas Jefferson</td>
+                                <td>29/07/2022</td>
+                                <td>Male</td>
+                                <td>11kg</td>
+                                <td class="rejected">Rejected</td>
+                                <td><span><i class="ri-edit-line edit"></i><i class="ri-delete-bin-line delete"></i></span></td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>James Madison</td>
+                                <td>29/07/2022</td>
+                                <td>Male</td>
+                                <td>69kg</td>
+                                <td class="confirmed">Confirmed</td>
+                                <td><span><i class="ri-edit-line edit"></i><i class="ri-delete-bin-line delete"></i></span></td>
+                            </tr>
+                            <tr>
+                                <td>6</td>
+                                <td>Andrew Jackson</td>
+                                <td>28/07/2022</td>
+                                <td>Male</td>
+                                <td>88kg</td>
+                                <td class="confirmed">Confirmed</td>
+                                <td><span><i class="ri-edit-line edit"></i><i class="ri-delete-bin-line delete"></i></span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="./assets/js/admin.js"></script>
+</body>
+</html>

@@ -61,7 +61,7 @@ function showCourseData(){
             <div class="cart">
                         <div class="hiddenDiv">
                             <div class="heartDiv">
-                                <i class="bi bi-heart"></i>
+                                <i class="bi favorite-btn ${isFavorite(element.id) ? 'bi-heart-fill' : 'bi-heart'}" data-song-id="${element.id}" onclick="toggleFavorite(${element.id})"></i>
                             </div>
                             <span class="title-span">Beginner</span>
                             <h3>Starting SEO as your Home Based Business</h3>
@@ -125,6 +125,67 @@ function showCourseData(){
         })
     })
 }
+function isFavorite(elemetId) {
+    const { fav } = getUserSession();
+    return fav.includes(elemetId);
+  
+  }
+  
+  function updateUserSession(userData) {
+    localStorage.setItem('currentUser', JSON.stringify(userData));
+  }
+  
+  async function toggleFavorite(elemetId) {
+    const userData = getUserSession();
+    const { fav } = userData;
+    const index = fav.indexOf(elemetId);
+    if (index !== -1) {
+      fav.splice(index, 1);
+    } else {
+      fav.push(elemetId);
+    
+    }
+    console.log(userData);
+    console.log(userData.fav);
+    updateUserSession(userData); 
+    updateFavoriteButton(elemetId);
+    
+    try {
+  
+      await axios.patch(`http://localhost:3000/user/${userData.id}`, { fav: userData.fav });
+      console.log('Favori listesi güncellendi:', userData.fav);
+    } catch (error) {
+      console.error('Favori listesi güncellenirken bir hata oluştu:', error);
+    }
+  }
+  
+  
+  function loadFavoriteSongs() {
+    const userData = getUserSession();
+    const { fav } = userData;
+    const favoriteSongs = songs.filter(element => fav.includes(element.id));
+    showCourseData(favoriteSongs);
+  }
+  
+  function handleFavoriteClick(elemetId) {
+  }
+  
+  function updateFavoriteButton(elemetId) {
+    const favoriteButton = document.querySelector(`.favorite-btn[data-song-id="${elemetId}"]`);
+    const userData = getUserSession();
+    const { fav } = userData;
+    const index = fav.indexOf(elemetId);
+    if (index !== -1) {
+      favoriteButton.classList.remove('bi-heart');
+      favoriteButton.classList.add('bi-heart-fill');
+    } else {
+      favoriteButton.classList.remove('bi-heart-fill');
+      favoriteButton.classList.add('bi-heart');
+    }
+  }
+  function getUserSession() {
+    return JSON.parse(localStorage.getItem('currentUser')) || { id: null, fav: [] };
+  }
 
 searcInput.addEventListener("input", (e) => {
     arr_1 = arr_2;

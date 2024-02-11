@@ -690,56 +690,53 @@
   ],
   "user": [
     {
-      "id": 1,
+      "id": "1",
       "name": "Sadiq",
       "surname": "Rəhmətov",
       "email": "friyaziyyat@gmail.com",
       "phone": "+994507624294",
       "password": "1234",
-      "fav": [
-        {
-          "name": "eli"
-        }
-      ]
+      "fav": []
     },
     {
-      "id": 2,
+      "id": "2",
       "name": "Sadiq",
       "surname": "Rəhmətov",
       "email": "sadiq@gmail.com",
       "phone": "+994507624294",
       "password": "666",
-      "fav": [
-        {
-          "name": "eli"
-        }
-      ]
+      "fav": []
     },
     {
-      "id": 3,
+      "id": "3",
       "name": "ffhhh",
       "surname": "pojklnkn",
       "email": "hjhjkhkhk@gmail.com",
       "phone": "787878788",
       "password": "787878",
-      "fav": [
-        {
-          "name": "eli"
-        }
-      ]
+      "fav": []
     },
     {
-      "id": 4,
+      "id": "4",
       "name": "Əli",
       "surname": "Hüseynov",
       "email": "əli@gmail.com",
       "phone": "+994507624294",
       "password": "12345",
       "fav": [
-        {
-          "name": "eli"
-        }
+        2,
+        1
       ]
+    },
+    {
+      "id": "7b21",
+      "name": "Azad",
+      "surname": "Həşimov",
+      "email": "azad@gmail.com",
+      "job": "student",
+      "phone": "32423432",
+      "password": "112233",
+      "fav": []
     }
   ]
 }

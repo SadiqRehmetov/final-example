@@ -1885,6 +1885,7 @@ footer .footer-down {
   text-align: center;
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 10px;
 }
 #acount-section .container .in-acount-section .center .image {
@@ -1897,6 +1898,37 @@ footer .footer-down {
   height: 100%;
   object-fit: cover;
   border-radius: 9999px;
+}
+
+.admin .container .in-admin {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  padding: 20px 0px;
+}
+.admin .container .in-admin .left {
+  min-width: 200px;
+}
+.admin .container .in-admin .left img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.bann-admin .container .in-bann-admin {
+  padding: 20px 0px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+}
+.bann-admin .container .in-bann-admin .left {
+  border: 1px solid black;
+  position: fixed;
+  z-index: 0;
+  width: 25%;
+  height: 100vh;
 }
 
 @media screen and (max-width: 1200px) {

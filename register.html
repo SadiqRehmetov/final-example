@@ -15,28 +15,35 @@
         <div class="user-details">
           <div class="input-box">
             <span class="details">Full Name</span>
-            <input type="text" placeholder="Enter your name" id="nameInput">
+            <input type="text" placeholder="Enter your name" id="nameInput" required>
           </div>
           <div class="input-box">
             <span class="details">Last Name</span>
-            <input type="text" placeholder="Enter your surname" id="lastNameInput">
+            <input type="text" placeholder="Enter your surname" id="lastNameInput" required>
           </div>
           <div class="input-box">
             <span class="details">Email</span>
-            <input type="text" placeholder="Enter your email" id="emailInput">
+            <input type="text" placeholder="Enter your email" id="emailInput" required>
           </div>
           <div class="input-box">
             <span class="details">Phone Number</span>
-            <input type="text" placeholder="Enter your number" id="number">
+            <input type="text" placeholder="Enter your number" id="number" required>
           </div>
           <div class="input-box">
             <span class="details">Password</span>
-            <input type="password" placeholder="Enter your password" id="passwordInput">
+            <input type="password" placeholder="Enter your password" id="passwordInput" required>
           </div>
           <div class="input-box">
             <span class="details">Confirm Password</span>
-            <input type="password" placeholder="Confirm your password" id="confirmpassword">
+            <input type="password" placeholder="Confirm your password" id="confirmpassword" required>
             <span class="wrongConfirm" style="color: red; display: none;">* Wrong confirm password</span>
+          </div>
+          <div class="input-box">
+            <span class="details">What do you do?</span>
+            <select id="job">
+              <option value="teacher">Teacher</option>
+              <option value="student">Student</option>
+            </select>
           </div>
         </div>
         <div class="button">
