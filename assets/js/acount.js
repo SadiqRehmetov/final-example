@@ -160,8 +160,8 @@ function isFavorite(responsId) {
   function loadFavoriteSongs() {
     const userData = getUserSession();
     const { fav } = userData;
-    const favoriteSongs = songs.filter(element => fav.includes(element.id));
-    shopData(favoriteSongs);
+    // const favoriteSongs = songs.filter(element => fav.includes(element.id));
+    // shopData(favoriteSongs);
   }
   
   function handleFavoriteClick(responsId) {

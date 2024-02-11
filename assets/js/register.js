@@ -17,7 +17,8 @@ form.addEventListener("submit",(e)=>{
             job:selectJob.value,
             phone:number.value,
             password:confirmpassword.value,
-            fav:[]
+            fav:[],
+            basket:[]
         })
         .then(res=>{
             window.location="../../login.html"

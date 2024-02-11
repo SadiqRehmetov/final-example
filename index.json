@@ -696,7 +696,8 @@
       "email": "friyaziyyat@gmail.com",
       "phone": "+994507624294",
       "password": "1234",
-      "fav": []
+      "fav": [],
+      "basket": []
     },
     {
       "id": "2",
@@ -705,7 +706,17 @@
       "email": "sadiq@gmail.com",
       "phone": "+994507624294",
       "password": "666",
-      "fav": []
+      "fav": [
+        6,
+        5,
+        19
+      ],
+      "basket": [
+        17,
+        15,
+        1,
+        5
+      ]
     },
     {
       "id": "3",
@@ -714,7 +725,8 @@
       "email": "hjhjkhkhk@gmail.com",
       "phone": "787878788",
       "password": "787878",
-      "fav": []
+      "fav": [],
+      "basket": []
     },
     {
       "id": "4",
@@ -723,10 +735,8 @@
       "email": "əli@gmail.com",
       "phone": "+994507624294",
       "password": "12345",
-      "fav": [
-        2,
-        1
-      ]
+      "fav": [],
+      "basket": []
     },
     {
       "id": "7b21",
@@ -736,7 +746,8 @@
       "job": "student",
       "phone": "32423432",
       "password": "112233",
-      "fav": []
+      "fav": [],
+      "basket": []
     }
   ]
 }
