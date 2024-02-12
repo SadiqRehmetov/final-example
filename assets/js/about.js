@@ -3,6 +3,10 @@ let menuİcon = document.querySelector(".bi-list")
 let responsMenu = document.querySelector(".respons-menu")
 let closeMenu = document.querySelector(".closemenu")
 let instructorsCarts = document.querySelector(".instructors-carts")
+let shopCount = document.querySelector(".shopCount")
+let currentUser = localStorage.getItem('currentUser') ? JSON.parse(localStorage.getItem('currentUser')) : null;
+let userBasketCount = currentUser.basket.length
+shopCount.innerHTML=`${userBasketCount}`
 window.addEventListener("scroll", () => {
     if (window.scrollY > 100) {
         nav.style.position = "fixed";
@@ -25,6 +29,10 @@ let loginAndRegister = document.querySelector("#login-register")
 if(user){
     acount.innerHTML = user
     acount.style.display = 'block'
+    acount.style.padding="10px"
+    acount.style.backgroundColor="#27B889"
+    acount.style.color="white"
+    acount.style.borderRadius="10px"
     loginAndRegister.style.display="none";
 }else{
     setTimeout(()=>{window.location = './login.html'}, 2000)

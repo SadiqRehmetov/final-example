@@ -91,6 +91,10 @@ let user = localStorage.getItem('currentUser') ? JSON.parse(localStorage.getItem
 if(user){
   acount.innerHTML = user
   acount.style.display = 'block'
+  acount.style.padding="10px"
+  acount.style.backgroundColor="#27B889"
+  acount.style.color="white"
+  acount.style.borderRadius="10px"
   loginAndRegister.style.display="none";
 }else{
   setTimeout(()=>{window.location = './login.html'}, 2000)
@@ -229,9 +233,6 @@ function updateBasketSession(userData) {
   localStorage.setItem('currentUser', JSON.stringify(userData));
 }
 
-console.log(currentUser);
-console.log(currentUser.basket);
-console.log(currentUser.basket.length);
 shopCount.innerHTML=`${userBasketCount}`
 
 

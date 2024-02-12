@@ -146,10 +146,10 @@ header .container .in-header .icons .search:focus {
   border: 1px solid #27B889;
 }
 header .container .in-header .icons span {
-  padding: 2px;
+  padding: 1px;
   font-size: 14px;
-  width: 25px;
-  height: 25px;
+  width: 20px;
+  height: 20 px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -157,7 +157,7 @@ header .container .in-header .icons span {
   color: white;
   border-radius: 9999px;
   position: absolute;
-  top: -15px;
+  top: -10px;
   right: -15px;
 }
 header .container .in-header strong a {
@@ -1838,6 +1838,7 @@ footer .footer-down {
   padding: 15px 10px;
   background-color: #27B889;
   color: white;
+  border-radius: 10px;
 }
 
 #shop .container .in-shop {

@@ -61,6 +61,10 @@ if(user){
     profilnumber.innerHTML=userNumber
     acount.innerHTML = user
     acount.style.display = 'block'
+    acount.style.padding="10px"
+    acount.style.backgroundColor="#27B889"
+    acount.style.color="white"
+    acount.style.borderRadius="10px"
     loginAndRegister.style.display="none";
 }else{
     setTimeout(()=>{window.location = './login.html'}, 2000)
