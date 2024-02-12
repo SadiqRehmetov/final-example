@@ -158,6 +158,7 @@
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
+                background-color: red;
                 gap: 50px;
                 .left{
                     width: 100%;
@@ -213,6 +214,22 @@
             .in-shop{
                 .shop-carts{
                     grid-template-columns: repeat(3,auto);
+                }
+            }
+        }
+    }
+    //course_details
+    #course-details{
+        .container{
+            .in-course-details{
+                @include column;
+                gap: 50px;
+                .left{
+                    width: 100%;
+                }
+                .right{
+                    width: 100%;
+                    margin: 0;
                 }
             }
         }
@@ -531,6 +548,43 @@
             }
         }
     }
+    //course_details
+    #course-details{
+        .container{
+            .in-course-details{
+                @include column;
+                gap: 50px;
+                .left{
+                    width: 100%;
+                    .header-info{
+                        .review{
+                            .review-info{
+                                flex-direction: column;
+                                align-items: center;
+                                .lefft{
+                                    height: 150px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    #add{
+        .container{
+            .in-add{
+                @include column;
+                gap: 50px;
+                .leftAdd{
+                    width: 100%;
+                }
+                .rightAdd{
+                    width: 100%;
+                }
+            }
+        }
+    }
 }
 
 @media screen and (max-width: 575px) {
@@ -701,6 +755,43 @@
             .in-shop{
                 .shop-carts{
                     grid-template-columns: repeat(1,auto);
+                }
+            }
+        }
+    }
+    //course_details
+    #course-details{
+        .container{
+            .in-course-details{
+                @include column;
+                gap: 50px;
+                .left{
+                    width: 100%;
+                    .header-info{
+                        .instructor{
+                            display: flex;
+                            flex-direction: column;
+                            .image{
+                                width: 100%;
+                            }
+                            .infos{
+                                width: 100%;
+                            }
+                        }
+                        .review{
+                            .reyt{
+                                flex-direction: column;
+                                gap: 30px;
+                                .righ{
+                                    width: 100%;
+                                }
+                            }
+                        }
+                    }
+                }
+                .right{
+                    width: 100%;
+                    margin: 0;
                 }
             }
         }

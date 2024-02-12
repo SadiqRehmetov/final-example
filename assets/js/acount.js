@@ -1,6 +1,5 @@
+
 let nav = document.querySelector("header")
-let searchIcon = document.querySelector("#search")
-let searchInput = document.querySelector("#searchinput")
 let menuİcon = document.querySelector(".bi-list")
 let responsMenu = document.querySelector(".respons-menu")
 let closeMenu = document.querySelector(".closemenu")
@@ -18,6 +17,13 @@ let userName =localStorage.getItem('currentUser') ? JSON.parse(localStorage.getI
 let userSurname =localStorage.getItem('currentUser') ? JSON.parse(localStorage.getItem('currentUser')).surname : null;
 let userNumber =localStorage.getItem('currentUser') ? JSON.parse(localStorage.getItem('currentUser')).phone : null;
 let userJob =localStorage.getItem('currentUser') ? JSON.parse(localStorage.getItem('currentUser')).job : null;
+console.log(userJob);
+let shopCount = document.querySelector(".shopCount")
+let currentUser = localStorage.getItem('currentUser') ? JSON.parse(localStorage.getItem('currentUser')) : null;
+let userId = currentUser.id
+console.log(userId);
+let userBasketCount = currentUser.basket.length
+shopCount.innerHTML=`${userBasketCount}`
 window.addEventListener("scroll", () => {
     if (window.scrollY > 100) {
         nav.style.position = "fixed";
@@ -27,17 +33,7 @@ window.addEventListener("scroll", () => {
         nav.style.transition = "position 0.3s ease";
     }
 });
-searchIcon.addEventListener("click", () => {
-    searchInput.classList.toggle("search");
-    searchInput.classList.toggle("searchInput");
-    if(menuİcon.style.display=="none"){
-        menuİcon.style.display="flex";
-    }
-    else{
-        menuİcon.style.display="none";
-        
-    }
-});
+
 menuİcon.addEventListener("click",()=>{
     responsMenu.style.transform = "translateX(0)";
 })
@@ -54,32 +50,60 @@ else{
 }
 
 
-if(user){
-    profilemail.innerHTML=user
-    profilname.innerHTML=userName
-    profilsurname.innerHTML=userSurname
-    profilnumber.innerHTML=userNumber
-    acount.innerHTML = user
-    acount.style.display = 'block'
-    acount.style.padding="10px"
-    acount.style.backgroundColor="#27B889"
-    acount.style.color="white"
-    acount.style.borderRadius="10px"
-    loginAndRegister.style.display="none";
+
+let responsiveAcount = document.querySelector(".my-acount-res")
+if(window.innerWidth < 768){
+    acount.style.display="none"
+    if(user){
+        profilemail.innerHTML=user
+        profilname.innerHTML=userName
+        profilsurname.innerHTML=userSurname
+        profilnumber.innerHTML=userNumber
+        acount.style.display="none"
+        responsiveAcount.innerHTML = user
+        responsiveAcount.style.display = 'block'
+        responsiveAcount.style.padding="10px"
+        responsiveAcount.style.backgroundColor="#27B889"
+        responsiveAcount.style.color="white"
+        responsiveAcount.style.borderRadius="10px"
+        loginAndRegister.style.display="none";
+    }else{
+        setTimeout(()=>{window.location = './login.html'}, 2000)
+    }
 }else{
-    setTimeout(()=>{window.location = './login.html'}, 2000)
+    if(user){
+        profilemail.innerHTML=user
+        profilname.innerHTML=userName
+        profilsurname.innerHTML=userSurname
+        profilnumber.innerHTML=userNumber
+        acount.innerHTML = user
+        acount.style.display = 'block'
+        acount.style.padding="10px"
+        acount.style.backgroundColor="#27B889"
+        acount.style.color="white"
+        acount.style.borderRadius="10px"
+        responsiveAcount.innerHTML = user
+        responsiveAcount.style.display = 'block'
+        responsiveAcount.style.padding="10px"
+        responsiveAcount.style.backgroundColor="#27B889"
+        responsiveAcount.style.color="white"
+        responsiveAcount.style.borderRadius="10px"
+        loginAndRegister.style.display="none";
+    }else{
+        setTimeout(()=>{window.location = './login.html'}, 2000)
+    }
 }
 logoutBtn.addEventListener('click',()=>{
     localStorage.removeItem('currentUser')
     window.location = './login.html'
 })
 let profilImage = document.querySelector(".profil");
-let fileInput = document.querySelector(".profileinput");
+
 
 profilImage.addEventListener("click", () => {
     fileInput.click();
 });
-
+let fileInput = document.querySelector(".profileinput");
 fileInput.addEventListener("change", (e) => {
     let file = e.target.files[0];
     if (file) {
@@ -188,3 +212,53 @@ function isFavorite(responsId) {
 function getUserSession() {
     return JSON.parse(localStorage.getItem('currentUser')) || { id: null, fav: [] };
   }
+
+
+
+
+let shopAdd=document.querySelector("#add-shop")
+let shopImage = document.querySelector("#shopImage")
+let newShopImage = document.querySelector("#newShopImage")
+let shopName = document.querySelector("#shopName")
+let shopPrice = document.querySelector("#shopPrice")
+let rightAdd =document.querySelector(".rightAdd")
+shopImage.addEventListener("input", (e)=>{
+    let file=e.target.files[0]
+    if(file){
+        let reader = new FileReader()
+        reader.readAsDataURL(file)
+        reader.onload=function(){
+            newShopImage.src=reader.result
+        }
+    }
+})
+
+shopAdd.addEventListener("submit",(e)=>{
+    e.preventDefault();
+    axios.post(`http://localhost:3000/shop`, {
+        image:newShopImage.src,
+        name:shopName.value,
+        price:shopPrice.value
+    })
+    .then(res=>{
+        window.location.reload()
+    })
+    axios.patch(`http://localhost:3000/user/${userId}`,{
+        data:[
+            {
+                image:newShopImage.src,
+                name:shopName.value,
+                price:shopPrice.value
+            }
+        ]
+    })
+    .then(res=>{
+        window.location.reload()
+    })
+})
+
+if(userJob!="teacher"){
+    rightAdd.style.display="none"
+}else{
+    rightAdd.style.display="flex"
+}

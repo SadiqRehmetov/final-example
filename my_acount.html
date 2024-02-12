@@ -14,6 +14,7 @@
             <i class=" bi bi-x-lg closemenu"></i>
         </div>
         <ul>
+            <li style="border: none;"><a href="./my_acount.html" class="my-acount-res" ></a></li>
             <li><a href="./index.html">Home</a></li>
             <li><a href="./about.html">About</a></li>
             <li><a href="./archive_course.html">Courses</a></li>
@@ -41,10 +42,8 @@
                 </ul>
 
                 <div class="icons">
-                    <input type="text" placeholder="Search courses..."  id="searchinput" class="searchInput">
-                    <a href="#"><i class="bi bi-search" id="search"></i></a>
-                    <a href="#"><i class="bi bi-cart"></i></a>
-                    <span>0</span>
+                    <a href="#" ><i class="bi bi-cart" style="display: flex;"></i></a>
+                    <span style="display: flex;" class="shopCount">0</span>
                 </div>
                 <strong id="login-register">
                     <a href="./login.html">Login</a>/
@@ -86,7 +85,50 @@
             </div>
         </div>
     </section>
-
+    <section id="add">
+        <div class="container">
+            <div class="in-add">
+                <div class="leftAdd">
+                    <form action="#" id="add-shop">
+                        <h2>Add Shop</h2>
+                        <label>Image:</label>
+                        <input type="file" required id="shopImage">
+                        <div class="image">
+                            <img src="" alt="picture" id="newShopImage">
+                        </div>
+                        <label>Name:</label>
+                        <input type="text" placeholder="Shop name..." required id="shopName">
+                        <label>Price:</label>
+                        <input type="text" placeholder="Shop price..." required id="shopPrice">
+                        <input type="submit" value="Send">
+                    </form>
+                </div>
+                <div class="rightAdd">
+                    <form action="#">
+                        <h2>Add Course</h2>
+                        <label>Image:</label>
+                        <input type="file" required>
+                        <div class="image">
+                            <img src="" alt="picture">
+                        </div>
+                        <label>Category</label>
+                        <input type="text" placeholder="Course category..." required>
+                        <label>Name:</label>
+                        <input type="text" placeholder="Cours name..." required>
+                        <label>Price:</label>
+                        <input type="text" placeholder="Course price..." required>
+                        <label>Instructtor Name:</label>
+                        <input type="text" placeholder="Instructor name..." required>
+                        <label>Instructors Job:</label>
+                        <input type="text" placeholder="instructors job..." required>
+                        <label>Description:</label>
+                        <input type="text" placeholder="Description..." required>
+                        <input type="submit" value="Send">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
     <footer>
         <div class="container">
             <div class="footer-up">

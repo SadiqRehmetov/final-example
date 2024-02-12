@@ -790,6 +790,21 @@ header{
                         &:hover{
                             opacity: 1;
                         }
+                        button{
+                            background-color: $color3;
+                            color: white;
+                            padding: 10px 5px;
+                            width: 200px;
+                            border: none;
+                            border-radius: 10px;
+                            font-size: $font - 5px;
+                            cursor: pointer;
+                            transition: all .5s ease;
+                            &:hover{
+                                background-color: white;
+                                color: black;
+                            }
+                        }
 
                     }
                     .image{
@@ -984,12 +999,14 @@ header{
     }
 }
 #started{
+    width: 100%;
     margin: 100px 0px;
     background-image: url("../image/shape-36.png");
     background-position: center;
     background-color: #F0F4F5;
+    overflow: hidden;
     .container{
-        overflow: hidden;
+        
         .in-started{
             @include column;
             align-items: center;
