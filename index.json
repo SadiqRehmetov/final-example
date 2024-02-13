@@ -1,4 +1,11 @@
 {
+  "admin":[
+    {
+      "id":1,
+      "name":"Sadiq",
+      "password":"1212"
+    }
+  ],
   "course": [
     {
       "id": "1",
@@ -6,7 +13,7 @@
       "category": "Beginner",
       "name": "Starting SEO as your Home Based Business",
       "price": "30",
-      "instructtorName": "Emilie Bryant",
+      "instructorName": "Emilie Bryant",
       "instructorsJob": "Expert",
       "description": "Lorem ipsum dolor sit amet consectur adipiscing elit, sed do eiusmod tempor"
     },
@@ -16,7 +23,7 @@
       "category": "Expert",
       "name": "Grow Personal Financial Security Thinking &",
       "price": "49",
-      "instructtorName": "Emilie Bryant",
+      "instructorName": "Emilie Bryant",
       "instructorsJob": "Expert",
       "description": "Lorem ipsum dolor sit amet consectur adipiscing elit, sed do eiusmod tempor"
     },
@@ -26,7 +33,7 @@
       "category": "All Levels",
       "name": "The Complete Guide to Build RESTful API",
       "price": "Free",
-      "instructtorName": "Emilie Bryant",
+      "instructorName": "Emilie Bryant",
       "instructorsJob": "Expert",
       "description": "Lorem ipsum dolor sit amet consectur adipiscing elit, sed do eiusmod tempor"
     },
@@ -36,7 +43,7 @@
       "category": "All Levels",
       "name": "Competitive Strategy Law for Management",
       "price": "75",
-      "instructtorName": "Emilie Bryant",
+      "instructorName": "Emilie Bryant",
       "instructorsJob": "Expert",
       "description": "Lorem ipsum dolor sit amet consectur adipiscing elit, sed do eiusmod tempor"
     },
@@ -46,7 +53,7 @@
       "category": "Beginner",
       "name": "Starting SEO as your Home Based Business",
       "price": "30",
-      "instructtorName": "Emilie Bryant",
+      "instructorName": "Emilie Bryant",
       "instructorsJob": "Expert",
       "description": "Lorem ipsum dolor sit amet consectur adipiscing elit, sed do eiusmod tempor"
     },
@@ -56,7 +63,7 @@
       "category": "Expert",
       "name": "Grow Personal Financial Security Thinking &",
       "price": "49",
-      "instructtorName": "Emilie Bryant",
+      "instructorName": "Emilie Bryant",
       "instructorsJob": "Expert",
       "description": "Lorem ipsum dolor sit amet consectur adipiscing elit, sed do eiusmod tempor"
     },
@@ -66,7 +73,7 @@
       "category": "All Levels",
       "name": "The Complete Guide to Build RESTful API",
       "price": "Free",
-      "instructtorName": "Emilie Bryant",
+      "instructorName": "Emilie Bryant",
       "instructorsJob": "Expert",
       "description": "Lorem ipsum dolor sit amet consectur adipiscing elit, sed do eiusmod tempor"
     },
@@ -76,7 +83,7 @@
       "category": "All Levels",
       "name": "Competitive Strategy Law for Management",
       "price": "75",
-      "instructtorName": "Emilie Bryant",
+      "instructorName": "Emilie Bryant",
       "instructorsJob": "Expert",
       "description": "Lorem ipsum dolor sit amet consectur adipiscing elit, sed do eiusmod tempor"
     },
@@ -86,7 +93,7 @@
       "category": "Beginner",
       "name": "Starting SEO as your Home Based Business",
       "price": "30",
-      "instructtorName": "Emilie Bryant",
+      "instructorName": "Emilie Bryant",
       "instructorsJob": "Expert",
       "description": "Lorem ipsum dolor sit amet consectur adipiscing elit, sed do eiusmod tempor"
     },
@@ -96,7 +103,7 @@
       "category": "Expert",
       "name": "Grow Personal Financial Security Thinking &",
       "price": "49",
-      "instructtorName": "Emilie Bryant",
+      "instructorName": "Emilie Bryant",
       "instructorsJob": "Expert",
       "description": "Lorem ipsum dolor sit amet consectur adipiscing elit, sed do eiusmod tempor"
     },
@@ -106,7 +113,7 @@
       "category": "All Levels",
       "name": "The Complete Guide to Build RESTful API",
       "price": "Free",
-      "instructtorName": "Emilie Bryant",
+      "instructorName": "Emilie Bryant",
       "instructorsJob": "Expert",
       "description": "Lorem ipsum dolor sit amet consectur adipiscing elit, sed do eiusmod tempor"
     },
@@ -116,7 +123,7 @@
       "category": "All Levels",
       "name": "Competitive Strategy Law for Management",
       "price": "75",
-      "instructtorName": "Emilie Bryant",
+      "instructorName": "Emilie Bryant",
       "instructorsJob": "Expert",
       "description": "Lorem ipsum dolor sit amet consectur adipiscing elit, sed do eiusmod tempor"
     },
@@ -126,7 +133,7 @@
       "category": "Beginner",
       "name": "Starting SEO as your Home Based Business",
       "price": "30",
-      "instructtorName": "Emilie Bryant",
+      "instructorName": "Emilie Bryant",
       "instructorsJob": "Expert",
       "description": "Lorem ipsum dolor sit amet consectur adipiscing elit, sed do eiusmod tempor"
     },
@@ -136,7 +143,7 @@
       "category": "Expert",
       "name": "Grow Personal Financial Security Thinking &",
       "price": "49",
-      "instructtorName": "Emilie Bryant",
+      "instructorName": "Emilie Bryant",
       "instructorsJob": "Expert",
       "description": "Lorem ipsum dolor sit amet consectur adipiscing elit, sed do eiusmod tempor"
     },
@@ -146,7 +153,7 @@
       "category": "All Levels",
       "name": "The Complete Guide to Build RESTful API",
       "price": "Free",
-      "instructtorName": "Emilie Bryant",
+      "instructorName": "Emilie Bryant",
       "instructorsJob": "Expert",
       "description": "Lorem ipsum dolor sit amet consectur adipiscing elit, sed do eiusmod tempor"
     },
@@ -156,7 +163,7 @@
       "category": "All Levels",
       "name": "Competitive Strategy Law for Management",
       "price": "75",
-      "instructtorName": "Emilie Bryant",
+      "instructorName": "Emilie Bryant",
       "instructorsJob": "Expert",
       "description": "Lorem ipsum dolor sit amet consectur adipiscing elit, sed do eiusmod tempor"
     },
@@ -166,7 +173,7 @@
       "category": "Beginner",
       "name": "Starting SEO as your Home Based Business",
       "price": "30",
-      "instructtorName": "Emilie Bryant",
+      "instructorName": "Emilie Bryant",
       "instructorsJob": "Expert",
       "description": "Lorem ipsum dolor sit amet consectur adipiscing elit, sed do eiusmod tempor"
     },
@@ -176,7 +183,7 @@
       "category": "Expert",
       "name": "Grow Personal Financial Security Thinking &",
       "price": "49",
-      "instructtorName": "Emilie Bryant",
+      "instructorName": "Emilie Bryant",
       "instructorsJob": "Expert",
       "description": "Lorem ipsum dolor sit amet consectur adipiscing elit, sed do eiusmod tempor"
     },
@@ -186,7 +193,7 @@
       "category": "All Levels",
       "name": "The Complete Guide to Build RESTful API",
       "price": "Free",
-      "instructtorName": "Emilie Bryant",
+      "instructorName": "Emilie Bryant",
       "instructorsJob": "Expert",
       "description": "Lorem ipsum dolor sit amet consectur adipiscing elit, sed do eiusmod tempor"
     },
@@ -196,7 +203,7 @@
       "category": "All Levels",
       "name": "Competitive Strategy Law for Management",
       "price": "75",
-      "instructtorName": "Emilie Bryant",
+      "instructorName": "Emilie Bryant",
       "instructorsJob": "Expert",
       "description": "Lorem ipsum dolor sit amet consectur adipiscing elit, sed do eiusmod tempor"
     },
@@ -206,7 +213,7 @@
       "category": "Beginner",
       "name": "Starting SEO as your Home Based Business",
       "price": "30",
-      "instructtorName": "Emilie Bryant",
+      "instructorName": "Emilie Bryant",
       "instructorsJob": "Expert",
       "description": "Lorem ipsum dolor sit amet consectur adipiscing elit, sed do eiusmod tempor"
     },
@@ -216,7 +223,7 @@
       "category": "Expert",
       "name": "Grow Personal Financial Security Thinking &",
       "price": "49",
-      "instructtorName": "Emilie Bryant",
+      "instructorName": "Emilie Bryant",
       "instructorsJob": "Expert",
       "description": "Lorem ipsum dolor sit amet consectur adipiscing elit, sed do eiusmod tempor"
     },
@@ -226,7 +233,7 @@
       "category": "All Levels",
       "name": "The Complete Guide to Build RESTful API",
       "price": "Free",
-      "instructtorName": "Emilie Bryant",
+      "instructorName": "Emilie Bryant",
       "instructorsJob": "Expert",
       "description": "Lorem ipsum dolor sit amet consectur adipiscing elit, sed do eiusmod tempor"
     },
@@ -236,7 +243,7 @@
       "category": "All Levels",
       "name": "Competitive Strategy Law for Management",
       "price": "75",
-      "instructtorName": "Emilie Bryant",
+      "instructorName": "Emilie Bryant",
       "instructorsJob": "Expert",
       "description": "Lorem ipsum dolor sit amet consectur adipiscing elit, sed do eiusmod tempor"
     },
@@ -246,7 +253,7 @@
       "category": "Beginner",
       "name": "Starting SEO as your Home Based Business",
       "price": "30",
-      "instructtorName": "Emilie Bryant",
+      "instructorName": "Emilie Bryant",
       "instructorsJob": "Expert",
       "description": "Lorem ipsum dolor sit amet consectur adipiscing elit, sed do eiusmod tempor"
     },
@@ -256,7 +263,7 @@
       "category": "Expert",
       "name": "Grow Personal Financial Security Thinking &",
       "price": "49",
-      "instructtorName": "Emilie Bryant",
+      "instructorName": "Emilie Bryant",
       "instructorsJob": "Expert",
       "description": "Lorem ipsum dolor sit amet consectur adipiscing elit, sed do eiusmod tempor"
     },
@@ -266,7 +273,7 @@
       "category": "All Levels",
       "name": "The Complete Guide to Build RESTful API",
       "price": "Free",
-      "instructtorName": "Emilie Bryant",
+      "instructorName": "Emilie Bryant",
       "instructorsJob": "Expert",
       "description": "Lorem ipsum dolor sit amet consectur adipiscing elit, sed do eiusmod tempor"
     },
@@ -276,7 +283,7 @@
       "category": "All Levels",
       "name": "Competitive Strategy Law for Management",
       "price": "75",
-      "instructtorName": "Emilie Bryant",
+      "instructorName": "Emilie Bryant",
       "instructorsJob": "Expert",
       "description": "Lorem ipsum dolor sit amet consectur adipiscing elit, sed do eiusmod tempor"
     },
@@ -286,7 +293,7 @@
       "category": "Beginner",
       "name": "Starting SEO as your Home Based Business",
       "price": "30",
-      "instructtorName": "Emilie Bryant",
+      "instructorName": "Emilie Bryant",
       "instructorsJob": "Expert",
       "description": "Lorem ipsum dolor sit amet consectur adipiscing elit, sed do eiusmod tempor"
     },
@@ -296,7 +303,7 @@
       "category": "Expert",
       "name": "Grow Personal Financial Security Thinking &",
       "price": "49",
-      "instructtorName": "Emilie Bryant",
+      "instructorName": "Emilie Bryant",
       "instructorsJob": "Expert",
       "description": "Lorem ipsum dolor sit amet consectur adipiscing elit, sed do eiusmod tempor"
     },
@@ -306,7 +313,7 @@
       "category": "All Levels",
       "name": "The Complete Guide to Build RESTful API",
       "price": "Free",
-      "instructtorName": "Emilie Bryant",
+      "instructorName": "Emilie Bryant",
       "instructorsJob": "Expert",
       "description": "Lorem ipsum dolor sit amet consectur adipiscing elit, sed do eiusmod tempor"
     },
@@ -316,7 +323,7 @@
       "category": "All Levels",
       "name": "Competitive Strategy Law for Management",
       "price": "75",
-      "instructtorName": "Emilie Bryant",
+      "instructorName": "Emilie Bryant",
       "instructorsJob": "Expert",
       "description": "Lorem ipsum dolor sit amet consectur adipiscing elit, sed do eiusmod tempor"
     },
@@ -326,7 +333,7 @@
       "category": "Beginner",
       "name": "Starting SEO as your Home Based Business",
       "price": "30",
-      "instructtorName": "Emilie Bryant",
+      "instructorName": "Emilie Bryant",
       "instructorsJob": "Expert",
       "description": "Lorem ipsum dolor sit amet consectur adipiscing elit, sed do eiusmod tempor"
     },
@@ -336,7 +343,7 @@
       "category": "Expert",
       "name": "Grow Personal Financial Security Thinking &",
       "price": "49",
-      "instructtorName": "Emilie Bryant",
+      "instructorName": "Emilie Bryant",
       "instructorsJob": "Expert",
       "description": "Lorem ipsum dolor sit amet consectur adipiscing elit, sed do eiusmod tempor"
     },
@@ -346,7 +353,7 @@
       "category": "All Levels",
       "name": "The Complete Guide to Build RESTful API",
       "price": "Free",
-      "instructtorName": "Emilie Bryant",
+      "instructorName": "Emilie Bryant",
       "instructorsJob": "Expert",
       "description": "Lorem ipsum dolor sit amet consectur adipiscing elit, sed do eiusmod tempor"
     },
@@ -356,7 +363,7 @@
       "category": "All Levels",
       "name": "Competitive Strategy Law for Management",
       "price": "75",
-      "instructtorName": "Emilie Bryant",
+      "instructorName": "Emilie Bryant",
       "instructorsJob": "Expert",
       "description": "Lorem ipsum dolor sit amet consectur adipiscing elit, sed do eiusmod tempor"
     },
@@ -366,7 +373,7 @@
       "category": "Beginner",
       "name": "Starting SEO as your Home Based Business",
       "price": "30",
-      "instructtorName": "Emilie Bryant",
+      "instructorName": "Emilie Bryant",
       "instructorsJob": "Expert",
       "description": "Lorem ipsum dolor sit amet consectur adipiscing elit, sed do eiusmod tempor"
     },
@@ -376,7 +383,7 @@
       "category": "Expert",
       "name": "Grow Personal Financial Security Thinking &",
       "price": "49",
-      "instructtorName": "Emilie Bryant",
+      "instructorName": "Emilie Bryant",
       "instructorsJob": "Expert",
       "description": "Lorem ipsum dolor sit amet consectur adipiscing elit, sed do eiusmod tempor"
     },
@@ -386,7 +393,7 @@
       "category": "All Levels",
       "name": "The Complete Guide to Build RESTful API",
       "price": "Free",
-      "instructtorName": "Emilie Bryant",
+      "instructorName": "Emilie Bryant",
       "instructorsJob": "Expert",
       "description": "Lorem ipsum dolor sit amet consectur adipiscing elit, sed do eiusmod tempor"
     },
@@ -396,7 +403,7 @@
       "category": "All Levels",
       "name": "Competitive Strategy Law for Management",
       "price": "75",
-      "instructtorName": "Emilie Bryant",
+      "instructorName": "Emilie Bryant",
       "instructorsJob": "Expert",
       "description": "Lorem ipsum dolor sit amet consectur adipiscing elit, sed do eiusmod tempor"
     }
@@ -813,6 +820,7 @@
       "name": "Sadiq",
       "surname": "Rəhmətov",
       "email": "friyaziyyat@gmail.com",
+      "job": "student",
       "phone": "+994507624294",
       "password": "1234",
       "fav": [],
@@ -820,12 +828,13 @@
       "data": []
     },
     {
-      "id": "2",
-      "name": "Sadiq",
-      "surname": "Rəhmətov",
-      "email": "sadiq@gmail.com",
-      "phone": "+994507624294",
-      "password": "666",
+      "id":"2",
+      "name":"Sadiq",
+      "surname":"Rəhmətov",
+      "email":"sadiq@gmail.com",
+      "job":"student",
+      "phone":"+994507624294",
+      "password":"666",
       "fav": [
         5,
         19
@@ -844,6 +853,7 @@
       "name": "ffhhh",
       "surname": "pojklnkn",
       "email": "hjhjkhkhk@gmail.com",
+      "job": "student",
       "phone": "787878788",
       "password": "787878",
       "fav": [],
@@ -855,6 +865,7 @@
       "name": "Əli",
       "surname": "Hüseynov",
       "email": "əli@gmail.com",
+      "job": "student",
       "phone": "+994507624294",
       "password": "12345",
       "fav": [],
@@ -884,7 +895,9 @@
       "phone": "+994507624294",
       "password": "12345678",
       "fav": [],
-      "basket": [],
+      "basket": [
+        2
+      ],
       "data": []
     }
   ]

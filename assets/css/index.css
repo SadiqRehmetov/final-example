@@ -138,7 +138,7 @@ header .container .in-header .icons .search {
   transition: all 1s ease;
   border: 1px solid white;
   background-color: #ceebe1;
-  padding: 10px 5px;
+  padding: 10px 25px;
   border-radius: 10px;
   outline: none;
 }
@@ -1859,6 +1859,9 @@ footer .footer-down {
 #shop .container .in-shop {
   width: 100%;
   padding: 50px 0px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 #shop .container .in-shop .shop-carts {
   text-align: center;

@@ -284,7 +284,7 @@ courseAdd.addEventListener("submit",(e)=>{
         name: courseName.value,
         price: coursePrice.value,
         category: courseCategory.value,
-        instructtorName: courseİnstructorName.value,
+        instructorName: courseİnstructorName.value,
         instructorsJob: courseİnstructorJob.value,
         description: courseDescription.value
     };

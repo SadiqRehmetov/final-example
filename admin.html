@@ -16,7 +16,14 @@
         </div>
         <div class="search--notification--profile">
             <div class="search">
-                <input type="text" placeholder="Search Scdule..">
+                <input type="text" placeholder="Search..." id="search">
+                <button><i class="ri-search-2-line"></i></button>
+            </div>
+            <div class="search">
+                <select id="sort">
+                    <option value="az">A-Z</option>
+                    <option value="za">Z-A</option>
+                </select>
                 <button><i class="ri-search-2-line"></i></button>
             </div>
             <div class="notification--profile">
@@ -39,19 +46,25 @@
         <div class="sidebar">
             <ul class="sidebar--items">
                 <li>
-                    <a href="#" id="active--link">
+                    <a href="#" class="all">
+                        <span class="icon icon-1"><i class="ri-layout-grid-line"></i></span>
+                        <span class="sidebar--item">All</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="user">
                         <span class="icon icon-1"><i class="ri-layout-grid-line"></i></span>
                         <span class="sidebar--item">User</span>
                     </a>
                 </li>
-                <li>
-                    <a href="#">
+                <li >
+                    <a href="#" class="shop">
                         <span class="icon icon-2"><i class="ri-calendar-2-line"></i></span>
                         <span class="sidebar--item">Shop</span>
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="#" class="coursse">
                         <span class="icon icon-3"><i class="ri-user-2-line"></i></span>
                         <span class="sidebar--item" style="white-space: nowrap;">Course</span>
                     </a>
@@ -76,75 +89,61 @@
                     <!-- <button class="add"><i class="ri-add-line"></i>Add Doctor</button> -->
                 </div>
                 <div class="table">
-                    <table>
+
+
+                    <table class="userTable">
                         <thead>
                             <tr>
                                 <th>Id</th>
                                 <th>Name</th>
                                 <th>Surname</th>
+                                <th>Email</th>
                                 <th>Job</th>
-                                <th>Age</th>
-                                <th>Status</th>
+                                <th>Phone</th>
                                 <th>Settings</th>
                             </tr>
                         </thead>
-                        <tbody>
-                            <tr>
-                                <td>1</td>
-                                <td>Cameron Williamson</td>
-                                <td>30/07/2022</td>
-                                <td>Male</td>
-                                <td>61kg</td>
-                                <td class="pending">pending</td>
-                                <td><span><i class="ri-edit-line edit"></i><i class="ri-delete-bin-line delete"></i></span></td>
-                            </tr>
-                            <tr>
-                                <td>2</td>
-                                <td>George Washington</td>
-                                <td>30/07/2022</td>
-                                <td>Male</td>
-                                <td>54kg</td>
-                                <td class="confirmed">Confirmed</td>
-                                <td><span><i class="ri-edit-line edit"></i><i class="ri-delete-bin-line delete"></i></span></td>
-                            </tr>
-                            <tr>
-                                <td>3</td>
-                                <td>John Adams</td>
-                                <td>29/07/2022</td>
-                                <td>Male</td>
-                                <td>56kg</td>
-                                <td class="confirmed">Confirmed</td>
-                                <td><span><i class="ri-edit-line edit"></i><i class="ri-delete-bin-line delete"></i></span></td>
-                            </tr>
-                            <tr>
-                                <td>4</td>
-                                <td>Thomas Jefferson</td>
-                                <td>29/07/2022</td>
-                                <td>Male</td>
-                                <td>11kg</td>
-                                <td class="rejected">Rejected</td>
-                                <td><span><i class="ri-edit-line edit"></i><i class="ri-delete-bin-line delete"></i></span></td>
-                            </tr>
-                            <tr>
-                                <td>5</td>
-                                <td>James Madison</td>
-                                <td>29/07/2022</td>
-                                <td>Male</td>
-                                <td>69kg</td>
-                                <td class="confirmed">Confirmed</td>
-                                <td><span><i class="ri-edit-line edit"></i><i class="ri-delete-bin-line delete"></i></span></td>
-                            </tr>
-                            <tr>
-                                <td>6</td>
-                                <td>Andrew Jackson</td>
-                                <td>28/07/2022</td>
-                                <td>Male</td>
-                                <td>88kg</td>
-                                <td class="confirmed">Confirmed</td>
-                                <td><span><i class="ri-edit-line edit"></i><i class="ri-delete-bin-line delete"></i></span></td>
-                            </tr>
+                        <tbody class="tbodyUser">
+                           
                         </tbody>
                     </table>
+
+
+
+                    <table class="shopTable">
+                        <thead>
+                            <tr>
+                                <th>Id</th>
+                                <th>Name</th>
+                                <th>Price</th>
+                                <th>Settings</th>
+                            </tr>
+                        </thead>
+                        <tbody class="tbodyShop">
+                           
+                        </tbody>
+                    </table>
+
+
+                    <table class="courseTable">
+                        <thead>
+                            <tr>
+                                <th>Id</th>
+                                <th>Name</th>
+                                <th>Category</th>
+                                <th>Price</th>
+                                <th>instructor Name</th>
+                                <th>instructors Job</th>
+                                <th>Settings</th>
+                            </tr>
+                        </thead>
+                        <tbody class="tbodyCourse">
+                           
+                        </tbody>
+                    </table>
+
+
+                    
                 </div>
             </div>
         </div>

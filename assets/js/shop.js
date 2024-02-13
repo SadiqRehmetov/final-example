@@ -8,10 +8,9 @@ let arr_2 = [];
 let searchIcon = document.querySelector("#search");
 let searchInput = document.querySelector("#searchinput");
 let currentUser = localStorage.getItem('currentUser') ? JSON.parse(localStorage.getItem('currentUser')) : null;
+let userBasketCount = currentUser.basket.length
 let shopCarts = document.querySelector(".shop-carts")
 let userId = currentUser.id
-let userBasketCount = currentUser.basket.length
-console.log("userrrr======", userBasketCount);
 window.addEventListener("scroll", () => {
     if (window.scrollY > 100) {
         nav.style.position = "fixed";
@@ -70,7 +69,12 @@ searchInput.addEventListener("input",(e)=>{
   arr_1=arr_1.filter((element)=>{
       return element.name.toLowerCase().includes(e.target.value.trim().toLowerCase())
   });
-  shopData()
+  if(arr_1.length==0){
+    shopCarts.innerHTML=`not data`
+  }else{
+    shopData()
+  }
+  
 })
 searchIcon.addEventListener("click", () => {
   searchInput.classList.toggle("search");

@@ -48,6 +48,13 @@ body {
     text-indent: 15px;
     width: 85%;
 }
+select{
+    background-color: transparent;
+    outline: none;
+    border: none;
+    text-indent: 15px;
+    width: 85%;
+}
 .search button {
     outline: none;
     border: none;
@@ -105,6 +112,9 @@ img {
     min-height: calc(100vh - 60px);
 }
 /* sidebar */
+.hidden{
+    display: none;
+}
 .sidebar {
     position: absolute;
     top: 0;
@@ -331,20 +341,24 @@ a {
     margin-bottom: 20px;
 }
 .table {
-    height: 200px;
+    height: 450px;
     overflow-y: scroll;
 }
 table {
     width: 100%;
     text-align: left;
     border-collapse: collapse;
+    margin-bottom: 50px;
+    
 }
+
 tr {
-    border-bottom: 1px solid #f1f1f1;
+    border: 1px solid #171717;
 }
 td,
 th {
-    padding-block: 10px;
+    border: 1px solid #171717;
+    padding: 10px;
 }
 @media screen and (max-width:1350px) {
     .cards,

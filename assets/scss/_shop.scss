@@ -3,6 +3,8 @@
         .in-shop{
             width: 100%;
             padding: 50px 0px;
+            @include column;
+            gap: 20px;
             .shop-carts{
                 text-align: center;
                 width: 100%;

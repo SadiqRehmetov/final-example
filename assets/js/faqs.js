@@ -3,7 +3,12 @@ let menuİcon = document.querySelector(".bi-list")
 let responsMenu = document.querySelector(".respons-menu")
 let closeMenu = document.querySelector(".closemenu")
 let questionCart = document.querySelector(".questionCart")
+let shopCount = document.querySelector(".shopCount")
 let listCategoryList = document.querySelectorAll(".list-category")
+let currentUser = localStorage.getItem('currentUser') ? JSON.parse(localStorage.getItem('currentUser')) : null;
+let userBasketCount = currentUser.basket.length
+console.log(userBasketCount);
+shopCount.innerHTML=`${userBasketCount}`
 window.addEventListener("scroll", () => {
     if (window.scrollY > 100) {
         nav.style.position = "fixed";
@@ -68,6 +73,9 @@ function showFaqData() {
                 category.addEventListener("click", () => {
                     listCategoryList.forEach(item => {
                         if (item !== category) {
+                            item.style.color="black"
+                        }else{
+                            item.style.color="#27B889"
                         }
                     });
 
