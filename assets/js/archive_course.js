@@ -1,6 +1,4 @@
 let nav = document.querySelector("header")
-let searchIcon = document.querySelector("#search")
-let searchInput = document.querySelector("#searchinput")
 let menuİcon = document.querySelector(".bi-list")
 let responsMenu = document.querySelector(".respons-menu")
 let closeMenu = document.querySelector(".closemenu")
@@ -16,17 +14,6 @@ window.addEventListener("scroll", () => {
     } else {
         nav.style.position = "static"; 
         nav.style.transition = "position 0.3s ease";
-    }
-});
-searchIcon.addEventListener("click", () => {
-    searchInput.classList.toggle("search");
-    searchInput.classList.toggle("searchInput");
-    if(menuİcon.style.display=="none"){
-        menuİcon.style.display="flex";
-    }
-    else{
-        menuİcon.style.display="none";
-        
     }
 });
 menuİcon.addEventListener("click",()=>{
@@ -91,7 +78,7 @@ function showCourseData(){
                                 <i class="bi favorite-btn ${isFavorite(element.id) ? 'bi-heart-fill' : 'bi-heart'}" data-song-id="${element.id}" onclick="toggleFavorite(${element.id})"></i>
                             </div>
                             <span class="title-span">Beginner</span>
-                            <h3>Starting SEO as your Home Based Business</h3>
+                            <h3>${element.name}</h3>
                             <p class="ratings">
                                 <i class="bi bi-star-fill"></i>
                                 <i class="bi bi-star-fill"></i>

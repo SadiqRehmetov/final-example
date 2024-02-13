@@ -1,6 +1,4 @@
 let nav = document.querySelector("header")
-let searchIcon = document.querySelector("#search")
-let searchInput = document.querySelector("#searchinput")
 let menuİcon = document.querySelector(".bi-list")
 let responsMenu = document.querySelector(".respons-menu")
 let closeMenu = document.querySelector(".closemenu")
@@ -13,17 +11,6 @@ window.addEventListener("scroll", () => {
     } else {
         nav.style.position = "static"; 
         nav.style.transition = "position 0.3s ease";
-    }
-});
-searchIcon.addEventListener("click", () => {
-    searchInput.classList.toggle("search");
-    searchInput.classList.toggle("searchInput");
-    if(menuİcon.style.display=="none"){
-        menuİcon.style.display="flex";
-    }
-    else{
-        menuİcon.style.display="none";
-        
     }
 });
 menuİcon.addEventListener("click",()=>{

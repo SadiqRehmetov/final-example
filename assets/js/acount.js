@@ -17,12 +17,25 @@ let userName =localStorage.getItem('currentUser') ? JSON.parse(localStorage.getI
 let userSurname =localStorage.getItem('currentUser') ? JSON.parse(localStorage.getItem('currentUser')).surname : null;
 let userNumber =localStorage.getItem('currentUser') ? JSON.parse(localStorage.getItem('currentUser')).phone : null;
 let userJob =localStorage.getItem('currentUser') ? JSON.parse(localStorage.getItem('currentUser')).job : null;
-console.log(userJob);
 let shopCount = document.querySelector(".shopCount")
 let currentUser = localStorage.getItem('currentUser') ? JSON.parse(localStorage.getItem('currentUser')) : null;
 let userId = currentUser.id
-console.log(userId);
 let userBasketCount = currentUser.basket.length
+let shopAdd=document.querySelector("#add-shop")
+let shopImage = document.querySelector("#shopImage")
+let newShopImage = document.querySelector("#newShopImage")
+let shopName = document.querySelector("#shopName")
+let shopPrice = document.querySelector("#shopPrice")
+let rightAdd =document.querySelector(".rightAdd")
+let courseAdd = document.querySelector("#add-course")
+let courseImage = document.querySelector("#courseImage")
+let newCourseImage = document.querySelector("#newCourseImage")
+let courseCategory = document.querySelector("#courseCategory")
+let courseName = document.querySelector("#courseName")
+let coursePrice = document.querySelector("#coursePrice")
+let courseİnstructorName = document.querySelector("#courseİnstructorName")
+let courseİnstructorJob = document.querySelector("#courseİnstructorJob")
+let courseDescription = document.querySelector("#courseDescription")
 shopCount.innerHTML=`${userBasketCount}`
 window.addEventListener("scroll", () => {
     if (window.scrollY > 100) {
@@ -188,8 +201,6 @@ function isFavorite(responsId) {
   function loadFavoriteSongs() {
     const userData = getUserSession();
     const { fav } = userData;
-    // const favoriteSongs = songs.filter(element => fav.includes(element.id));
-    // shopData(favoriteSongs);
   }
   
   function handleFavoriteClick(responsId) {
@@ -216,12 +227,7 @@ function getUserSession() {
 
 
 
-let shopAdd=document.querySelector("#add-shop")
-let shopImage = document.querySelector("#shopImage")
-let newShopImage = document.querySelector("#newShopImage")
-let shopName = document.querySelector("#shopName")
-let shopPrice = document.querySelector("#shopPrice")
-let rightAdd =document.querySelector(".rightAdd")
+
 shopImage.addEventListener("input", (e)=>{
     let file=e.target.files[0]
     if(file){
@@ -232,31 +238,79 @@ shopImage.addEventListener("input", (e)=>{
         }
     }
 })
-
 shopAdd.addEventListener("submit",(e)=>{
     e.preventDefault();
-    axios.post(`http://localhost:3000/shop`, {
-        image:newShopImage.src,
-        name:shopName.value,
-        price:shopPrice.value
+    const shopData = {
+        image: newShopImage.src,
+        name: shopName.value,
+        price: shopPrice.value
+    };
+    axios.post(`http://localhost:3000/shop`, shopData)
+    .then(res => {
+        const shopId = res.data.id; 
+        axios.get(`http://localhost:3000/user`)
+        .then(userRes => {
+            const userData = userRes.data;
+            const teacherUser = userData.find(user => user.job === userJob);
+            teacherUser.data.push(shopData); 
+            return axios.patch(`http://localhost:3000/user/${teacherUser.id}`, teacherUser);
+        })
+        .then(res => {
+            window.location.reload();
+        })
+        .catch(error => {
+            console.error('Error updating user data:', error);
+        });
     })
-    .then(res=>{
-        window.location.reload()
-    })
-    axios.patch(`http://localhost:3000/user/${userId}`,{
-        data:[
-            {
-                image:newShopImage.src,
-                name:shopName.value,
-                price:shopPrice.value
-            }
-        ]
-    })
-    .then(res=>{
-        window.location.reload()
-    })
-})
+    .catch(error => {
+        console.error('Error adding shop:', error);
+    });
+});
 
+courseImage.addEventListener("input", (e)=>{
+    let file=e.target.files[0]
+    if(file){
+        let reader = new FileReader()
+        reader.readAsDataURL(file)
+        reader.onload=function(){
+            newCourseImage.src=reader.result
+        }
+    }
+})
+courseAdd.addEventListener("submit",(e)=>{
+    e.preventDefault();
+    const courseData = {
+        image: newCourseImage.src,
+        name: courseName.value,
+        price: coursePrice.value,
+        category: courseCategory.value,
+        instructtorName: courseİnstructorName.value,
+        instructorsJob: courseİnstructorJob.value,
+        description: courseDescription.value
+    };
+    axios.post(`http://localhost:3000/course`, courseData)
+    .then(res => {
+        const courseId = res.data.id; 
+        axios.get(`http://localhost:3000/user`)
+        .then(userRes => {
+            const userData = userRes.data;
+            const teacherUser = userData.find(user => user.job === userJob);
+            teacherUser.data.push(courseData); 
+            return axios.patch(`http://localhost:3000/user/${teacherUser.id}`, teacherUser);
+        })
+        .then(res => {
+            window.location.reload();
+        })
+        .catch(error => {
+            console.error('Error updating user data:', error);
+        });
+    })
+    .catch(error => {
+        console.error('Error adding shop:', error);
+    });
+});
+
+  
 if(userJob!="teacher"){
     rightAdd.style.display="none"
 }else{
