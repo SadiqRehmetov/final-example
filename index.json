@@ -1,9 +1,9 @@
 {
-  "admin":[
+  "admin": [
     {
-      "id":1,
-      "name":"Sadiq",
-      "password":"1212"
+      "id": "1",
+      "name": "Sadiq",
+      "password": "1212"
     }
   ],
   "course": [
@@ -695,9 +695,9 @@
   "shop": [
     {
       "id": "1",
-      "image": "./assets/image/12.jpg",
+      "image": "./assets/image/5.jpg",
       "name": "Book Demo A",
-      "price": "60"
+      "price": "45"
     },
     {
       "id": "2",
@@ -828,13 +828,13 @@
       "data": []
     },
     {
-      "id":"2",
-      "name":"Sadiq",
-      "surname":"Rəhmətov",
-      "email":"sadiq@gmail.com",
-      "job":"student",
-      "phone":"+994507624294",
-      "password":"666",
+      "id": "2",
+      "name": "Sadiq",
+      "surname": "Rəhmətov",
+      "email": "sadiq@gmail.com",
+      "job": "student",
+      "phone": "+994507624294",
+      "password": "666",
       "fav": [
         5,
         19

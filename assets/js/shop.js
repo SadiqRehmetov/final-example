@@ -76,6 +76,22 @@ searchInput.addEventListener("input",(e)=>{
   }
   
 })
+
+let sort = document.querySelector("#sort");
+
+sort.addEventListener("change", (e)=> {
+    if(e.target.value == "asc"){
+        shopArr_1 = shopArr_1.sort((a,b)=> a.price - b.price);
+    }
+    else if(e.target.value == "dsc"){
+        shopArr_1 = shopArr_1.sort((a,b)=> b.price - a.price);
+    }
+    else{
+        shopArr_1 = []
+    };
+    shopData();
+})
+
 searchIcon.addEventListener("click", () => {
   searchInput.classList.toggle("search");
   searchInput.classList.toggle("searchInput");

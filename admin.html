@@ -19,12 +19,13 @@
                 <input type="text" placeholder="Search..." id="search">
                 <button><i class="ri-search-2-line"></i></button>
             </div>
-            <div class="search">
+            <div class="search" style="width: 200px; padding: 10px;">
                 <select id="sort">
-                    <option value="az">A-Z</option>
-                    <option value="za">Z-A</option>
+                    <option value="df">Default</option>
+                    <option value="asc">A-Z</option>
+                    <option value="dsc">Z-A</option>
                 </select>
-                <button><i class="ri-search-2-line"></i></button>
+
             </div>
             <div class="notification--profile">
                 <!-- <div class="picon lock">
@@ -69,12 +70,12 @@
                         <span class="sidebar--item" style="white-space: nowrap;">Course</span>
                     </a>
                 </li>
-                <li>
+                <!-- <li>
                     <a href="#">
                         <span class="icon icon-3"><i class="ri-user-2-line"></i></span>
                         <span class="sidebar--item" style="white-space: nowrap;">Faq's</span>
                     </a>
-                </li>
+                </li> -->
                 
             </ul>
             
@@ -89,8 +90,6 @@
                     <!-- <button class="add"><i class="ri-add-line"></i>Add Doctor</button> -->
                 </div>
                 <div class="table">
-
-
                     <table class="userTable">
                         <thead>
                             <tr>
@@ -148,6 +147,7 @@
             </div>
         </div>
     </section>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="./assets/js/admin.js"></script>
 </body>
 </html>
