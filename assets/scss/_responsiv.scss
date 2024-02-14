@@ -585,6 +585,29 @@
             }
         }
     }
+    #basket{
+        .container{
+            .in-basket{
+                flex-direction: column;
+                align-items: center;
+                table{
+                    display: none;
+                }
+                .basket-responsiv{
+                    .responsiv-cart{
+                        display: flex;
+                    }
+                }
+                .totals{
+                    width: 100%;
+                    justify-content: center;
+                    .cart{
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
 }
 
 @media screen and (max-width: 575px) {

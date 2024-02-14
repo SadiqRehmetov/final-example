@@ -74,48 +74,38 @@
                         <tr>
                             <th>Product</th>
                             <th>Name</th>
-                            <th>Price</th>
+                            <th>Price($)</th>
                             <th>Quantity</th>
                             <th>Subtotal</th>
                             <th>Delete</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td class="img">
-                                <div class="image">
-                                    <img src="./assets/image/blog-01.jpg" alt="picture">
-                                </div>
-                            </td>
-                            <td>
-                                Book
-                            </td>
-                            <td>
-                                100$
-                            </td>
-                            <td>
-                                <input type="number" min="0" value="0">
-                            </td>
-                            <td>
-                                100$
-                            </td>
-                            <td>
-                                <i class="bi bi-x-circle"></i>
-                            </td>
-                        </tr>
                         
                     </tbody>
                 </table>
+                <div class="basket-responsiv">
+                    <!-- <div class="responsiv-cart">
+                        <div class="image">
+                            <img src="./assets/image/course-04-590x430.jpg" alt="">
+                        </div>
+                        <h4>Book</h4>
+                        <p>price</p>
+                        <p><input type="number" value="0"></p>
+                        <p>Subtotal</p>
+                        <p class="delet-icon"><i class="bi bi-x-circle"></i></p>
+                    </div> -->
+                </div>
                 <div class="totals">
                     <div class="cart">
                         <h2>Cart Totals</h2>
                         <div class="subtotal">
                             <h5>Subtotal</h5>
-                            <p>$500</p>
+                            <p class="p">$0</p>
                         </div>
                         <div class="total">
                             <h5>Total</h5>
-                            <p>$788</p>
+                            <p>$0</p>
                         </div>
                         <button>Proceed to checkout</button>
                     </div>
@@ -167,6 +157,7 @@
             <p>Copyright 2024 EduBlink | Developed By DevsBlink. All Rights Reserved</p>
         </div>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="./assets/js/basket.js"></script>
 </body>
 </html>

@@ -132,11 +132,9 @@ function showCourseData(){
                                     <i class="bi bi-person"></i>
                                     <span>229 Students</span>
                                 </p>
-                            </div>
-                            
+                            </div> 
                         </div>
                     </div>
-
             `
         })
     })
@@ -159,21 +157,25 @@ function isFavorite(elemetId) {
       fav.splice(index, 1);
     } else {
       fav.push(elemetId);
-    
     }
-    console.log(userData);
-    console.log(userData.fav);
     updateUserSession(userData); 
-    updateFavoriteButton(elemetId);
+    if (index === -1) { // Əgər element fav array-inda yoxdursa, ürəyi dolu edək
+      updateFavoriteButton(elemetId);
+    }
     
     try {
-  
-      await axios.patch(`http://localhost:3000/user/${userData.id}`, { fav: userData.fav });
-      console.log('Favori listesi güncellendi:', userData.fav);
+      if (index !== -1) {
+        await axios.patch(`http://localhost:3000/user/${userData.id}`, { fav: userData.fav });
+        console.log('Favori listesi güncellendi:', userData.fav);
+      } else {
+        console.log('Favori listesi güncellenir:', userData.fav);
+      }
     } catch (error) {
       console.error('Favori listesi güncellenirken bir hata oluştu:', error);
     }
-  }
+}
+
+
   
   
   function loadFavoriteSongs() {
@@ -202,6 +204,19 @@ function isFavorite(elemetId) {
   function getUserSession() {
     return JSON.parse(localStorage.getItem('currentUser')) || { id: null, fav: [] };
   }
+  
+  document.addEventListener('DOMContentLoaded', function() {
+    const userData = getUserSession();
+    const { fav } = userData;
+    if (fav && fav.length > 0) {
+        fav.forEach(elementId => {
+            updateFavoriteButton(elementId);
+        });
+    }
+})
+
+
+
 
 searcInput.addEventListener("input", (e) => {
     arr_1 = arr_2;
@@ -212,6 +227,9 @@ searcInput.addEventListener("input", (e) => {
     showCourseData();
 });
 
+
+
+
 sort.addEventListener("change", (e) => {
     if (e.target.value === "exp") {
         arr_1 = arr_1.sort((a, b) => a.price - b.price);
@@ -221,6 +239,4 @@ sort.addEventListener("change", (e) => {
         arr_1 = arr_2.slice(); // Orijinal array yenidən yüklənir
     }
     showCourseData();
-});
-
-
+})

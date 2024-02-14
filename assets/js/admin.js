@@ -120,6 +120,7 @@ function courseData(){
             tablecourse.innerHTML+=`
                 <tr>
                     <td>${element.id}</td>
+                    <td><img class="adminimg" src="${element.image}"></td>
                     <td>${element.name}</td>
                     <td>${element.category}</td>
                     <td>${element.price}</td>
