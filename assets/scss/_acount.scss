@@ -23,6 +23,18 @@
                         border-radius: 9999px;
                     }
                 }
+                input[type="text"],input[type="email"],input[type="tel"]{
+                    padding: 10px;
+                    outline: none;
+                    border:none;
+                }
+                button{
+                    padding: 10px 20px;
+                    background-color: #27B889;
+                    border: none;
+                    border-radius: 10px;
+                    color: white;
+                }
             }
         }
     }

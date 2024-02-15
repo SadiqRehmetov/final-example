@@ -46,7 +46,7 @@
                     .overview{
                         @include column;
                         gap: 20px;
-                        display: none;
+                        // display: none;
                         ul{
                             padding: 0px 40px;
                             @include column;
@@ -60,7 +60,7 @@
                     .curriculum{
                         @include column;
                         gap: 20px;
-                        display: none;
+                        // display: none;
                         ul{
                             padding: 0px 40px;
                             @include column;
@@ -73,7 +73,7 @@
                     .instructor{
                         @include center;
                         align-items: flex-start;
-                        display: none;
+                        // display: none;
                         .image{
                             width: 30%;
                             img{

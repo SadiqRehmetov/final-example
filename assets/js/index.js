@@ -1,14 +1,14 @@
 let iframeDiv = document.querySelector(".iframe")
 let closeIframe = document.querySelector(".iframe-close")
 let playIframe = document.querySelector(".play-iframe")
-let nav = document.querySelector("header")
 
-let menuİcon = document.querySelector(".bi-list")
-let responsMenu = document.querySelector(".respons-menu")
-let closeMenu = document.querySelector(".closemenu")
 let courseCarts = document.querySelector(".course-carts")
 let page = 1;
 let instructorsCarts = document.querySelector(".instructors-carts")
+let nav = document.querySelector("header")
+let menuİcon = document.querySelector(".bi-list")
+let responsMenu = document.querySelector(".respons-menu")
+let closeMenu = document.querySelector(".closemenu")
 playIframe.addEventListener("click", ()=>{
     iframeDiv.style.display="flex";
 })

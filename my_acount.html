@@ -34,15 +34,14 @@
                 </div>
                 <ul>
                     <li><a href="./index.html">Home</a></li>
-                    <li><a href="./archive_course.html">Blog</a></li>
                     <li><a href="./shop.html">Shop</a></li>
-                    <li><a href="./basket.html">Basket</a></li>
+                    <li><a href="./archive_course.html">Course</a></li>
                     <li style="opacity: .8; cursor: pointer;" class="favorit">Favorite</li>
-                    <li class="toCourse"><a href="./add_course.html">Add to course</a></li>
+                    <li style="opacity: .8; cursor: pointer;" class="blog">Blog</li>
                 </ul>
 
                 <div class="icons">
-                    <a href="#" ><i class="bi bi-cart" style="display: flex;"></i></a>
+                    <a href="./basket.html" ><i class="bi bi-cart" style="display: flex;"></i></a>
                     <span style="display: flex;" class="shopCount">0</span>
                 </div>
                 <strong id="login-register">
@@ -50,7 +49,7 @@
                     <a href="./register.html">Register</a>
                 </strong>
                 <div style="display: flex; justify-content: center;align-items: center;gap: 10px;">
-                    <a href="./my_avount.html" class="my-acount" ></a>
+                    <a href="./my_acount.html" class="my-acount" ></a>
                     <button id="logout" style="padding: 11px; border: none;border-radius: 10px;background-color: #27B889; color: white; cursor: pointer;">Log out</button>
                 </div>
                 <i class="bi bi-list" style="font-size: 30px;"></i>
@@ -62,15 +61,16 @@
         <div class="container">
             <div class="in-acount-section">
                 <div class="center">
-                    <div class="image">
-                        <img src="./assets/image/userimage.webp" alt="picture" class="profil">
+                    <div class="image" style="background-color: aquamarine;">
+                        <img src="" alt="picture" class="profilImage">
                     </div>
                     
-                    <h3 class="profilname">Name:</h3>
-                    <h3 class="profilsurname">Surname:</h3>
-                    <p class="profilemail">Email:</p>
-                    <p class="profilnumber">Number:</p>
+                    <input type="text" class="profilname">
+                    <input type="text" class="profilsurname">
+                    <input type="email" class="profilemail">
+                    <input type="tel" class="profilnumber">
                     <input type="file" style="width: 0;" class="profileinput">
+                    <button class="saveProfil">Save</button>
                 </div>
             </div>
         </div>

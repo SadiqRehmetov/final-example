@@ -837,7 +837,7 @@ header .container .in-header .bi-list {
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
   width: 100%;
-  height: auto;
+  height: 40%;
   position: relative;
 }
 #course .container .in-course .course-carts .cart .image .date {
@@ -1868,9 +1868,43 @@ footer .footer-down {
 }
 #basket .container .in-basket .totals {
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
+}
+#basket .container .in-basket .totals .pay {
+  width: 50%;
+  display: none;
+}
+#basket .container .in-basket .totals .pay form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+#basket .container .in-basket .totals .pay form input {
+  outline: none;
+}
+#basket .container .in-basket .totals .pay form input[type=text], #basket .container .in-basket .totals .pay form input[type=email] {
+  border-radius: 10px;
+  border: 1px solid #27B889;
+  padding: 20px 15px;
+}
+#basket .container .in-basket .totals .pay form select {
+  border-radius: 10px;
+  border: 1px solid #27B889;
+  padding: 20px 15px;
+}
+#basket .container .in-basket .totals .pay form button {
+  border: none;
+  border-radius: 10px;
+  background-color: #27B889;
+  padding: 20px 15px;
+  color: white;
+}
+#basket .container .in-basket .totals .pay form button:hover {
+  cursor: pointer;
 }
 #basket .container .in-basket .totals .cart {
+  height: 250px;
   width: 300px;
   padding: 20px;
   border: 4px solid #27B889;
@@ -2003,6 +2037,18 @@ footer .footer-down {
   height: 100%;
   object-fit: cover;
   border-radius: 9999px;
+}
+#acount-section .container .in-acount-section .center input[type=text], #acount-section .container .in-acount-section .center input[type=email], #acount-section .container .in-acount-section .center input[type=tel] {
+  padding: 10px;
+  outline: none;
+  border: none;
+}
+#acount-section .container .in-acount-section .center button {
+  padding: 10px 20px;
+  background-color: #27B889;
+  border: none;
+  border-radius: 10px;
+  color: white;
 }
 
 #add .container .in-add {
@@ -2143,7 +2189,6 @@ footer .footer-down {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  display: none;
 }
 #course-details .container .in-course-details .left .header-info .overview ul {
   padding: 0px 40px;
@@ -2159,7 +2204,6 @@ footer .footer-down {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  display: none;
 }
 #course-details .container .in-course-details .left .header-info .curriculum ul {
   padding: 0px 40px;
@@ -2175,7 +2219,6 @@ footer .footer-down {
   justify-content: space-between;
   align-items: center;
   align-items: flex-start;
-  display: none;
 }
 #course-details .container .in-course-details .left .header-info .instructor .image {
   width: 30%;
@@ -2703,6 +2746,11 @@ footer .footer-down {
   #basket .container .in-basket .totals {
     width: 100%;
     justify-content: center;
+    flex-direction: column-reverse;
+    gap: 30px;
+  }
+  #basket .container .in-basket .totals .pay {
+    width: 100%;
   }
   #basket .container .in-basket .totals .cart {
     width: 100%;

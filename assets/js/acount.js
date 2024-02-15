@@ -4,8 +4,10 @@ let menuİcon = document.querySelector(".bi-list")
 let responsMenu = document.querySelector(".respons-menu")
 let closeMenu = document.querySelector(".closemenu")
 let favLi = document.querySelector(".favorit")
+let blogLi = document.querySelector(".blog")
 let acount = document.querySelector(".my-acount")
 let loginAndRegister = document.querySelector("#login-register")
+let profilImage = document.querySelector(".profilImage")
 let profilname = document.querySelector(".profilname")
 let profilemail = document.querySelector(".profilemail")
 let profilsurname = document.querySelector(".profilsurname")
@@ -17,6 +19,7 @@ let userName =localStorage.getItem('currentUser') ? JSON.parse(localStorage.getI
 let userSurname =localStorage.getItem('currentUser') ? JSON.parse(localStorage.getItem('currentUser')).surname : null;
 let userNumber =localStorage.getItem('currentUser') ? JSON.parse(localStorage.getItem('currentUser')).phone : null;
 let userJob =localStorage.getItem('currentUser') ? JSON.parse(localStorage.getItem('currentUser')).job : null;
+let userImage =localStorage.getItem('currentUser') ? JSON.parse(localStorage.getItem('currentUser')).image : null;
 let shopCount = document.querySelector(".shopCount")
 let currentUser = localStorage.getItem('currentUser') ? JSON.parse(localStorage.getItem('currentUser')) : null;
 let userId = currentUser.id
@@ -46,6 +49,18 @@ window.addEventListener("scroll", () => {
         nav.style.transition = "position 0.3s ease";
     }
 });
+let fileInput = document.querySelector(".profileinput");
+fileInput.addEventListener("change", (e) => {
+    let file = e.target.files[0];
+    if (file) {
+        let reader = new FileReader();
+        reader.readAsDataURL(file);
+        reader.onload = function () {
+            profilImage.src = reader.result;
+        };
+    }
+});
+
 
 menuİcon.addEventListener("click",()=>{
     responsMenu.style.transform = "translateX(0)";
@@ -54,13 +69,6 @@ closeMenu.addEventListener("click", ()=>{
     responsMenu.style.transform = "translateX(-500%)";
 })
 
-
-if(userJob ==="teacher"){
-    toCourse.style.display="flex";
-}
-else{
-    toCourse.style.display="none";
-}
 
 
 
@@ -85,10 +93,11 @@ if(window.innerWidth < 768){
     }
 }else{
     if(user){
-        profilemail.innerHTML=user
-        profilname.innerHTML=userName
-        profilsurname.innerHTML=userSurname
-        profilnumber.innerHTML=userNumber
+        profilemail.value=user
+        profilname.value=userName
+        profilsurname.value=userSurname
+        profilnumber.value=userNumber
+        profilImage.src=userImage
         acount.innerHTML = user
         acount.style.display = 'block'
         acount.style.padding="10px"
@@ -106,26 +115,16 @@ if(window.innerWidth < 768){
         setTimeout(()=>{window.location = './login.html'}, 2000)
     }
 }
+
 logoutBtn.addEventListener('click',()=>{
     localStorage.removeItem('currentUser')
     window.location = './login.html'
 })
-let profilImage = document.querySelector(".profil");
+
 
 
 profilImage.addEventListener("click", () => {
     fileInput.click();
-});
-let fileInput = document.querySelector(".profileinput");
-fileInput.addEventListener("change", (e) => {
-    let file = e.target.files[0];
-    if (file) {
-        let reader = new FileReader();
-        reader.readAsDataURL(file);
-        reader.onload = function () {
-            profilImage.src = reader.result;
-        };
-    }
 });
 
 let shopCarts = document.querySelector(".shop-carts")
@@ -170,6 +169,7 @@ favLi.addEventListener("click",()=>{
     shopCarts.innerHTML=""
     favoriteShop()
 })
+
 function isFavorite(responsId) {
     const { fav } = getUserSession();
     return fav.includes(responsId);
@@ -316,3 +316,23 @@ if(userJob!="teacher"){
 }else{
     rightAdd.style.display="flex"
 }
+
+let saveProfil = document.querySelector(".saveProfil")
+saveProfil.addEventListener("click",()=>{
+    axios.patch(`http://localhost:3000/user/${userId}`,{
+        name: profilname.value,
+        surname: profilsurname.value,
+        image:profilImage.src,
+        email: profilemail.value,
+        phone: profilnumber.value
+    });
+    const currentUser = JSON.parse(localStorage.getItem('currentUser'));
+            currentUser.name = profilname.value;
+            currentUser.email = profilemail.value;
+            currentUser.image = profilImage.src;
+            currentUser.phone =profilnumber.value;
+            currentUser.surname=profilsurname.value;
+            localStorage.setItem('currentUser', JSON.stringify(currentUser));
+        console.log("Profile updated successfully!");
+
+})

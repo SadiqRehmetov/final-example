@@ -5,8 +5,30 @@ let userBasket = localStorage.getItem('currentUser') ? JSON.parse(localStorage.g
 let tbody = document.querySelector("tbody");
 let responsiveBasketCart = document.querySelector(".basket-responsiv");
 let responsiveAcount = document.querySelector(".my-acount-res")
+let shopCount = document.querySelector(".shopCount")
+let userBasketCount = userBasket.length
+shopCount.innerHTML=`${userBasketCount}`
+let nav = document.querySelector("header")
+let menuİcon = document.querySelector(".bi-list")
+let responsMenu = document.querySelector(".respons-menu")
+let closeMenu = document.querySelector(".closemenu")
+window.addEventListener("scroll", () => {
+    if (window.scrollY > 100) {
+        nav.style.position = "fixed";
+        nav.style.top="0"
+        nav.style.transition = "position 0.3s ease"; 
+    } else {
+        nav.style.position = "static"; 
+        nav.style.transition = "position 0.3s ease";
+    }
+});
 
-
+menuİcon.addEventListener("click",()=>{
+    responsMenu.style.transform = "translateX(0)";
+})
+closeMenu.addEventListener("click", ()=>{
+    responsMenu.style.transform = "translateX(-500%)";
+})
 if(window.innerWidth < 768){
     acount.style.display="none"
     if(user){
@@ -125,3 +147,8 @@ async function deleteFromBasket(elementId) {
 function updateBasketSession(userData) {
     localStorage.setItem('currentUser', JSON.stringify(userData));
 }
+let pay = document.querySelector(".pay")
+let totalButton = document.querySelector(".totalPay")
+totalButton.addEventListener("click",()=>{
+    pay.style.display="flex";
+})

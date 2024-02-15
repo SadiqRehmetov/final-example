@@ -601,6 +601,11 @@
                 .totals{
                     width: 100%;
                     justify-content: center;
+                    flex-direction: column-reverse;
+                    gap: 30px;
+                    .pay{
+                        width: 100%;
+                    }
                     .cart{
                         width: 100%;
                     }

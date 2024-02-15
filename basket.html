@@ -40,7 +40,7 @@
 
                 <div class="icons">
                     <a href="#"><i class="bi bi-cart"></i></a>
-                    <span>0</span>
+                    <span class="shopCount">0</span>
 
                 </div>
                 <strong id="login-register">
@@ -85,18 +85,35 @@
                     </tbody>
                 </table>
                 <div class="basket-responsiv">
-                    <!-- <div class="responsiv-cart">
-                        <div class="image">
-                            <img src="./assets/image/course-04-590x430.jpg" alt="">
-                        </div>
-                        <h4>Book</h4>
-                        <p>price</p>
-                        <p><input type="number" value="0"></p>
-                        <p>Subtotal</p>
-                        <p class="delet-icon"><i class="bi bi-x-circle"></i></p>
-                    </div> -->
+                    
                 </div>
                 <div class="totals">
+                    <div class="pay">
+                        <form action="#">
+                            <h2>Billing details</h2>
+                            <label>Lirst name*</label>
+                            <input type="text" required>
+                            <label>Last name*</label>
+                            <input type="text" required>
+                            <label>Company name (optional)</label>
+                            <input type="text">
+                            <label>Country / Region *</label>
+                            <select id="#">
+                                <option value="#">United Kingdom (UK)</option>
+                                <option value="#">Azerbaijan</option>
+                                <option value="#">Turkey</option>
+                            </select>
+                            <label>Street address *</label>
+                            <input type="text" required placeholder="House number and street name">
+                            <label>Post code*</label>
+                            <input type="text" required>
+                            <label>Phone*</label>
+                            <input type="text" required>
+                            <label>Email address*</label>
+                            <input type="email" required>
+                            <button>Send</button>
+                        </form>
+                    </div>
                     <div class="cart">
                         <h2>Cart Totals</h2>
                         <div class="subtotal">
@@ -107,7 +124,7 @@
                             <h5>Total</h5>
                             <p>$0</p>
                         </div>
-                        <button>Proceed to checkout</button>
+                        <button class="totalPay">Proceed to checkout</button>
                     </div>
                 </div>
             </div>

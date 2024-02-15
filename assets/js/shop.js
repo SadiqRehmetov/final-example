@@ -1,3 +1,5 @@
+"use strict"
+
 let nav = document.querySelector("header")
 let menuİcon = document.querySelector(".bi-list")
 let responsMenu = document.querySelector(".respons-menu")
@@ -11,6 +13,7 @@ let currentUser = localStorage.getItem('currentUser') ? JSON.parse(localStorage.
 let userBasketCount = currentUser.basket.length
 let shopCarts = document.querySelector(".shop-carts")
 let userId = currentUser.id
+
 window.addEventListener("scroll", () => {
     if (window.scrollY > 100) {
         nav.style.position = "fixed";
@@ -43,7 +46,7 @@ function shopData() {
           <div class="cart">
               <div class="image">
                   <img src="${element.image}" alt="picture">
-                  <button data-song-id="${element.id}" onclick="toggleBasket(${element.id})">Add basket</button>
+                  <button data-element-id="${element.id}" onclick="toggleBasket(${element.id})">Add basket</button>
 
               </div>
               <div class="info">
@@ -55,7 +58,7 @@ function shopData() {
                       <i class="bi bi-star-fill"></i>
                       <i class="bi bi-star-fill"></i>
                       <span style="opacity:.7;">(4.00)</span>
-                      <i class="bi favorite-btn ${isFavorite(element.id) ? 'bi-heart-fill' : 'bi-heart'}" data-song-id="${element.id}" onclick="toggleFavorite(${element.id})"></i>
+                      <i class="bi favorite-btn ${isFavorite(element.id) ? 'bi-heart-fill' : 'bi-heart'}" data-element-id="${element.id}" onclick="toggleFavorite(${element.id})"></i>
                   </div>
                   <p>$${element.price}</p>
               </div>
@@ -97,8 +100,8 @@ try {
 function loadBasketelement() {
 const userData = getUserSession();
 const { basket } = userData;
-// const basketedelement = element.filter(element => basket.includes(element.id));
-// shopData(basketedelement);
+const basketedelement = element.filter(element => basket.includes(element.id));
+shopData(basketedelement);
 }
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -112,7 +115,7 @@ toggleBasket(elemetId);
 }
 
 function updateBasketButton(elemetId) {
-const basketButton = document.querySelector(`button[data-song-id="${elemetId}"]`);
+const basketButton = document.querySelector(`button[data-element-id="${elemetId}"]`);
 if (basketButton) {
     const isBasketedValue = isBasketed(elemetId); 
     if (isBasketedValue) {
@@ -171,8 +174,8 @@ async function toggleFavorite(elemetId) {
 function loadFavoriteelement() {
   const userData = getUserSession();
   const { fav } = userData;
-  // const favoriteElement = element.filter(element => fav.includes(element.id));
-  // shopData(favoriteElement);
+  const favoriteElement = arr_1.filter(element => fav.includes(element.id));
+  shopData(favoriteElement);
 }
 
 function handleFavoriteClick(elemetId) {
@@ -180,7 +183,7 @@ function handleFavoriteClick(elemetId) {
 }
 
 function updateFavoriteButton(elemetId) {
-  const favoriteButton = document.querySelector(`.favorite-btn[data-song-id="${elemetId}"]`);
+  const favoriteButton = document.querySelector(`.favorite-btn[data-element-id="${elemetId}"]`);
   const userData = getUserSession();
   const { fav } = userData;
   const index = fav.indexOf(elemetId);

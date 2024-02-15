@@ -8,6 +8,7 @@ let listCategoryList = document.querySelectorAll(".list-category")
 let currentUser = localStorage.getItem('currentUser') ? JSON.parse(localStorage.getItem('currentUser')) : null;
 let userBasketCount = currentUser.basket.length
 console.log(userBasketCount);
+console.log(userBasketCount);
 shopCount.innerHTML=`${userBasketCount}`
 window.addEventListener("scroll", () => {
     if (window.scrollY > 100) {
