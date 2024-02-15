@@ -9,6 +9,22 @@ let nav = document.querySelector("header")
 let menuİcon = document.querySelector(".bi-list")
 let responsMenu = document.querySelector(".respons-menu")
 let closeMenu = document.querySelector(".closemenu")
+let topIconn = document.querySelector(".topIcon")
+window.addEventListener("scroll", () => {
+    if (window.scrollY > 100) {
+        topIconn.style.display="flex"
+        topIconn.addEventListener("click",()=>{
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        })
+    } else {
+        topIconn.style.display="none"
+    }
+});
+
+
 playIframe.addEventListener("click", ()=>{
     iframeDiv.style.display="flex";
 })
@@ -79,7 +95,7 @@ function showData(){
         respons.map((element)=>{
             console.log(element.id);
             courseCarts.innerHTML+=`
-            <div class="cart">
+                <div class="cart">
                         <div class="hiddenDiv">
                             <div class="heartDiv">
                                 <i class="bi bi-heart"></i>

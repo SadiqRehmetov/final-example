@@ -32,6 +32,9 @@ let tableUser = document.querySelector(".tbodyUser")
 let all = document.querySelector(".all")
 let menuItems = document.querySelectorAll('.sidebar ul.sidebar--items li a');
 let search = document.querySelector("#search")
+let sort = document.querySelector("#sort");
+let shop = document.querySelector(".shop");
+let course=document.querySelector(".coursse")
 
 
 menuItems.forEach(item => {
@@ -81,23 +84,26 @@ search.addEventListener("input",(e)=>{
     }
 })
 
-let sort = document.querySelector("#sort");
 
-sort.addEventListener("change", (e)=> {
-    if(e.target.value == "asc"){
-        shopArr_1 = shopArr_1.sort((a,b)=> a.price - b.price);
+
+sort.addEventListener("change", (e) => {
+    if (e.target.value == "asc") {
+        shopArr_1 = shopArr_1.sort((a, b) => a.price - b.price);
+        courseArr_1 = courseArr_1.sort((a, b) => a.price - b.price);
+    } else if (e.target.value == "dsc") {
+        shopArr_1 = shopArr_1.sort((a, b) => b.price - a.price);
+        courseArr_1 = courseArr_1.sort((a, b) => b.price - a.price);
+    } else {
+        shopArr_1 = shopArr_2;
+        courseArr_1 = courseArr_2;
     }
-    else if(e.target.value == "dsc"){
-        shopArr_1 = shopArr_1.sort((a,b)=> b.price - a.price);
-    }
-    else{
-        shopArr_1 = []
-    };
     shopData();
-})
+    courseData();
+});
 
 
-let shop = document.querySelector(".shop");
+
+
 window.onload=all.click(userData(),shopData(),courseData(),header.textContent="All")
 shop.addEventListener("click",(e)=>{
     e.preventDefault()
@@ -161,7 +167,7 @@ search.addEventListener("input",(e)=>{
 
 
 
-let course=document.querySelector(".coursse")
+
 course.addEventListener("click",(e)=>{
     e.preventDefault()
     header.innerHTML=e.target.textContent
@@ -294,3 +300,232 @@ tableShop.addEventListener('click', function(event) {
     }
 });
 
+
+
+
+tablecourse.addEventListener('click', function(event) {
+    if (event.target.classList.contains('edit')) {
+        let row = event.target.closest('tr'); 
+        let itemId = row.querySelector('td:nth-child(1)').textContent; 
+        let image = row.querySelector('td:nth-child(2) img').src; 
+        let name = row.querySelector('td:nth-child(3)').textContent; 
+        let category = row.querySelector('td:nth-child(4)').textContent; 
+        let price = row.querySelector('td:nth-child(5)').textContent; 
+        let instructorName = row.querySelector('td:nth-child(6)').textContent; 
+        let instructorsJob = row.querySelector('td:nth-child(7)').textContent; 
+
+        let imageInput = document.createElement('input');
+        imageInput.type = 'file';
+        imageInput.accept = 'image/*'; 
+        imageInput.addEventListener('change', function() {
+            if (this.files && this.files[0]) {
+                let reader = new FileReader();
+                reader.onload = function(e) {
+                    row.querySelector('td:nth-child(2) img').src = e.target.result;
+                }
+                reader.readAsDataURL(this.files[0]);
+            }
+        });
+
+        let nameInput = document.createElement('input');
+        nameInput.value = name;
+        let categoryInput = document.createElement('input');
+        categoryInput.value = category;
+        let priceInput = document.createElement('input');
+        priceInput.value = price;
+        let instructorNameInput = document.createElement('input');
+        instructorNameInput.value = instructorName;
+        let instructorsJobInput = document.createElement('input');
+        instructorsJobInput.value = instructorsJob;
+
+        row.querySelector('td:nth-child(2)').textContent = '';
+        row.querySelector('td:nth-child(2)').appendChild(imageInput);
+        row.querySelector('td:nth-child(3)').textContent = '';
+        row.querySelector('td:nth-child(3)').appendChild(nameInput);
+        row.querySelector('td:nth-child(4)').textContent = '';
+        row.querySelector('td:nth-child(4)').appendChild(categoryInput);
+        row.querySelector('td:nth-child(5)').textContent = '';
+        row.querySelector('td:nth-child(5)').appendChild(priceInput);
+        row.querySelector('td:nth-child(6)').textContent = '';
+        row.querySelector('td:nth-child(6)').appendChild(instructorNameInput);
+        row.querySelector('td:nth-child(7)').textContent = '';
+        row.querySelector('td:nth-child(7)').appendChild(instructorsJobInput);
+        
+        row.querySelector('td:last-child').innerHTML = '<span><i class="ri-check-line confirm-edit"></i><i class="ri-close-line cancel-edit"></i></span>';
+    } 
+    else if (event.target.classList.contains('delete')) {
+        let row = event.target.closest('tr'); 
+        let itemId = row.querySelector('td:nth-child(1)').textContent; 
+        if (confirm(`Are you sure you want to delete the item with ID ${itemId}?`)) { 
+            console.log('Delete item:', itemId);
+            axios.delete(`http://localhost:3000/course/${itemId}`)
+                .then(response => {
+                    event.target.closest('tr').remove();
+                })
+                .catch(error => {
+                    console.error('Error deleting item:', error);
+                });
+            row.remove();
+        }
+    }
+    else if (event.target.classList.contains('confirm-edit')) {
+        let row = event.target.closest('tr'); 
+        let itemId = row.querySelector('td:nth-child(1)').textContent; 
+        let newImage = row.querySelector('td:nth-child(2) input').files[0];
+        let newName = row.querySelector('td:nth-child(3) input').value; 
+        let newCategory = row.querySelector('td:nth-child(4) input').value;
+        let newPrice = row.querySelector('td:nth-child(5) input').value; 
+        let newInstructorName = row.querySelector('td:nth-child(6) input').value; 
+        let newInstructorsJob = row.querySelector('td:nth-child(7) input').value; 
+
+        let reader = new FileReader();
+        reader.onload = function() {
+            let imageDataUrl = reader.result;
+            axios.patch(`http://localhost:3000/course/${itemId}`, {
+                image: imageDataUrl,
+                name: newName,
+                category: newCategory,
+                price: newPrice,
+                instructorName: newInstructorName,
+                instructorsJob: newInstructorsJob
+            })
+            .then(response => {
+                console.log('Data successfully updated:', response.data);
+                row.querySelector('td:nth-child(2) img').src = imageDataUrl;
+                row.querySelector('td:nth-child(3)').textContent = newName;
+                row.querySelector('td:nth-child(4)').textContent = newCategory;
+                row.querySelector('td:nth-child(5)').textContent = newPrice;
+                row.querySelector('td:nth-child(6)').textContent = newInstructorName;
+                row.querySelector('td:nth-child(7)').textContent = newInstructorsJob;
+            })
+            .catch(error => {
+                console.error('Error updating data:', error);
+            });
+        };
+        reader.readAsDataURL(newImage);
+
+        row.querySelector('td:last-child').innerHTML = '<span><i class="ri-edit-line edit"></i><i class="ri-delete-bin-line delete"></i></span>';
+    }
+    else if (event.target.classList.contains('cancel-edit')) {
+        let row = event.target.closest('tr'); 
+        let nameInput = row.querySelector('td:nth-child(3) input');
+        let categoryInput = row.querySelector('td:nth-child(4) input');
+        let priceInput = row.querySelector('td:nth-child(5) input');
+        let instructorNameInput = row.querySelector('td:nth-child(6) input');
+        let instructorsJobInput = row.querySelector('td:nth-child(7) input');
+        let newName = nameInput.value; 
+        let newCategory = categoryInput.value;
+        let newPrice = priceInput.value; 
+        let newInstructorName = instructorNameInput.value; 
+        let newInstructorsJob = instructorsJobInput.value; 
+        row.querySelector('td:nth-child(3)').textContent = newName;
+        row.querySelector('td:nth-child(4)').textContent = newCategory;
+        row.querySelector('td:nth-child(5)').textContent = newPrice;
+        row.querySelector('td:nth-child(6)').textContent = newInstructorName;
+        row.querySelector('td:nth-child(7)').textContent = newInstructorsJob;
+        row.querySelector('td:last-child').innerHTML = '<span><i class="ri-edit-line edit"></i><i class="ri-delete-bin-line delete"></i></span>';
+    }
+});
+
+
+
+tableUser.addEventListener('click', function(event) {
+    if (event.target.classList.contains('edit')) {
+        let row = event.target.closest('tr');
+        let itemId = row.querySelector('td:first-child').textContent;
+        let name = row.querySelector('td:nth-child(2)').textContent;
+        let surname = row.querySelector('td:nth-child(3)').textContent;
+        let email = row.querySelector('td:nth-child(4)').textContent;
+        let job = row.querySelector('td:nth-child(5)').textContent;
+        let phone = row.querySelector('td:nth-child(6)').textContent;
+
+        let nameInput = document.createElement('input');
+        nameInput.value = name;
+        let surnameInput = document.createElement('input');
+        surnameInput.value = surname;
+        let emailInput = document.createElement('input');
+        emailInput.value = email;
+        let jobInput = document.createElement('input');
+        jobInput.value = job;
+        let phoneInput = document.createElement('input');
+        phoneInput.value = phone;
+
+        row.querySelector('td:nth-child(2)').textContent = '';
+        row.querySelector('td:nth-child(2)').appendChild(nameInput);
+        row.querySelector('td:nth-child(3)').textContent = '';
+        row.querySelector('td:nth-child(3)').appendChild(surnameInput);
+        row.querySelector('td:nth-child(4)').textContent = '';
+        row.querySelector('td:nth-child(4)').appendChild(emailInput);
+        row.querySelector('td:nth-child(5)').textContent = '';
+        row.querySelector('td:nth-child(5)').appendChild(jobInput);
+        row.querySelector('td:nth-child(6)').textContent = '';
+        row.querySelector('td:nth-child(6)').appendChild(phoneInput);
+
+        row.querySelector('td:last-child').innerHTML = '<span><i class="ri-check-line confirm-edit"></i><i class="ri-close-line cancel-edit"></i></span>';
+    } 
+    else if (event.target.classList.contains('delete')) {
+        let itemId = event.target.closest('tr').querySelector('td:first-child').textContent;
+        if (confirm(`Are you sure you want to delete the item with ID ${itemId}?`)) {
+            console.log('Delete item:', itemId);
+            axios.delete(`http://localhost:3000/user/${itemId}`)
+                .then(response => {
+                    event.target.closest('tr').remove();
+                })
+                .catch(error => {
+                    console.error('Error deleting item:', error);
+                });
+        }
+    }
+    else if (event.target.classList.contains('confirm-edit')) {
+        let row = event.target.closest('tr');
+        let itemId = row.querySelector('td:first-child').textContent;
+        let newName = row.querySelector('td:nth-child(2) input').value;
+        let newSurname = row.querySelector('td:nth-child(3) input').value;
+        let newEmail = row.querySelector('td:nth-child(4) input').value;
+        let newJob = row.querySelector('td:nth-child(5) input').value;
+        let newPhone = row.querySelector('td:nth-child(6) input').value;
+
+        row.querySelector('td:nth-child(2)').textContent = newName;
+        row.querySelector('td:nth-child(3)').textContent = newSurname;
+        row.querySelector('td:nth-child(4)').textContent = newEmail;
+        row.querySelector('td:nth-child(5)').textContent = newJob;
+        row.querySelector('td:nth-child(6)').textContent = newPhone;
+
+        axios.patch(`http://localhost:3000/user/${itemId}`, {
+            name: newName,
+            surname: newSurname,
+            email: newEmail,
+            job: newJob,
+            phone: newPhone
+        })
+        .then(response => {
+            console.log('Data successfully updated:', response.data);
+        })
+        .catch(error => {
+            console.error('Error updating data:', error);
+        });
+
+        row.querySelector('td:last-child').innerHTML = '<span><i class="ri-edit-line edit"></i><i class="ri-delete-bin-line delete"></i></span>';
+    }
+    else if (event.target.classList.contains('cancel-edit')) {
+        let row = event.target.closest('tr');
+        let nameInput = row.querySelector('td:nth-child(2) input');
+        let surnameInput = row.querySelector('td:nth-child(3) input');
+        let emailInput = row.querySelector('td:nth-child(4) input');
+        let jobInput = row.querySelector('td:nth-child(5) input');
+        let phoneInput = row.querySelector('td:nth-child(6) input');
+        let newName = nameInput.value;
+        let newSurname = surnameInput.value;
+        let newEmail = emailInput.value;
+        let newJob = jobInput.value;
+        let newPhone = phoneInput.value;
+
+        row.querySelector('td:nth-child(2)').textContent = newName;
+        row.querySelector('td:nth-child(3)').textContent = newSurname;
+        row.querySelector('td:nth-child(4)').textContent = newEmail;
+        row.querySelector('td:nth-child(5)').textContent = newJob;
+        row.querySelector('td:nth-child(6)').textContent = newPhone;
+
+        row.querySelector('td:last-child').innerHTML = '<span><i class="ri-edit-line edit"></i><i class="ri-delete-bin-line delete"></i></span>';
+    }
+});

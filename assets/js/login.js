@@ -1,9 +1,6 @@
 let form = document.querySelector("form")
 let user = localStorage.getItem('currentUser') ? JSON.parse(localStorage.getItem('currentUser')).email : null;
 
-// if(user){
-//     window.location = '../../contact.html'
-// }
 
 form.addEventListener("submit",(e)=>{
     e.preventDefault();

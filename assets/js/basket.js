@@ -12,6 +12,7 @@ let nav = document.querySelector("header")
 let menuİcon = document.querySelector(".bi-list")
 let responsMenu = document.querySelector(".respons-menu")
 let closeMenu = document.querySelector(".closemenu")
+let closepay = document.querySelector(".bi-chevron-double-left")
 window.addEventListener("scroll", () => {
     if (window.scrollY > 100) {
         nav.style.position = "fixed";
@@ -134,9 +135,9 @@ async function deleteFromBasket(elementId) {
         updateBasketSession(userData); 
         try {
             await axios.patch(`http://localhost:3000/user/${userData.id}`, { basket: userData.basket });
-            console.log('Basket listesi güncellendi:', userData.basket);
+            console.log('Basket güncəlləndi:', userData.basket);
         } catch (error) {
-            console.error('Basket listesi güncellenirken bir hata oluştu:', error);
+            console.error('Xəta:', error);
         }
         tbody.innerHTML = '';
         updateTotal();
@@ -151,4 +152,7 @@ let pay = document.querySelector(".pay")
 let totalButton = document.querySelector(".totalPay")
 totalButton.addEventListener("click",()=>{
     pay.style.display="flex";
+})
+closepay.addEventListener("click",()=>{
+    pay.style.display="none";
 })

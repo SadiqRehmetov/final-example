@@ -6,6 +6,20 @@ let headerInfo =document.querySelector(".header-info")
 let courseId = new URLSearchParams(window.location.search).get("id")
 let detailsRight = document.querySelector(".details-right")
 console.log(courseId);
+let topIconn = document.querySelector(".topIcon")
+window.addEventListener("scroll", () => {
+    if (window.scrollY > 100) {
+        topIconn.style.display="flex"
+        topIconn.addEventListener("click",()=>{
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        })
+    } else {
+        topIconn.style.display="none"
+    }
+});
 fetch(`http://localhost:3000/course/${courseId}`)
 .then(res=>res.json())
 .then(respons=>{
@@ -129,8 +143,7 @@ let innstructor =document.querySelector(".instructor")
 let stronng =document.querySelectorAll(".strong")
 
 let startedSection = document.querySelector(".in-started")
-// detailsCourseData
-// function detailsCourseData(){
+
     fetch(`http://localhost:3000/course/${courseId}`)
     .then(res=>res.json())
     .then(respons=>{
@@ -267,7 +280,7 @@ let startedSection = document.querySelector(".in-started")
             innstructor.style.display="none"
             curriculum.style.display="none"
 })
-// }
+
 
 
 stronng.forEach(e=>{

@@ -7,7 +7,20 @@ let shopCount = document.querySelector(".shopCount")
 let currentUser = localStorage.getItem('currentUser') ? JSON.parse(localStorage.getItem('currentUser')) : null;
 let userBasketCount = currentUser.basket.length
 shopCount.innerHTML=`${userBasketCount}`
-
+let topIconn = document.querySelector(".topIcon")
+window.addEventListener("scroll", () => {
+    if (window.scrollY > 100) {
+        topIconn.style.display="flex"
+        topIconn.addEventListener("click",()=>{
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        })
+    } else {
+        topIconn.style.display="none"
+    }
+});
 window.addEventListener("scroll", () => {
     if (window.scrollY > 100) {
         nav.style.position = "fixed";

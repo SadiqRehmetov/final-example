@@ -10,6 +10,20 @@ let userBasketCount = currentUser.basket.length
 console.log(userBasketCount);
 console.log(userBasketCount);
 shopCount.innerHTML=`${userBasketCount}`
+let topIconn = document.querySelector(".topIcon")
+window.addEventListener("scroll", () => {
+    if (window.scrollY > 100) {
+        topIconn.style.display="flex"
+        topIconn.addEventListener("click",()=>{
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        })
+    } else {
+        topIconn.style.display="none"
+    }
+});
 window.addEventListener("scroll", () => {
     if (window.scrollY > 100) {
         nav.style.position = "fixed";

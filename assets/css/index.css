@@ -60,6 +60,22 @@ p {
   padding: 5px 0px;
 }
 
+.topIcon {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  border: 1px solid #1AB69D;
+  border-radius: 9999px;
+  color: #1AB69D;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
+
 .iframe {
   background-color: rgba(0, 0, 0, 0.785);
   width: 100%;
@@ -68,7 +84,7 @@ p {
   justify-content: center;
   align-items: center;
   position: fixed;
-  z-index: 1000;
+  z-index: 10000000000000000000;
   display: none;
 }
 .iframe iframe {
@@ -360,6 +376,7 @@ header .container .in-header .bi-list {
 #categories .container .in-categories .categories-carts .cart a {
   font-size: 17px;
   color: black;
+  cursor: auto;
 }
 #categories .container .in-categories .categories-carts .first {
   background-color: #ceebe1;
@@ -746,6 +763,7 @@ header .container .in-header .bi-list {
 }
 #course .container .in-course .course-carts .cart {
   border-radius: 10px;
+  height: auto;
   position: relative;
 }
 #course .container .in-course .course-carts .cart .hiddenDiv {
@@ -765,6 +783,7 @@ header .container .in-header .bi-list {
   z-index: 1;
   opacity: 0;
   transition: all 0.5s ease;
+  overflow: hidden;
 }
 #course .container .in-course .course-carts .cart .hiddenDiv .heartDiv {
   width: 60px;
@@ -859,6 +878,7 @@ header .container .in-header .bi-list {
 }
 #course .container .in-course .course-carts .cart .info {
   width: 100%;
+  height: 60%;
   background-color: white;
   border-radius: 10px;
   display: flex;
@@ -1872,6 +1892,9 @@ footer .footer-down {
 }
 #basket .container .in-basket .totals .pay {
   width: 50%;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+  padding: 20px;
+  transition: all 0.5s ease;
   display: none;
 }
 #basket .container .in-basket .totals .pay form {
@@ -1879,6 +1902,11 @@ footer .footer-down {
   display: flex;
   flex-direction: column;
   gap: 10px;
+}
+#basket .container .in-basket .totals .pay form h2 {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
 }
 #basket .container .in-basket .totals .pay form input {
   outline: none;

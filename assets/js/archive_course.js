@@ -11,6 +11,20 @@ shopCount.innerHTML=`${userBasketCount}`
 let arr_1=[]
 let arr_2=[]
 let sort = document.querySelector("#sort")
+let topIconn = document.querySelector(".topIcon")
+window.addEventListener("scroll", () => {
+    if (window.scrollY > 100) {
+        topIconn.style.display="flex"
+        topIconn.addEventListener("click",()=>{
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        })
+    } else {
+        topIconn.style.display="none"
+    }
+});
 window.addEventListener("scroll", () => {
     if (window.scrollY > 100) {
         nav.style.position = "fixed";
@@ -209,15 +223,15 @@ function isFavorite(elemetId) {
     return JSON.parse(localStorage.getItem('currentUser')) || { id: null, fav: [] };
   }
   
-  document.addEventListener('DOMContentLoaded', function() {
-    const userData = getUserSession();
-    const { fav } = userData;
-    if (fav && fav.length > 0) {
-        fav.forEach(elementId => {
-            updateFavoriteButton(elementId);
-        });
-    }
-})
+//   document.addEventListener('DOMContentLoaded', function() {
+//     const userData = getUserSession();
+//     const { fav } = userData;
+//     if (fav && fav.length > 0) {
+//         fav.forEach(elementId => {
+//             updateFavoriteButton(elementId);
+//         });
+//     }
+// })
 
 
 

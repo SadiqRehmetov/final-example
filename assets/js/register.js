@@ -1,4 +1,5 @@
 let form = document.querySelector("form")
+let userEmail = localStorage.getItem('currentUser') ? JSON.parse(localStorage.getItem('currentUser')).email : null;
 form.addEventListener("submit",(e)=>{
     e.preventDefault();
     let nameInput = document.querySelector("#nameInput")
@@ -10,7 +11,14 @@ form.addEventListener("submit",(e)=>{
     let selectJob = document.querySelector("#job")
     if(nameInput.value && lastNameInput.value && emailInput.value && number.value && passwordInput.value&& confirmpassword.value){
         if(passwordInput.value===confirmpassword.value){
-            axios.post(`http://localhost:3000/user`,{
+            fetch(`http://localhost:3000/user`)
+            .then(res=>res.json())
+            .then(respons=>{
+                respons.map(element=>{
+                    if(element.email == emailInput.value){
+                        alert("Email artıq mövcuddur.")
+                    }else{
+                        axios.post(`http://localhost:3000/user`,{
             name:nameInput.value,
             surname:lastNameInput.value,
             email:emailInput.value,
@@ -18,11 +26,13 @@ form.addEventListener("submit",(e)=>{
             phone:number.value,
             password:confirmpassword.value,
             fav:[],
-            basket:[]
-        })
-        .then(res=>{
-            window.location="../../login.html"
-        })
+            basket:[],
+            data:[]
+                    }
+                )}
+            })
+                
+            })
         }else{
             document.querySelector(".wrongConfirm").style.display="flex";
         }
