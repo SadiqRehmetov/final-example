@@ -79,7 +79,7 @@ function showCourseData(){
             <div class="cart">
                         <div class="hiddenDiv">
                             <div class="heartDiv">
-                                <i class="bi favorite-btn ${isFavorite(element.id) ? 'bi-heart-fill' : 'bi-heart'}" data-song-id="${element.id}" onclick="toggleFavorite(${element.id})"></i>
+                                <i class="bi favorite-btn ${isFavorite(element.id) ? 'bi-heart-fill' : 'bi-heart'}" data-element-id="${element.id}" onclick="toggleFavorite(${element.id})"></i>
                             </div>
                             <span class="title-span">Beginner</span>
                             <h3>${element.name}</h3>
@@ -163,7 +163,7 @@ function isFavorite(elemetId) {
       fav.push(elemetId);
     }
     updateUserSession(userData); 
-    if (index === -1) { // Əgər element fav array-inda yoxdursa, ürəyi dolu edək
+    if (index === -1) { 
       updateFavoriteButton(elemetId);
     }
     
@@ -193,17 +193,17 @@ function isFavorite(elemetId) {
   }
   
   function updateFavoriteButton(elemetId) {
-    const favoriteButton = document.querySelector(`.favorite-btn[data-song-id="${elemetId}"]`);
+    const favoriteButton = document.querySelector(`.favorite-btn[data-element-id="${elemetId}"]`);
     const userData = getUserSession();
     const { fav } = userData;
     const index = fav.indexOf(elemetId);
-    if (index !== -1) {
-      favoriteButton.classList.remove('bi-heart');
-      favoriteButton.classList.add('bi-heart-fill');
-    } else {
-      favoriteButton.classList.remove('bi-heart-fill');
-      favoriteButton.classList.add('bi-heart');
-    }
+    // if (index !== -1) {
+    //   favoriteButton.classList.remove('bi-heart');
+    //   favoriteButton.classList.add('bi-heart-fill');
+    // } else {
+    //   favoriteButton.classList.remove('bi-heart-fill');
+    //   favoriteButton.classList.add('bi-heart');
+    // }
   }
   function getUserSession() {
     return JSON.parse(localStorage.getItem('currentUser')) || { id: null, fav: [] };
@@ -240,7 +240,7 @@ sort.addEventListener("change", (e) => {
     } else if (e.target.value === "cheap") {
         arr_1 = arr_1.sort((a, b) => b.price - a.price);
     } else {
-        arr_1 = arr_2.slice(); // Orijinal array yenidən yüklənir
+        arr_1 = arr_2.slice();
     }
     showCourseData();
 })

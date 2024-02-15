@@ -76,6 +76,7 @@ return basket.includes(elemetId);
 }
 
 async function toggleBasket(elemetId) {
+  console.log(elemetId);
 const userData = getUserSession();
 const { basket } = userData;
 const index = basket.indexOf(elemetId);
@@ -100,7 +101,7 @@ try {
 function loadBasketelement() {
 const userData = getUserSession();
 const { basket } = userData;
-const basketedelement = element.filter(element => basket.includes(element.id));
+const basketedelement = arr_1.filter(element => basket.includes(element.id));
 shopData(basketedelement);
 }
 

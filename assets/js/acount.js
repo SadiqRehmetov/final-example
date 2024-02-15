@@ -40,6 +40,8 @@ let courseİnstructorName = document.querySelector("#courseİnstructorName")
 let courseİnstructorJob = document.querySelector("#courseİnstructorJob")
 let courseDescription = document.querySelector("#courseDescription")
 shopCount.innerHTML=`${userBasketCount}`
+let userrId =localStorage.getItem('currentUser') ? JSON.parse(localStorage.getItem('currentUser')).id : null;
+
 window.addEventListener("scroll", () => {
     if (window.scrollY > 100) {
         nav.style.position = "fixed";
@@ -169,6 +171,83 @@ favLi.addEventListener("click",()=>{
     shopCarts.innerHTML=""
     favoriteShop()
 })
+function blogShop() {
+    return fetch(`http://localhost:3000/shop/`)
+        .then(res => res.json())
+        .then(response => {
+            return response.filter(element => element.shopid === userrId);
+        })
+        .catch(error => {
+            console.error('Error fetching shop data:', error);
+            return []; 
+        });
+}
+
+function coursseData() {
+    let userData = localStorage.getItem('currentUser') ? JSON.parse(localStorage.getItem('currentUser')).data : null;
+    return userData ? userData : []; 
+}
+
+function displayData() {
+    Promise.all([blogShop(), coursseData()]).then(([shopData, userData]) => {
+        let html = "";
+        if (shopData.length > 0) {
+            html += shopData.map(element => `
+                <div class="cart">
+                    <div class="image">
+                        <img src="${element.image}" alt="picture">
+                    </div>
+                    <div class="info">
+                        <h3>${element.name}</h3>
+                        <div class="icon">
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <span style="opacity:.7;">(4.00)</span>
+                            <i class="bi favorite-btn ${isFavorite(element.id) ? 'bi-heart-fill' : 'bi-heart'}" data-song-id="${element.id}" onclick="toggleFavorite(${element.id})"></i>
+                        </div>
+                        <p>$${element.price}</p>
+                    </div>
+                </div>
+            `).join('');
+        } else {
+            html += "<p>No shop data</p>";
+        }
+        if (userData.length > 0) {
+            html += userData.map(element => `
+                <div class="cart">
+                    <div class="image">
+                        <img src="${element.image}" alt="picture">
+                    </div>
+                    <div class="info">
+                        <h3>${element.name}</h3>
+                        <div class="icon">
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <span style="opacity:.7;">(4.00)</span>
+                            <i class="bi favorite-btn ${isFavorite(element.id) ? 'bi-heart-fill' : 'bi-heart'}" data-song-id="${element.id}" onclick="toggleFavorite(${element.id})"></i>
+                        </div>
+                        <p>$${element.price}</p>
+                    </div>
+                </div>
+            `).join('');
+        } else {
+            html += "<p>No user data</p>";
+        }
+        shopCarts.innerHTML = html;
+    });
+}
+
+blogLi.addEventListener("click", () => {
+    shopCarts.innerHTML = "";
+    displayData();
+});
+
 
 function isFavorite(responsId) {
     const { fav } = getUserSession();
@@ -243,24 +322,24 @@ shopAdd.addEventListener("submit",(e)=>{
     const shopData = {
         image: newShopImage.src,
         name: shopName.value,
-        price: shopPrice.value
+        price: shopPrice.value,
+        shopid:userrId
     };
     axios.post(`http://localhost:3000/shop`, shopData)
     .then(res => {
-        const shopId = res.data.id; 
-        axios.get(`http://localhost:3000/user`)
-        .then(userRes => {
-            const userData = userRes.data;
-            const teacherUser = userData.find(user => user.job === userJob);
-            teacherUser.data.push(shopData); 
-            return axios.patch(`http://localhost:3000/user/${teacherUser.id}`, teacherUser);
-        })
-        .then(res => {
-            window.location.reload();
-        })
-        .catch(error => {
-            console.error('Error updating user data:', error);
-        });
+        // let userrId =localStorage.getItem('currentUser') ? JSON.parse(localStorage.getItem('currentUser')).id : null;
+        // axios.get(`http://localhost:3000/user/${userrId}`)
+        // .then(userRes => {
+        //     const userrData = userRes.data;
+        //     userrData.data.push(shopData); 
+        //     return axios.patch(`http://localhost:3000/user/${userrId}`, userrData);
+        // })
+        // .then(res => {
+        //     window.location.reload();
+        // })
+        // .catch(error => {
+        //     console.error('Error updating user data:', error);
+        // });
     })
     .catch(error => {
         console.error('Error adding shop:', error);
@@ -290,13 +369,12 @@ courseAdd.addEventListener("submit",(e)=>{
     };
     axios.post(`http://localhost:3000/course`, courseData)
     .then(res => {
-        const courseId = res.data.id; 
-        axios.get(`http://localhost:3000/user`)
+        let userrId =localStorage.getItem('currentUser') ? JSON.parse(localStorage.getItem('currentUser')).id : null;; 
+        axios.get(`http://localhost:3000/user/${userrId}`)
         .then(userRes => {
-            const userData = userRes.data;
-            const teacherUser = userData.find(user => user.job === userJob);
-            teacherUser.data.push(courseData); 
-            return axios.patch(`http://localhost:3000/user/${teacherUser.id}`, teacherUser);
+            const userrData = userRes.data;
+            userrData.data.push(courseData); 
+            return axios.patch(`http://localhost:3000/user/${userrId}`, userrData);
         })
         .then(res => {
             window.location.reload();

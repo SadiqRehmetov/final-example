@@ -4,11 +4,67 @@ let responsMenu = document.querySelector(".respons-menu")
 let closeMenu = document.querySelector(".closemenu")
 let headerInfo =document.querySelector(".header-info")
 let courseId = new URLSearchParams(window.location.search).get("id")
+let detailsRight = document.querySelector(".details-right")
 console.log(courseId);
 fetch(`http://localhost:3000/course/${courseId}`)
 .then(res=>res.json())
 .then(respons=>{
-    console.log(respons);
+    detailsRight.innerHTML+=`
+    <div class="video">
+    <iframe src="https://www.youtube.com/embed/m2m5Xx5T4No" frameborder="0" allowfullscreen></iframe>
+</div>
+<h3>Course Includes:</h3>
+<div class="static">
+    <p class="icona">
+        <i class="bi bi-currency-dollar"></i>
+        Price:
+    </p>
+    <span style="color: #EE4A62; font-size: 20px;">$${respons.price}</span>
+</div>
+<div class="static">
+    <p class="icona">
+        <i class="bi bi-person-vcard"></i>
+        Instruction:
+    </p>
+    <span>${respons.instructorName}</span>
+</div>
+<div class="static">
+    <p class="icona">
+        <i class="bi bi-clock"></i>
+        Duration:
+    </p>
+    <span>12 weeks</span>
+</div>
+<div class="static">
+    <p class="icona">
+        <i class="bi bi-card-heading"></i>
+        Lesson:
+    </p>
+    <span>8</span>
+</div>
+<div class="static">
+    <p class="icona">
+        <i class="bi bi-person-plus"></i>
+        Student:
+    </p>
+    <span>74</span>
+</div>
+<div class="static">
+    <p class="icona">
+        <i class="bi bi-translate"></i>
+        Language:
+    </p>
+    <span>English</span>
+</div>
+<div class="static" style="border: none;">
+    <p class="icona">
+        <i class="bi bi-patch-check"></i>
+        Certifications:
+    </p>
+    <span>Yes</span>
+</div>
+<button>Buy Now</button>
+    `
 })
 window.addEventListener("scroll", () => {
     if (window.scrollY > 100) {
