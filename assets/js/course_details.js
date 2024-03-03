@@ -20,7 +20,7 @@ window.addEventListener("scroll", () => {
         topIconn.style.display="none"
     }
 });
-fetch(`http://localhost:3000/course/${courseId}`)
+fetch(`https://north-petalite-relative.glitch.me/course/${courseId}`)
 .then(res=>res.json())
 .then(respons=>{
     detailsRight.innerHTML+=`
@@ -144,7 +144,7 @@ let stronng =document.querySelectorAll(".strong")
 
 let startedSection = document.querySelector(".in-started")
 
-    fetch(`http://localhost:3000/course/${courseId}`)
+    fetch(`https://north-petalite-relative.glitch.me/course/${courseId}`)
     .then(res=>res.json())
     .then(respons=>{
         console.log(respons);

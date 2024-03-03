@@ -133,7 +133,7 @@ function favoriteShop(){
     console.log(userFav);
     if(userFav.length){
         userFav.forEach(element=>{
-            fetch(`http://localhost:3000/shop/${element}`)
+            fetch(`https://north-petalite-relative.glitch.me/shop/${element}`)
             .then(res=>res.json())
             .then(respons=>{
                 console.log(respons);
@@ -192,7 +192,7 @@ function isFavorite(responsId) {
     updateUserSession(userData); 
     updateFavoriteButton(responsId); 
     try {
-      await axios.patch(`http://localhost:3000/user/${userData.id}`, { fav: userData.fav });
+      await axios.patch(`https://north-petalite-relative.glitch.me/user/${userData.id}`, { fav: userData.fav });
       console.log('Favori listesi güncellendi:', userData.fav);
     } catch (error) {
       console.error('Favori listesi güncellenirken bir hata oluştu:', error);
@@ -247,14 +247,14 @@ shopAdd.addEventListener("submit",(e)=>{
         name: shopName.value,
         price: shopPrice.value
     };
-    axios.post(`http://localhost:3000/shop`, shopData)
+    axios.post(`https://north-petalite-relative.glitch.me/shop`, shopData)
     .then(res => {
         let userrId =localStorage.getItem('currentUser') ? JSON.parse(localStorage.getItem('currentUser')).id : null;; 
-        axios.get(`http://localhost:3000/user/${userrId}`)
+        axios.get(`https://north-petalite-relative.glitch.me/user/${userrId}`)
         .then(userRes => {
             const userrData = userRes.data;
             userrData.data.push(shopData); 
-            return axios.patch(`http://localhost:3000/user/${userrId}`, userrData);
+            return axios.patch(`https://north-petalite-relative.glitch.me/user/${userrId}`, userrData);
         })
         .then(res => {
             window.location.reload();
@@ -289,14 +289,14 @@ courseAdd.addEventListener("submit",(e)=>{
         instructorsJob: courseİnstructorJob.value,
         description: courseDescription.value
     };
-    axios.post(`http://localhost:3000/course`, courseData)
+    axios.post(`https://north-petalite-relative.glitch.me/course`, courseData)
     .then(res => {
         let userrId =localStorage.getItem('currentUser') ? JSON.parse(localStorage.getItem('currentUser')).id : null;; 
-        axios.get(`http://localhost:3000/user/${userrId}`)
+        axios.get(`https://north-petalite-relative.glitch.me/user/${userrId}`)
         .then(userRes => {
             const userrData = userRes.data;
             userrData.data.push(courseData); 
-            return axios.patch(`http://localhost:3000/user/${userrId}`, userrData);
+            return axios.patch(`https://north-petalite-relative.glitch.me/user/${userrId}`, userrData);
         })
         .then(res => {
             window.location.reload();
@@ -321,7 +321,7 @@ if(userJob!="teacher"){
 
 let saveProfil = document.querySelector(".saveProfil")
 saveProfil.addEventListener("click",()=>{
-    axios.patch(`http://localhost:3000/user/${userId}`,{
+    axios.patch(`https://north-petalite-relative.glitch.me/user/${userId}`,{
         name: profilname.value,
         surname: profilsurname.value,
         image:profilImage.src,
@@ -343,7 +343,7 @@ let userrId =localStorage.getItem('currentUser') ? JSON.parse(localStorage.getIt
 console.log("klklkl",usersData);
 console.log(userId);
 function blogShopData(){
-    fetch(`http://localhost:3000/user`)
+    fetch(`https://north-petalite-relative.glitch.me/user`)
     .then(res=>res.json())
     .then(respons=>{
         respons.map(element=>{

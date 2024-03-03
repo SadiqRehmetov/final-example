@@ -81,7 +81,7 @@ if(window.innerWidth < 768){
 
 showCourseData()
 function showCourseData(){
-    fetch(`http://localhost:3000/course`)
+    fetch(`https://north-petalite-relative.glitch.me/course`)
     .then(res=>res.json())
     .then(respons=>{
         arr_2=respons;
@@ -183,7 +183,7 @@ function isFavorite(elemetId) {
     
     try {
       if (index !== -1) {
-        await axios.patch(`http://localhost:3000/user/${userData.id}`, { fav: userData.fav });
+        await axios.patch(`https://north-petalite-relative.glitch.me/user/${userData.id}`, { fav: userData.fav });
         console.log('Favori listesi güncellendi:', userData.fav);
       } else {
         console.log('Favori listesi güncellenir:', userData.fav);

@@ -6,7 +6,7 @@ form.addEventListener("submit",(e)=>{
     e.preventDefault();
     let passwordInput = document.querySelector("#passwordInput").value
     let emailInput = document.querySelector("#emailInput").value
-    fetch(`http://localhost:3000/user`)
+    fetch(`https://north-petalite-relative.glitch.me/user`)
     .then(res=>res.json())
     .then(data => {
         let info = data.find((user)=>user.email == emailInput)

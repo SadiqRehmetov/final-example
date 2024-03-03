@@ -48,7 +48,7 @@ closeMenu.addEventListener("click", ()=>{
 
 shopData();
 function shopData() {
-  fetch(`http://localhost:3000/shop`)
+  fetch(`https://north-petalite-relative.glitch.me/shop`)
   .then(res => res.json())
   .then(respons => {
       arr_2 = respons;
@@ -104,7 +104,7 @@ updateBasketSession(userData);
 updateBasketButton(elemetId);
 
 try {
-    await axios.patch(`http://localhost:3000/user/${userData.id}`, { basket: userData.basket });
+    await axios.patch(`https://north-petalite-relative.glitch.me/user/${userData.id}`, { basket: userData.basket });
     console.log('Basket listesi güncellendi:', userData.basket);
 } catch (error) {
     console.error('Basket listesi güncellenirken bir hata oluştu:', error);
@@ -179,7 +179,7 @@ async function toggleFavorite(elemetId) {
   
   try {
 
-    await axios.patch(`http://localhost:3000/user/${userData.id}`, { fav: userData.fav });
+    await axios.patch(`https://north-petalite-relative.glitch.me/user/${userData.id}`, { fav: userData.fav });
     console.log('Güncəlləndi:', userData.fav);
   } catch (error) {
     console.error('Xəta:', error);

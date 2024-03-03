@@ -81,7 +81,7 @@ if(window.innerWidth < 768){
 
 showFaqData()
 function showFaqData() {
-    fetch(`http://localhost:3000/faqs`)
+    fetch(`https://north-petalite-relative.glitch.me/faqs`)
         .then(res => res.json())
         .then(respons => {
             listCategoryList.forEach(category => {

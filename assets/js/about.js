@@ -76,7 +76,7 @@ if(window.innerWidth < 768){
 }
 showInstructorsData()
 function showInstructorsData(){
-    fetch(`http://localhost:3000/instructors`)
+    fetch(`https://north-petalite-relative.glitch.me/instructors`)
     .then(res=>res.json())
     .then(respons=>{
         respons.map((element)=>{

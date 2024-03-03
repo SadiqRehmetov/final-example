@@ -11,14 +11,14 @@ form.addEventListener("submit",(e)=>{
     let selectJob = document.querySelector("#job")
     if(nameInput.value && lastNameInput.value && emailInput.value && number.value && passwordInput.value&& confirmpassword.value){
         if(passwordInput.value===confirmpassword.value){
-            fetch(`http://localhost:3000/user`)
+            fetch(`https://north-petalite-relative.glitch.me/user`)
             .then(res=>res.json())
             .then(respons=>{
                 respons.map(element=>{
                     if(element.email == emailInput.value){
                         alert("Email artıq mövcuddur.")
                     }else{
-                        axios.post(`http://localhost:3000/user`,{
+                        axios.post(`https://north-petalite-relative.glitch.me/user`,{
             name:nameInput.value,
             surname:lastNameInput.value,
             email:emailInput.value,

@@ -89,7 +89,7 @@ if(window.innerWidth < 768){
 }
 showData()
 function showData(){
-    fetch(`http://localhost:3000/course?_page=${page}&_limit=4`)
+    fetch(`https://north-petalite-relative.glitch.me/course?_page=${page}&_limit=4`)
     .then(res=>res.json())
     .then(respons=>{
         respons.map((element)=>{
@@ -164,7 +164,7 @@ function showData(){
 
 showInstructorsData()
 function showInstructorsData(){
-    fetch(`http://localhost:3000/instructors`)
+    fetch(`https://north-petalite-relative.glitch.me/instructors`)
     .then(res=>res.json())
     .then(respons=>{
         respons.map((element)=>{

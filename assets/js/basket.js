@@ -67,7 +67,7 @@ function getUserSession() {
     return JSON.parse(localStorage.getItem('currentUser')) || { id: null, basket: [] };
 }
 userBasket.forEach(elementId => {
-    fetch(`http://localhost:3000/shop/${elementId}`)
+    fetch(`https://north-petalite-relative.glitch.me/shop/${elementId}`)
         .then(res => res.json())
         .then(respons => {
             const productHTML = `
@@ -134,7 +134,7 @@ async function deleteFromBasket(elementId) {
         userData.basket.splice(index, 1);
         updateBasketSession(userData); 
         try {
-            await axios.patch(`http://localhost:3000/user/${userData.id}`, { basket: userData.basket });
+            await axios.patch(`https://north-petalite-relative.glitch.me/user/${userData.id}`, { basket: userData.basket });
             console.log('Basket güncəlləndi:', userData.basket);
         } catch (error) {
             console.error('Xəta:', error);

@@ -53,7 +53,7 @@ menuItems.forEach(item => {
 
 
 function shopData() {
-  fetch(`http://localhost:3000/shop`)
+  fetch(`https://north-petalite-relative.glitch.me/shop`)
   .then(res => res.json())
   .then(respons => {
     shopArr_2=respons;
@@ -116,7 +116,7 @@ shop.addEventListener("click",(e)=>{
 
 
 function courseData(){
-    fetch(`http://localhost:3000/course`)
+    fetch(`https://north-petalite-relative.glitch.me/course`)
     .then(res=>res.json())
     .then(respons=>{
         courseArr_2=respons;
@@ -179,7 +179,7 @@ course.addEventListener("click",(e)=>{
 
 
 function userData(){
-    fetch(`http://localhost:3000/user`)
+    fetch(`https://north-petalite-relative.glitch.me/user`)
     .then(res=>res.json())
     .then(respons=>{
         userArr_2=respons;
@@ -358,7 +358,7 @@ tablecourse.addEventListener('click', function(event) {
         let itemId = row.querySelector('td:nth-child(1)').textContent; 
         if (confirm(`Are you sure you want to delete the item with ID ${itemId}?`)) { 
             console.log('Delete item:', itemId);
-            axios.delete(`http://localhost:3000/course/${itemId}`)
+            axios.delete(`https://north-petalite-relative.glitch.me/course/${itemId}`)
                 .then(response => {
                     event.target.closest('tr').remove();
                 })
@@ -381,7 +381,7 @@ tablecourse.addEventListener('click', function(event) {
         let reader = new FileReader();
         reader.onload = function() {
             let imageDataUrl = reader.result;
-            axios.patch(`http://localhost:3000/course/${itemId}`, {
+            axios.patch(`https://north-petalite-relative.glitch.me/course/${itemId}`, {
                 image: imageDataUrl,
                 name: newName,
                 category: newCategory,
@@ -467,7 +467,7 @@ tableUser.addEventListener('click', function(event) {
         let itemId = event.target.closest('tr').querySelector('td:first-child').textContent;
         if (confirm(`Are you sure you want to delete the item with ID ${itemId}?`)) {
             console.log('Delete item:', itemId);
-            axios.delete(`http://localhost:3000/user/${itemId}`)
+            axios.delete(`https://north-petalite-relative.glitch.me/user/${itemId}`)
                 .then(response => {
                     event.target.closest('tr').remove();
                 })
@@ -491,7 +491,7 @@ tableUser.addEventListener('click', function(event) {
         row.querySelector('td:nth-child(5)').textContent = newJob;
         row.querySelector('td:nth-child(6)').textContent = newPhone;
 
-        axios.patch(`http://localhost:3000/user/${itemId}`, {
+        axios.patch(`https://north-petalite-relative.glitch.me/user/${itemId}`, {
             name: newName,
             surname: newSurname,
             email: newEmail,
